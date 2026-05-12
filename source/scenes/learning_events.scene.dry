@@ -1,0 +1,34 @@
+title: Learning events
+is-special: true
+new-page: true
+
+{!
+<article class="article" aria-labelledby="learning-events-top">
+  <div class="article-hero">
+    <div class="article-hero-text">
+      <p class="article-kicker">Further learning</p>
+      <h1 id="learning-events-top">Learning events</h1>
+      <p class="article-tagline">
+        In the future, this page will embed upcoming learning events.
+      </p>
+
+      <div class="article-actions">
+        <button class="article-btn article-btn-primary" type="button" onclick="dendryUI.dendryEngine.goToScene('1_home');" aria-label="Back to the homepage">
+          Back to home
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-grid">
+    <div class="article-card" aria-labelledby="learning-events-embed-title">
+      <h2 id="learning-events-embed-title">What will appear here</h2>
+      <ul>
+        <li>Upcoming events and workshops</li>
+      </ul>
+    </div>
+  </div>
+</article>
+!}
+
+- @backSpecialScene: Back

@@ -1,0 +1,11 @@
+ 
+# fltr_progress
+
+(0..0) <div class="progress-track"><div class="progress-track-head"><strong>Decision Checks</strong><span>0 / 7</span></div><progress value="0" max="7">0</progress><div class="progress-track-status">No checks completed yet</div></div>
+(1..1) <div class="progress-track"><div class="progress-track-head"><strong>Decision Checks</strong><span>1 / 7</span></div><progress value="1" max="7">1</progress><div class="progress-track-status">Cause and Effect complete</div></div>
+(2..2) <div class="progress-track"><div class="progress-track-head"><strong>Decision Checks</strong><span>2 / 7</span></div><progress value="2" max="7">2</progress><div class="progress-track-status">Weak Link complete</div></div>
+(3..3) <div class="progress-track"><div class="progress-track-head"><strong>Decision Checks</strong><span>3 / 7</span></div><progress value="3" max="7">3</progress><div class="progress-track-status">Marginal Reaction complete</div></div>
+(4..4) <div class="progress-track"><div class="progress-track-head"><strong>Decision Checks</strong><span>4 / 7</span></div><progress value="4" max="7">4</progress><div class="progress-track-status">Gross Profit complete</div></div>
+(5..5) <div class="progress-track"><div class="progress-track-head"><strong>Decision Checks</strong><span>5 / 7</span></div><progress value="5" max="7">5</progress><div class="progress-track-status">Source and Use complete</div></div>
+(6..6) <div class="progress-track"><div class="progress-track-head"><strong>Decision Checks</strong><span>6 / 7</span></div><progress value="6" max="7">6</progress><div class="progress-track-status">Sustainability complete</div></div>
+(7..7) <div class="progress-track progress-track-complete"><div class="progress-track-head"><strong>Decision Checks</strong><span>7 / 7</span></div><progress value="7" max="7">7</progress><div class="progress-track-status">Gut Feel complete</div></div>

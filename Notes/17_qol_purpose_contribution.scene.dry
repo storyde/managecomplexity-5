@@ -1,0 +1,468 @@
+title: Purpose and Contribution
+on-arrival: progress = 17
+
+Facilyn: The next questions about purpose and contribution help you discover the meaning in what you're doing. 
+
+Facilyn: The first question asks: 
+
+Facilyn: What are we about?
+
+- #qol_purpose
+
+@qolp_explanation
+title: What are these questions for?
+max-visits: 1
+tags: qol_purpose, 
+
+Me: What are these questions for?
+
+Facilyn: These three questions help you find meaning and personal relevance in your purpose. The first asks about your current identity and focus. The second explores your future aspirations. The third examines your long-term impact.
+
+A service robot wheels by, carrying a tray of tea and stopping to bow politely to each table.
+
+- #purpose_questions
+
+# Purpose - What are we about?
+
+@qolp_education_mission
+title: We are about education and learning
+on-arrival: qol-purpose = "education and learning"
+tags: qol_purpose
+
+Me: We are about education and learning.
+
+- #purpose_questions
+
+@qolp_sustainability_focus
+title: We are about environmental sustainability
+on-arrival: qol-purpose = "environmental sustainability"
+tags: qol_purpose
+
+Me: We are about environmental sustainability.
+
+- #purpose_questions
+
+@qolp_community_service
+title: We are about serving our community
+on-arrival: qol-purpose = "community service"
+tags: qol_purpose
+
+Me: We are about serving our community.
+
+- #purpose_questions
+
+@qolp_innovation_development
+title: We are about innovation and development
+on-arrival: qol-purpose = "innovation and development"
+tags: qol_purpose
+
+Me: We are about innovation and development.
+
+- #purpose_questions
+
+@qolp_health_wellbeing
+title: We are about health and wellbeing
+on-arrival: qol-purpose = "health and wellbeing"
+tags: qol_purpose
+
+Me: Health and wellbeing.
+
+- #purpose_questions
+
+# Statement of Purpose
+
+view-if part-of = "org" : Facilyn: If you're working within an organisation with a statement of purpose, you already have an answer to the first question: 
+
+Paper: [+ st-purpose +]
+
+Facilyn: The other two questions help you find personal meaning in that larger purpose. 
+
+# Agriculture
+
+@qolp_agr_farm
+title: We produce food to nourish communities
+view-if: sector = "agriculture"
+on-arrival: qol-purpose = "We produce food to nourish communities"
+tags: qol_purpose
+
+Me: We produce food to nourish communities.
+
+- #purpose_questions
+
+@qolp_agr_coop
+title: We support farmers and strengthen rural communities
+view-if: sector = "agriculture"
+on-arrival: qol-purpose = "We support farmers and strengthen rural communities"
+tags: qol_purpose
+
+Me: We support farmers and strengthen rural communities.
+
+- #purpose_questions
+
+@qolp_agr_ranch
+title: We steward the land for future generations
+view-if: sector = "agriculture"
+on-arrival: qol-purpose = "We steward the land for future generations"
+tags: qol_purpose
+
+Me: We steward the land for future generations.
+
+- #purpose_questions
+
+# Business
+
+@qolp_bus_store
+title: We make life more convenient and efficient
+view-if: sector = "business"
+on-arrival: qol-purpose = "We make life more convenient and efficient"
+tags: qol_purpose
+
+Me: We make life more convenient and efficient.
+
+- #purpose_questions
+
+@qolp_bus_insurance
+title: We protect people and organisations from financial risk so they can thrive
+view-if: sector = "business"
+on-arrival: qol-purpose = "We protect people and organisations from financial risk so they can thrive"
+tags: qol_purpose
+
+Me: We protect people and organisations from financial risk so they can thrive.
+
+- #purpose_questions
+
+@qolp_bus_hospitality
+title: We provide welcoming spaces and experiences for travellers
+view-if: sector = "business"
+on-arrival: qol-purpose = "We provide welcoming spaces and experiences for travellers"
+tags: qol_purpose
+
+Me: We provide welcoming spaces and experiences for travellers.
+
+- #purpose_questions
+
+@qolp_bus_company
+title: We provide value through our professional services and products
+view-if: sector = "business"
+on-arrival: qol-purpose = "We provide value through our professional services and products"
+tags: qol_purpose
+
+Me: We provide value through our professional services and products.
+
+- #purpose_questions
+
+# Culture
+
+@qolp_cul_arts
+title: We foster cultural expression and creativity
+view-if: sector = "culture"
+on-arrival: qol-purpose = "We foster cultural expression and creativity"
+tags: qol_purpose
+
+Me: We foster cultural expression and creativity.
+
+- #purpose_questions
+
+@qolp_cul_heritage
+title: We preserve and share cultural heritage
+view-if: sector = "culture"
+on-arrival: qol-purpose = "We preserve and share cultural heritage"
+tags: qol_purpose
+
+Me: We preserve and share cultural heritage.
+
+- #purpose_questions
+
+@qolp_cul_newsroom
+title: We inform the public with accurate, independent reporting
+view-if: sector = "culture"
+on-arrival: qol-purpose = "We inform the public with accurate, independent reporting"
+tags: qol_purpose
+
+Me: We inform the public with accurate, independent reporting.
+
+- #purpose_questions
+
+# Education
+
+@qolp_edu_kindergarten
+title: We provide a safe, nurturing environment where young children can learn and grow
+view-if: sector = "education"
+on-arrival: qol-purpose = "We provide a safe, nurturing environment where young children can learn and grow"
+tags: qol_purpose
+
+Me: We provide a safe, nurturing environment where young children can learn and grow.
+
+- #purpose_questions
+
+@qolp_edu_school
+title: We prepare students for their future and help them reach their potential
+view-if: sector = "education"
+on-arrival: qol-purpose = "We prepare students for their future and help them reach their potential"
+tags: qol_purpose
+
+Me: We prepare students for their future and help them reach their potential.
+
+- #purpose_questions
+
+@qolp_edu_university
+title: We advance knowledge through research and prepare leaders for tomorrow
+view-if: sector = "education"
+on-arrival: qol-purpose = "We advance knowledge through research and prepare leaders for tomorrow"
+tags: qol_purpose
+
+Me: We advance knowledge through research and prepare leaders for tomorrow.
+
+- #purpose_questions
+
+# Industry
+
+@qolp_ind_factory
+title: We make useful products that improve people's lives
+view-if: sector = "industry"
+on-arrival: qol-purpose = "We make useful products that improve people's lives"
+tags: qol_purpose
+
+Me: We make useful products that improve people's lives.
+
+- #purpose_questions
+
+@qolp_ind_construction
+title: We create safe, durable structures and infrastructure that serve communities
+view-if: sector = "industry"
+on-arrival: qol-purpose = "We create safe, durable structures and infrastructure that serve communities"
+tags: qol_purpose
+
+Me: We create safe, durable structures and infrastructure that serve communities.
+
+- #purpose_questions
+
+@qolp_ind_logging
+title: We provide timber resources responsibly to meet society's needs
+view-if: sector = "industry"
+on-arrival: qol-purpose = "We provide timber resources responsibly to meet society's needs"
+tags: qol_purpose
+
+Me: We provide timber resources responsibly to meet society's needs.
+
+- #purpose_questions
+
+# Nonprofit
+
+@qolp_nonprofit_service
+title: We address community needs and social challenges
+view-if: sector = "nonprofit"
+on-arrival: qol-purpose = "We address community needs and social challenges"
+tags: qol_purpose
+
+Me: We address community needs and social challenges.
+
+- #purpose_questions
+
+@qolp_nonprofit_advocacy
+title: We advocate for positive change and social justice
+view-if: sector = "nonprofit"
+on-arrival: qol-purpose = "We advocate for positive change and social justice"
+tags: qol_purpose
+
+Me: We advocate for positive change and social justice.
+
+- #purpose_questions
+
+@qolp_nonprofit_climate
+title: We protect the environment and fight climate change
+view-if: sector = "nonprofit"
+on-arrival: qol-purpose = "We protect the environment and fight climate change"
+tags: qol_purpose
+
+Me: We protect the environment and fight climate change.
+
+- #purpose_questions
+
+# Public service
+
+@qolp_pub_transport
+title: We connect communities with safe and accessible transport
+view-if: sector = "publicservice"
+on-arrival: qol-purpose = "We connect communities with safe and accessible transport"
+tags: qol_purpose
+
+Me: We connect communities with safe and accessible transport.
+
+- #purpose_questions
+
+@qolp_pub_health
+title: We heal, prevent illness, and restore health
+view-if: sector = "publicservice"
+on-arrival: qol-purpose = "We heal, prevent illness, and restore health"
+tags: qol_purpose
+
+Me: We heal, prevent illness, and restore health.
+
+- #purpose_questions
+
+@qolp_pub_service
+title: We serve the public interest and common good
+view-if: sector = "publicservice"
+on-arrival: qol-purpose = "We serve the public interest and common good"
+tags: qol_purpose
+
+Me: We serve the public interest and common good.
+
+- #purpose_questions
+
+@qolp_pub_parks
+title: We protect and share our natural heritage for current and future generations
+view-if: sector = "publicservice"
+on-arrival: qol-purpose = "We protect and share our natural heritage for current and future generations"
+tags: qol_purpose
+
+Me: We protect and share our natural heritage for current and future generations.
+
+- #purpose_questions
+
+# Policymaking
+
+@qolp_pol_policy
+title: We represent citizens and shape public policy for the common good
+view-if: sector = "policymaking"
+on-arrival: qol-purpose = "We represent citizens and shape public policy for the common good"
+tags: qol_purpose
+
+Me: We represent citizens and shape public policy for the common good.
+
+- #purpose_questions
+
+@qolp_pol_city
+title: We govern local communities and provide municipal services
+view-if: sector = "policymaking"
+on-arrival: qol-purpose = "We govern local communities and provide municipal services"
+tags: qol_purpose
+
+Me: We govern local communities and provide municipal services.
+
+- #purpose_questions
+
+@qolp_pol_intl
+title: We promote international cooperation and diplomacy
+view-if: sector = "policymaking"
+on-arrival: qol-purpose = "We promote international cooperation and diplomacy"
+tags: qol_purpose
+
+Me: We promote international cooperation and diplomacy.
+
+- #purpose_questions
+
+# Aspiration - What do we want to be?
+
+@qolp_want_to_be
+title: What do we want to be?
+on-arrival: qolp-be = 1
+
+Facilyn: The second question is about aspiration: 
+
+Facilyn: What do we want to be?
+
+- #qol_aspiration
+
+@qolas_trusted_leader
+title: A trusted leader in our field
+on-arrival: qol-aspiration = "A trusted leader in our field"
+tags: qol_aspiration
+
+Me: A trusted leader in our field.
+
+- #purpose_questions
+
+@qolas_positive_force
+title: A positive force for change
+on-arrival: qol-aspiration = "A positive force for change"
+tags: qol_aspiration
+
+Me: A positive force for change.
+
+- #purpose_questions
+
+@qolas_resilient_adaptive
+title: Resilient and adaptive to challenges
+on-arrival: qol-aspiration = "Resilient and adaptive to challenges"
+tags: qol_aspiration
+
+Me: Resilient and adaptive to challenges.
+
+- #purpose_questions
+
+@qolas_collaborative_partner
+title: A collaborative and supportive partner
+on-arrival: qol-aspiration = "A collaborative and supportive partner"
+tags: qol_aspiration
+
+Me: A collaborative and supportive partner.
+
+- #purpose_questions
+
+@qolas_innovative_pioneer
+title: An innovative pioneer breaking new ground
+on-arrival: qol-aspiration = "An innovative pioneer breaking new ground"
+tags: qol_aspiration
+
+Me: An innovative pioneer breaking new ground.
+
+- #purpose_questions
+
+# Accomplishment - What do we ultimately want to accomplish?
+
+@qolp_accomplish
+title: What do we ultimately want to accomplish?
+on-arrival: qolp-accomplish = 1
+
+Facilyn: The third question asks: 
+
+Facilyn: What do we ultimately want to accomplish?
+
+- #qol_accomplish
+
+@qolac_lasting_impact
+title: Create lasting positive impact for future generations
+on-arrival: qol-accomplish = "Create lasting positive impact for future generations"
+tags: qol_accomplish
+
+Me: Create lasting positive impact for future generations.
+
+- #purpose_questions
+
+@qolac_solve_problems
+title: Solve important problems that matter
+on-arrival: qol-accomplish = "Solve important problems that matter"
+tags: qol_accomplish
+
+Me: Solve important problems that matter.
+
+- #purpose_questions
+
+@qolac_empower_others
+title: Empower others to reach their potential
+on-arrival: qol-accomplish = "Empower others to reach their potential"
+tags: qol_accomplish
+
+Me: Empower others to reach their potential.
+
+- #purpose_questions
+
+@qolac_regenerate_systems
+title: Regenerate damaged social and ecological systems
+on-arrival: qol-accomplish = "Regenerate damaged social and ecological systems"
+tags: qol_accomplish
+
+Me: Regenerate damaged social and ecological systems.
+
+- #purpose_questions
+
+@qolac_bridge_divides
+title: Bridge divides and build understanding
+on-arrival: qol-accomplish = "Bridge divides and build understanding"
+tags: qol_accomplish
+
+Me: Bridge divides and build understanding.
+
+- #purpose_questions

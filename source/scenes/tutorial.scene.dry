@@ -1,0 +1,85 @@
+title: Tutorial
+subtitle: Instructions
+is-special: true
+new-page: true
+
+{!
+<article class="article" aria-labelledby="tutorial-top">
+  <div class="article-hero article-hero--wide">
+    <div class="article-hero-text">
+      <p class="article-kicker">How to use the interface</p>
+      <h1 id="tutorial-top">Tutorial</h1>
+      <p class="article-tagline">This story plays like a chat. Click answers to continue.</p>
+
+      <nav class="article-nav" aria-label="Tutorial navigation">
+        <ul class="article-nav-list">
+          <li><a class="article-nav-link" href="#tutorial-basics">Basics</a></li>
+          <li><a class="article-nav-link" href="#tutorial-sidebars">Sidebars</a></li>
+          <li><a class="article-nav-link" href="#tutorial-learn">What you learn</a></li>
+        </ul>
+      </nav>
+
+      <div class="article-actions">
+        <button class="article-btn article-btn-primary" type="button" onclick="dendryUI.dendryEngine.goToScene('2_intro');" aria-label="Start playing the story">
+          Start playing
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-grid">
+    <div class="article-card" id="tutorial-basics" aria-labelledby="tutorial-basics-title">
+      <h2 id="tutorial-basics-title">Basics</h2>
+      <p>Click an answer to continue. If you can’t see the newest message, scroll.</p>
+    </div>
+
+    <div class="article-card" id="tutorial-marker" aria-labelledby="tutorial-marker-title">
+      <h2 id="tutorial-marker-title">New content marker</h2>
+      <p>New content appears below a bar like this:</p>
+      <hr id="read-marker" role="separator" data-enhanced="1">
+    </div>
+
+    <div class="article-card article-card-wide" id="tutorial-sidebars" aria-labelledby="tutorial-sidebars-title">
+      <h2 id="tutorial-sidebars-title">Sidebars</h2>
+      <p>Use the buttons in the top bar to open the side panels:</p>
+
+      <div class="article-grid article-grid--compact">
+        <div class="article-card" id="tutorial-progress" aria-labelledby="tutorial-progress-title">
+          <h3 id="tutorial-progress-title">Progress (left)</h3>
+          <p>Shows your progress, your achievements and some of your choices.</p>
+        </div>
+
+        <div class="article-card" id="tutorial-info" aria-labelledby="tutorial-info-title">
+          <h3 id="tutorial-info-title">Info (right)</h3>
+          <p>Gives you access to additional information, theme toggle, and save/load.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-card article-card-wide" id="tutorial-learn" aria-labelledby="tutorial-learn-title">
+      <h2 id="tutorial-learn-title">What you learn</h2>
+      <ul class="article-badges">
+        <li class="article-badge">
+          <h3>1) Define the whole</h3>
+          <p>Clarify decision makers, your resource base and your money sources.</p>
+        </li>
+        <li class="article-badge">
+          <h3>2) Holistic context</h3>
+          <p>Describe the quality of life you want and the future resource base needed to sustain it.</p>
+        </li>
+        <li class="article-badge">
+          <h3>3) Filter questions</h3>
+          <p>Test actions against social, economic, and environmental consequences before you commit.</p>
+        </li>
+        <li class="article-badge">
+          <h3>4) Learn as you go</h3>
+          <p>Gain knowledge along the way and unlock achievements.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</article>
+!}
+
+- @backSpecialScene: Back
+

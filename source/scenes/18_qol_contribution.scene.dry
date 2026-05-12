@@ -1,0 +1,214 @@
+title: Contribution
+on-arrival: hctx_progress = 9 if hctx_progress < 9
+
+Facilyn: What do you want to be?
+
+- #qol_aspiration
+
+# Aspiration - All
+
+@qolas_source_strength
+title: A steady source of strength and reassurance
+on-arrival: qol_aspiration = "a steady source of strength and reassurance"
+go-to: qolac_accomplish
+tags: qol_aspiration
+
+Me: A steady source of strength and reassurance
+
+@qolas_positive_force
+title: A brave and constructive force for change
+on-arrival: qol_aspiration = "a brave and constructive force for change"
+go-to: qolac_accomplish
+tags: qol_aspiration
+
+Me: A brave and constructive force for change
+
+@qolas_collaborative_partner
+title: A partner people trust, enjoy and feel strengthened by
+on-arrival: qol_aspiration = "a partner people trust, enjoy and feel strengthened by"
+go-to: qolac_accomplish
+tags: qol_aspiration
+
+Me: A partner people trust, enjoy and feel strengthened by
+
+# Aspiration - Individual
+
+@qolas_ind_balanced
+title: A balanced, joyful and fully alive person
+view-if: player = "one"
+on-arrival: qol_aspiration = "a balanced, joyful and fully alive person"
+go-to: qolac_accomplish
+tags: qol_aspiration
+
+Me: A balanced, joyful and fully alive person
+
+@qolas_ind_learner
+title: A curious, lifelong learner with room to keep exploring
+view-if: player = "one"
+on-arrival: qol_aspiration = "a curious, lifelong learner with room to keep exploring"
+go-to: qolac_accomplish
+tags: qol_aspiration
+
+Me: A curious, lifelong learner with room to keep exploring
+
+# Aspiration - Group
+
+@qolas_loving_family
+title: A loving, dependable and inclusive community
+view-if: player = "group"
+on-arrival: qol_aspiration = "a loving, dependable and inclusive community"
+go-to: qolac_accomplish
+tags: qol_aspiration
+
+Me: A loving, dependable and inclusive community
+
+# Aspiration - Organisation
+
+@qolas_resilient_adaptive
+title: A resilient organisation people can trust to endure and adapt
+view-if: player = "org"
+on-arrival: qol_aspiration = "a resilient organisation people can trust to endure and adapt"
+go-to: qolac_accomplish
+tags: qol_aspiration
+
+Me: A resilient organisation people can trust to endure and adapt
+
+@qolas_innovative_pioneer
+title: A bold pioneer exploring new ground
+view-if: player = "org"
+on-arrival: qol_aspiration = "a bold pioneer exploring new ground"
+go-to: qolac_accomplish
+tags: qol_aspiration
+
+Me: A bold pioneer exploring new ground
+
+@qolas_custom
+title: Custom answer
+order: 20
+tags: qol_aspiration
+
+Me: Custom answer
+
+{!<textarea class="textarea" data-quality="qol_aspiration" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
+
+- @qolas_custom_answer: Save
+
+@qolas_custom_answer
+title: Save
+go-to: qolac_accomplish
+
+Me: [+ qol_aspiration +]
+
+# Accomplishment - What do we ultimately want to accomplish?
+
+@qolac_accomplish
+title: What do we ultimately want to accomplish?
+
+Facilyn: Great. 
+
+Facilyn: And in terms of contribution, what do you ultimately want to accomplish?
+
+- #qol_accomplish
+
+# Accomplishment - All
+
+@qolac_lasting_impact
+title: Building conditions that leave future generations better off
+on-arrival: qol_accomplish = "building conditions that leave future generations better off"
+go-to: 19_qol_complement
+tags: qol_accomplish
+
+Me: Building conditions that leave future generations better off
+
+@qolac_regenerate_systems
+title: Restoring damaged social and ecological systems
+on-arrival: qol_accomplish = "restoring damaged social and ecological systems"
+go-to: 19_qol_complement
+tags: qol_accomplish
+
+Me: Restoring damaged social and ecological systems
+
+@qolac_empower_others
+title: Helping others grow into their own strength and potential
+on-arrival: qol_accomplish = "helping others grow into their own strength and potential"
+go-to: 19_qol_complement
+tags: qol_accomplish
+
+Me: Helping others grow into their own strength and potential
+
+# Accomplishment - Individual
+
+@qolac_ind_meaning
+title: Building a life of deep meaning and quiet joy
+view-if: player = "one"
+on-arrival: qol_accomplish = "building a life of deep meaning and quiet joy"
+go-to: 19_qol_complement
+tags: qol_accomplish
+
+Me: Building a life of deep meaning and quiet joy
+
+@qolac_ind_potential
+title: Bringing unique potential into the world
+view-if: player = "one"
+on-arrival: qol_accomplish = "bringing unique potential into the world"
+go-to: 19_qol_complement
+tags: qol_accomplish
+
+Me: Bringing unique potential into the world
+
+# Accomplishment - Group
+
+@qolac_grp_resilient
+title: Building a resilient, supportive and vibrant community
+view-if: player = "group"
+on-arrival: qol_accomplish = "building a resilient, supportive and vibrant community"
+go-to: 19_qol_complement
+tags: qol_accomplish
+
+Me: Building a resilient, supportive and vibrant community
+
+@qolac_bridge_divides
+title: Healing divides and fostering deep understanding
+view-if: player = "group"
+on-arrival: qol_accomplish = "healing divides and fostering deep understanding"
+go-to: 19_qol_complement
+tags: qol_accomplish
+
+Me: Healing divides and fostering deep understanding
+
+# Accomplishment - Organisation
+
+@qolac_solve_problems
+title: Solving hard problems that truly matter
+view-if: player = "org"
+on-arrival: qol_accomplish = "solving hard problems that truly matter"
+go-to: 19_qol_complement
+tags: qol_accomplish
+
+Me: Solving hard problems that truly matter
+
+@qolac_org_ethical
+title: Innovation that is ethical, responsible and worthy of trust
+view-if: player = "org"
+on-arrival: qol_accomplish = "innovation that is ethical, responsible and worthy of trust"
+go-to: 19_qol_complement
+tags: qol_accomplish
+
+Me: Innovation that is ethical, responsible and worthy of trust
+
+@qolac_custom
+title: Custom answer
+order: 20
+tags: qol_accomplish
+
+Me: Custom answer
+
+{!<textarea class="textarea" data-quality="qol_accomplish" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
+
+- @qolac_custom_answer: Save
+
+@qolac_custom_answer
+title: Save
+go-to: 19_qol_complement
+
+Me: [+ qol_accomplish +]

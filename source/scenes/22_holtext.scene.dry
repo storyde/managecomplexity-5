@@ -1,0 +1,38 @@
+title: Completed holistic context
+on-arrival: hctx_progress = 13 if hctx_progress < 13; info_last = "Holistic Context" if info_holtext = 0; info_holtext = 1; {!
+if (!Q.holtext) {
+    if (Q.player === "one") {
+        Q.holtext = `I want ${Q.qol_economic} in a balanced life with ${Q.qol_balance}. My relationships will be grounded in ${Q.qol_relationships}. I thrive on ${Q.qol_challenge} and want to be free to ${Q.qol_growth}. I find purpose in ${Q.qol_purpose}. I seek to be ${Q.qol_aspiration} and want to contribute to ${Q.qol_accomplish}.
+${Q.complement || ""}
+
+I will act in ways that are ${Q.frb_people}.
+
+All to be ensured, for many generations to come, on a foundation of ${Q.frb_environment}.`;
+    } else if (Q.player === "group" || Q.player === "org") {
+        Q.holtext = `We want ${Q.qol_economic} in balanced lives with ${Q.qol_balance}. Our relationships will be grounded in ${Q.qol_relationships}. We thrive on ${Q.qol_challenge} and want to be free to ${Q.qol_growth}. We find purpose in ${Q.qol_purpose}. We seek to be ${Q.qol_aspiration} and want to contribute to ${Q.qol_accomplish}.
+${Q.complement || ""}
+
+We will act in ways that are ${Q.frb_people}.
+
+All to be ensured, for many generations to come, on a foundation of ${Q.frb_environment}.`;
+    }
+}
+!}
+
+Facilyn: Excellent. You now have your holistic context: your quality of life and your future resource base — captured in simple phrases.
+
+Facilyn: We can easily put them into full sentences.
+
+She fills in a few words, then hands you the Paper.
+
+Facilyn: Feel free to improve it and make it yours, using your own words. And make sure every decision-maker shares the same understanding of what each line means.
+
+Facilyn: When everyone has ownership, they can commit to it.
+
+Paper: {!<h1>Holistic Context:</h1><br><div style="white-space: pre-wrap;" contenteditable="true" data-quality="holtext" oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.innerText);">!}[+ holtext +]</div>
+
+Facilyn: This becomes your North Star. Not a goal you “finish,” but a reference for your decisions in a complex world — like guides for the ships leaving this harbour.
+
+Facilyn: Are you happy with this text or do you want to improve it using AI?
+
+- #holtext_complete

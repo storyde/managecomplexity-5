@@ -1,0 +1,60 @@
+title: Gross Profit Analysis Check
+on-arrival: fltr_progress = 3 if fltr_progress < 3; info_last = "Marginal Reaction versus Gross Profit" if info_gross_profit = 0; info_gross_profit = 1
+
+Facilyn: The gross profit analysis check helps you focus on the work that brings in the most, relative to its extra costs.
+
+Facilyn: "Which enterprises contribute the most to covering the overheads of the business?"
+
+- #gross_profit
+
+@fqgp_explanation
+title: I need help understanding this check
+max-visits: 1
+order: 21
+tags: gross_profit
+
+Me: I need help understanding this check.
+
+Facilyn: Gross profit is the money an enterprise brings in, minus what it costs to run.
+
+Facilyn: You’re choosing the best enterprise — or mix of enterprises — to cover overheads while keeping risk reasonable. This one takes longer than the others, and it’s worth doing with pen and paper.
+
+- #gross_profit
+
+@fqgp_pass
+title: It contributes the most to covering overheads
+on-arrival: fltr_profit = "Passed"
+go-to: 34_fq_result if filtered = 1; 31_fq_energy_money
+tags: gross_profit
+
+Me: It contributes the most to covering overheads.
+
+Facilyn: Excellent. You've identified this as a high-performing enterprise that will help sustain your business.
+
+@fqgp_combination
+title: It is part of a good combination of enterprises
+on-arrival: fltr_profit = "Passed"
+go-to: 34_fq_result if filtered = 1; 31_fq_energy_money
+tags: gross_profit
+
+Me: It is part of a good combination of enterprises.
+
+Facilyn: Good. Sometimes a mix of enterprises creates the best stability and profit, even if one isn't the absolute highest earner on its own.
+
+@fqgp_fail
+title: It contributes little to covering overheads
+on-arrival: fltr_profit = "Failed"
+go-to: 34_fq_result if filtered = 1; 31_fq_energy_money
+tags: gross_profit
+
+Me: It contributes little to covering overheads.
+
+Facilyn: You may want to reconsider if this is the best use of your resources, or if there are non-financial reasons that justify it.
+
+@fqgp_skip
+title: Not sure, let's move on
+on-arrival: fltr_profit = "Skipped"
+go-to: 34_fq_result if filtered = 1; 31_fq_energy_money
+tags: gross_profit
+
+Me: Not sure, let's move on.

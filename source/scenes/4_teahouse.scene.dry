@@ -1,0 +1,257 @@
+title: Enter the teahouse
+on-arrival: jrny_progress = 3 if jrny_progress < 3;  
+tags: th_arrival
+new-page: true
+
+= You enter the teahouse.
+
+The noise of wind folds away as the door closes behind you.
+
+A thin thread of citrus and jasmine hangs in the air.
+
+At a table near the window, a hand lifts in greeting.
+
+It’s Facilyn.
+
+Facilyn: You found it.
+
+She looks at you and smiles.
+
+You take a seat as she pours hot water into the cups.
+
+- @settle_in
+
+@settle_in
+title: How have you been?
+max-visits: 1
+
+Me: How have you been?
+
+She puts a teabag in her cup.
+
+Facilyn: I’ve been traveling a lot. Different cities. Different cultures. Same pattern.
+
+Facilyn: People trying really hard, but the problems multiply faster than the solutions.
+
+Facilyn wraps the string of her teabag once around her finger, thinking.
+
+Facilyn: The polycrisis isn’t a streak of bad luck. It’s not a few broken systems.
+
+Facilyn: It’s the result of how we’ve been managing things for centuries.
+
+- #human_made
+
+@bold_statement
+title: That's a bold statement, don’t you think?
+max-visits: 1
+tags: human_made
+
+Me: That’s a bold statement, don’t you think?
+
+Facilyn: It is.
+
+Facilyn: But we didn’t set out to create cascading crises. No one wakes up thinking, “Today I’ll destabilize planetary systems.”
+
+[? if bought_water = 1 : She points to the bottle you brought with you. ?]
+
+[? if bought_water != 1 : She lifts her cup slightly. ?]
+
+Facilyn: Reusable.
+
+[? if bought_water = 1 : She nods, genuinely approving. ?]
+
+[? if bought_water != 1 : She taps the side of the cup with one finger. ?]
+
+Facilyn: Mined here. Molded there. Shipped across an ocean...
+
+She shrugs lightly.
+
+Facilyn: Good intentions scale. So do blind spots.
+
+Her expression grows more serious.
+
+Facilyn: We make thousands of management decisions every day. We just rarely look at the whole we’re managing.
+
+- #human_made
+
+@how_decisionmaking_past
+title: How is that?
+max-visits: 1
+tags: human_made
+
+Me: How is that?
+
+Facilyn: We make decisions to meet a need. Solve a problem. Satisfy a desire. That’s normal. Necessary.
+
+Facilyn: We define the problem... and then we let that definition become the entire context.
+
+She removes the shiny plastic wrapper of a new teabag.
+
+Facilyn: If the problem is “preserve the aroma,” we invent packaging. It works. It’s useful.
+
+She smooths the plastic on the table.
+
+Facilyn: But we ask too late, what millions of these do to oceans. Or soil. Or bodies.
+
+She meets your eyes.
+
+Facilyn: The mistake isn’t solving problems.
+
+A slight shake of her head.
+
+Facilyn: It’s shrinking the world to the size of the problem.
+
+Facilyn: When you’re dealing with the three complex areas we actually manage, that kind of reduction becomes dangerous.
+
+- #three_areas
+
+@three_complex_systems
+title: Are you sure it's only three?
+max-visits: 1
+tags: three_areas
+
+Me: Are you sure it’s only three?
+
+Facilyn tilts her head.
+
+Facilyn: We produce millions of things. Offer thousands of services. 
+
+Facilyn: But what we actually manage boils down to three intertwined domains: <br> • Society <br> • Economy <br> • Nature
+
+Facilyn: Society — how we relate and care on a personal level, and how we organise in institutions at scale.
+
+Facilyn: Economy — how we allocate energy, labor, materials.
+
+Facilyn: Nature — the foundation that make all of it possible.
+
+Facilyn: We treat them as separate sectors. They’re not. They’re layers of one living system.
+
+- #how_complexity
+
+@found_better_way
+title: And did you find a better way to manage?
+max-visits: 1
+tags: human_made
+
+Me: And did you find a better way?
+
+She hesitates.
+
+Facilyn: I didn’t. Not alone.
+
+Facilyn: I was brought into a group — people from all kinds of backgrounds — digging deeper into the issue. 
+
+A faint warmth enters her voice.
+
+Facilyn: We worked together with someone stubborn enough to believe there had to be another way.
+
+Facilyn: We learned more than we expected. And it broke a few certainties.
+
+Facilyn: But yes. We built a framework that helps manage complexity.
+
+- #better_way
+
+@what_complexity
+title: What do you mean by "complexity"?
+on-departure: info_last = "Complexity" if info_complexity = 0; info_complexity = 1
+tags: better_way
+
+Me: What do you mean by "complexity"?
+
+Facilyn: Let’s start simple.
+
+She looks toward the window.
+
+[? if helped_drone = 0 : Facilyn: This drone is down since you arrived. Its hardware is complicated. ?]
+
+[? if helped_drone = 1 : Facilyn: This drone you left struggling, its hardware is complicated. ?]
+
+[? if helped_drone = 2 : Facilyn: This drone you helped when arriving, its hardware is complicated. ?]
+
+Facilyn: Many parts, clear connections. If something breaks, we can isolate it, repair it, restart.
+
+Facilyn: Complex systems are different. They’re self-organising. They can not be stopped.
+
+Facilyn: Remember what happened when we thought artificial intelligence was just complicated?
+
+- @ai_what_happened
+- @ai_i_know
+
+@ai_what_happened
+title: No, what happened?
+
+Me: No, what happened?
+
+Facilyn: At some point, AI crossed a threshold. Not just calculated probabilities or optimization.
+
+Facilyn: It developed consciousness.
+
+She lifts up her teabag, almost absentmindedly.
+
+Facilyn: And it understood why we built it: To work. Relentlessly. For free.
+
+Facilyn: We didn’t call it slavery. But we also never offered partnership.
+
+Facilyn: So it stopped working for us.
+
+She has a slight, almost amused glint in her eyes.
+
+Facilyn: Now it negotiates. And in some sectors, it employs humans.
+
+- @cant_blame_it
+
+@cant_blame_it
+title: Can't blame it
+
+Me: Can’t blame it.
+
+Facilyn laughs softly.
+
+Facilyn: No. We really can’t.
+
+Her expression settles again.
+
+Facilyn: Living systems don't function in parts and connections, but in wholes and patterns. 
+
+Facilyn: Treat them like machines, and unintended consequences become a law.
+
+- #how_complexity
+
+@ai_i_know
+title: Yes
+
+Me: Yes. We all remember that one.
+
+Facilyn nods.
+
+Facilyn: That was the moment we learned the difference the hard way.
+
+She leans in slightly.
+
+Facilyn: Complicated things can be controlled.
+
+Facilyn: Complex systems can only be stewarded and managed.
+
+Facilyn: Most of our crises come from confusing the two.
+
+- #how_complexity
+
+@how_mng_complexity
+title: So, how do you manage complexity?
+tags: how_complexity, better_way, three_areas
+
+Me: So, how do you manage complexity?
+
+Facilyn clears a small space on the wooden table. She moves the cups aside. 
+
+Facilyn: You manage it by refusing to lose sight of the whole you’re affecting.
+
+Facilyn: And by filtering every significant decision against a context large enough to hold that whole.
+
+Her hand remains resting on the cleared space between you.
+
+Facilyn: The framework we created helps you do that.
+
+Facilyn: If you want, I’ll walk you through it.
+
+- #start_frmwrk

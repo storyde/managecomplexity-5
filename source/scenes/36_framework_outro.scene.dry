@@ -1,0 +1,39 @@
+title: Finalize my decision
+tags: revisit_skips
+order: 21
+
+Me: Finalize my decision.
+
+Facilyn: You did it. You’ve walked through the whole framework: your whole, your quality of life, your future resource base — and the context checks.
+
+Facilyn: Use the framework wisely. Share it generously. And remember: every decision is a chance to move toward the future you want.
+
+Facilyn: In complexity, conditions change. What’s right today can still fail tomorrow.
+
+Facilyn: So start by assuming you’re wrong. Monitor. Correct. Replan — especially when your actions touch the land.
+
+You and Facilyn talk quietly as the storm outside runs its course. When it finally settles and you prepare to leave, she looks up and says:
+
+Facilyn: I really enjoyed our time together. But this is only the beginning. When we meet again, I’d love to explore how to design the economy regeneratively — or even how to calm these dust storms.
+
+- #final_choices
+
+@need_resources
+title: I need resources for continued learning
+tags: final_choices
+game-over: true
+
+Me: I need resources for continued learning.
+
+Facilyn: More resources will be added soon...
+
+Facilyn: Most importantly, practice using the framework regularly. Start with small decisions and work up to larger ones as you become more comfortable with the process.
+
+@start_over
+title: I'd like to start the framework from the beginning
+game-over: false
+tags: final_choices
+
+Me: I'd like to start the framework from the beginning.
+
+{!<meta http-equiv="refresh" content="2">!}

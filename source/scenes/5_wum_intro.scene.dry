@@ -1,0 +1,65 @@
+title: Yes, please
+on-arrival: jrny_progress = 4 if jrny_progress < 4; info_last = "Whole Under Management" if info_whole = 0; info_whole = 1
+tags: start_frmwrk
+
+Me: Yes, please.
+
+Facilyn: Great.
+
+Facilyn slides a pen and a sheet of thin paper onto the table.
+
+Facilyn: When we try to “fix” something, we usually jump straight to the problem.
+
+Facilyn: Let’s not do that.
+
+She draws a slow circle on the paper.
+
+Facilyn: Instead, we begin with something simpler.
+
+She writes three words in the circle, leaving room between them:
+
+Paper: People 
+
+Paper: Resources 
+
+Paper: Money
+
+Facilyn: A manageable whole has three essentials: <br> • The people making decisions <br> • The resources within reach <br> • And the money you have — or can generate.
+
+Facilyn: So before we talk about changing anything...
+
+She nudges the pen a little closer to you.
+
+Facilyn: We define the whole you’re actually managing.
+
+- #whole_u_mgmt
+
+@wum_explanation
+title: Why defining the "whole"?
+max-visits: 1
+order: 21
+tags: whole_u_mgmt
+
+Me: Why defining the "whole"?
+
+Facilyn: We’re trained to think in parts. Departments. Issues. Boxes you can label.
+
+Facilyn: But living systems don’t function that way.
+
+She glances toward the steaming tea.
+
+Facilyn: Hydrogen isn’t water. Oxygen isn’t water.
+
+Facilyn: You can study them for weeks and still miss what water *is*.
+
+Facilyn: When you define your whole, you start to see two things: what really influences it — and how your choices ripple outward.
+
+Her finger moves outward beyond the circle.
+
+Facilyn: Most management fails because we never define the whole. We manage fragments and hope they behave.
+
+She taps the page lightly.
+
+Facilyn: This is where we stop hoping.
+
+- #whole_u_mgmt

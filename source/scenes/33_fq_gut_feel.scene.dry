@@ -1,0 +1,53 @@
+title: Gut Feel Check
+subtitle: Values-Based Final Assessment
+on-arrival: fltr_progress = 6 if fltr_progress < 6; info_last = "Gut Feel" if info_gut_feel = 0; info_gut_feel = 1; 
+
+Facilyn: Once you’ve looked at all other aspects, it’s time for the gut feel check:
+
+Facilyn: "How do we feel about this action now? Will it lead to the quality of life we desire? Will it adversely affect the lives of others?"
+
+- #gut_feel
+
+@fqgut_explanation
+title: I need help understanding this check
+max-visits: 1
+order: 21
+tags: gut_feel
+
+Me: I need help understanding this check.
+
+Facilyn: This asks about your *intuition*, not just what you can justify. It ties straight back to your quality of life.
+
+Facilyn: Even if something “passes” the other questions, you might reject it if it feels wrong. And sometimes you’ll proceed anyway, knowing the downsides — and taking responsibility to reduce harm.
+
+- #gut_feel
+
+@fqgut_pass
+title: It feels right
+on-arrival: fltr_gut = "Passed"
+go-to: 34_fq_result
+tags: gut_feel
+
+Me: It feels right.
+
+Facilyn: Great. If your decision failed other checks, but still feels right, you should work to mitigate the negative consequences, if you choose to proceed.
+
+@fqgut_fail
+title: It feels wrong
+on-arrival: fltr_gut = "Failed"
+go-to: 34_fq_result
+tags: gut_feel
+
+Me: It feels wrong.
+
+Facilyn: Trust that feeling. Your intuition often catches what logic misses.
+
+@fqgut_mixed
+title: I have mixed feelings
+on-arrival: fltr_gut = "Skipped"
+go-to: 34_fq_result
+tags: gut_feel
+
+Me: I have mixed feelings.
+
+Facilyn: Mixed feelings often reflect real trade-offs. Weigh the positives against the concerns before deciding.

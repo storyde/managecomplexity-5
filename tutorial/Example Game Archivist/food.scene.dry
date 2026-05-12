@@ -1,0 +1,267 @@
+title: Food
+audio: music/A1_Pacing.mp3
+go-to: food_options
+on-arrival: got_food_today = 1;
+new-page: true
+
+You have no more edible food left in your apartment. What are you going to do?
+
+@food_options
+
+- @takeout: Purchase some cooked food.
+- @cook: Buy ingredients for cooking and make your own meals.
+- @scrounge: Scrounge for snacks, leftovers, and so on.
+- @cook_new: Cook with the ingredients you have.
+- @take_1
+- @take_2
+- @starve: Starve.
+
+@takeout
+subtitle: $[+ takeout_cost - 5 +]-[+ takeout_cost + 20 +], lasts 1-4 days.
+choose-if: stress < stress_threshold
+view-if: money >= takeout_cost + 20
+unavailable-subtitle: You don't have the energy for this.
+
+Buying takeout was your preferred option, back when you had a job. The downside is the cost, and that you could be seen. The upside is lower energy expenditures.
+
+- @takeout_2: Do it.
+- @food_options: Do something else.
+
+@takeout_2
+max-choices: 1
+on-arrival: days_starved = 0
+set-bg: images/windows_filtered_dithered.png
+
+- #takeout
+
+@takeout_do_1
+title: Takeout
+tags: takeout
+on-arrival: money -= takeout_cost + 10; food += 2; stress += 1
+
+The trolleys have broken down today, so you visit the nearest walkable restaurant. It is more expensive than you would like.
+
+It costs $35 for food to last 2 days.
+
+
+@takeout_do_2
+title: Takeout
+tags: takeout
+on-arrival: money -= takeout_cost; food += 2; stress += 1
+
+You take the trolleys to visit your favourite restaurant near the university.
+
+It costs $20 for enough food to last 2 days.
+
+#################
+
+@cook
+subtitle: $[+ grocery_cost - 25 +]-[+ grocery_cost + 5 +], lasts 2-7 days.
+choose-if: stress <= 3*stress_threshold/4
+view-if: money >= grocery_cost + 5
+unavailable-subtitle: You don't have the energy for this.
+
+Perhaps a visit to the grocery store is in order. You could buy a supply of shelf-stable products to cook for yourself. The downside is the effort of walking and carrying the groceries, and that you could be seen.
+
+- @cook_2: Do it.
+- @food_options: Do something else.
+
+@cook_2
+max-choices: 1
+on-arrival: {!
+Q.post_trolley = window.randomSelect(['food.cook_2_1', 'food.cook_2_2', 'food.cook_2_3']);
+Q.days_starved = 0;
+!}
+set-bg: images/windows_filtered_dithered.png
+
+The nearest grocery store is a 20-minute trolley ride away.
+
+- #trolley
+
+
+# trolley incidents for all trolley riding stuff?
+@trolley_1
+title: The trolley is mostly empty when you board.
+tags: trolley
+go-to-ref: post_trolley
+
+The trolley is mostly empty when you board.
+
+@trolley_2
+title: A man accosts you on the trolley.
+tags: trolley
+on-arrival: stress += 1
+go-to-ref: post_trolley
+
+A man on the trolley attempts to strike up a conversation with you. He sits next to you so that his legs touch yours. He is bare-faced, and you perceive droplets of saliva as he speaks. You cannot comprehend the words. You smile and nod. "Speak up! I can't hear you!" he shouts. Fortunately, he does not restrict your exit. You debark at the next stop, and walk the rest of the way.
+
+
+@trolley_3
+title: A man accosts you on the trolley.
+view-if: cw_enabled = 0
+on-arrival: stress += 1; money += 20
+max-visits: 1
+tags: trolley
+go-to-ref: post_trolley
+
+A man sits next to you on the trolley. You do not look at him, but he is wearing a mask. "Wearing a skirt doesn't make you a real lady," he whispers into your ear while placing his hand on your bottom. You freeze. *How the fuck did he tell?* "But I don't care. I always liked you people. I was rooting for you guys in the war. Shame what happened."
+
+As soon as you can move, you do, and walk the rest of the way. You notice that there is a $20 bill in your pocket.
+
+@trolley_4
+title: The trolley is mostly empty when you board.
+tags: trolley
+go-to-ref: post_trolley
+
+The trolley is mostly empty when you board. There are posters here: advertisements for high-interest loans, property investment schemes, multi-level marketing opportunities.
+
+@trolley_5
+title: The trolley is mostly empty when you board.
+tags: trolley
+go-to-ref: post_trolley
+
+The trolley is mostly empty when you board. The interior is papered in advertisements, but you still see the outlines of the revolutionary insignia, three thick "X" characters arranged in a triangle.
+
+
+@cook_2_1
+title: The trip is uneventful.
+tags: cooking
+on-arrival: money -= grocery_cost; food += 5; day_major += 1
+
+When you arrive at the store, the shelves are devoid of rice, flour, and bread, as well as long-lasting shelf-stable products in general. There must have been panic buying over the latest news of nanoplagues or strikes or equipment failures or sabotage or terrorism or...
+
+However, there is a decent supply of perishables. Fresh fruits and vegetables straight from the farms, with supposedly minimal contamination.
+
+It costs $55 for enough food to last five days.
+
+- @main: You are tired.
+
+
+@cook_2_2
+title: The trip is uneventful.
+tags: cooking
+on-arrival: money -= grocery_cost; supply += 2; food += 5; day_major += 1
+
+When you arrive at the store, the shelves are devoid of fresh fruits and produce. There must have been technical incidents at the farms or the transportation system or the refrigeration or maybe there has been sabotage (your comrades or the reactionaries?) or perhaps delivery strikes or anti-plant nanoplagues or...
+
+However, there is enough rice to last for a while yet, as well as an adequate supply of beans.
+
+It costs $50 for enough food to last five days.
+
+- @main: You are tired.
+
+
+@cook_2_3
+title: The trip is uneventful.
+on-arrival: money -= grocery_cost; food += 2; day_major += 1
+
+When you arrive at the store, the only food item available is algal paste, better known as "gray mush". Of course gray mush has the same biological origin as rice and a number of other staples, but it has not been processed for any kind of flavor or texture. Of course there are recipes for "homemade rice" directly from gray mush, but you have neither the equipment nor energy for such projects.
+
+It costs $25 for two days of food.
+
+- @main: You are tired.
+
+
+#############################################
+
+@take_1
+title: Take what you need.
+subtitle: Free, but risky.
+view-if: food_take = 0
+on-arrival: food_take += 1; food += 3; stress += 1; days_starved = 0
+
+There are waste disposal containers near a store containing old but still-edible food. For now, no one is watching, so you take what you can find, quickly, before anyone notices.
+
+You have 3 more days of food.
+
+
+@take_2
+title: Take what you need.
+subtitle: Free, but risky.
+view-if: food_take >= 1 and caught = 0
+on-arrival: food_take += 1
+
+Unfortunately, the waste disposal containers are locked, and the leftovers you see on the streets are inedible. You could attempt to lift items from the grocery store.
+
+- @take_store: Take some items from the store.
+- @food_options: Too risky.
+
+@take_store
+go-to: take_store_win; take_store_lose
+
+@take_store_win
+on-arrival: food += 2; stress += 1; days_starved = 0
+
+You find some small-volume and calorie-dense items - oils, sugary products, and so on, and put them in your jacket pockets. No one is watching, and no one sees you leave.
+
+You have 2 more days of food.
+
+@take_store_lose
+on-arrival: food += 1; stress += 3; days_starved += 1; caught = 1
+
+A security guard watches you put an item in your pocket. You are barely cognizant of what happens next, but loud and harsh words are spoken, a picture is taken, and hands grab your body, dragging you out.
+
+Thankfully, you are released with only a warning, but you are banned from this store, thus foreclosing one possibility of acquiring food.
+
+
+##############################################################
+
+@cook_new
+choose-if: supply > 0
+subtitle: You have some cooking supplies.
+on-arrival: supply -= 1; stress += 1; food += 2; days_starved = 0
+unavailable-subtitle: You don't have any supplies.
+
+You cook using some of the supplies that you have. You make a vegetable and tofu stir fry, which will last you for all of today.
+
+
+@scrounge
+choose-if: scrounged = 0
+subtitle: Free, lasts 1-2 days.
+unavailable-subtitle: You don't have any more food left.
+on-arrival: scrounged = 1; stress += 1; food += 1
+
+You scrounge around for some food. A package of gray mush. A small bowl of leftover rice. A package of fried algae. It is enough, for now.
+
+@starve
+subtitle: Free.
+
+You could simply not eat today. There are no potential long-term consequences, of course.
+
+- #starve: Do it.
+- @food_options: Do something else.
+
+
+@starve_2
+title: Do it.
+view-if: days_starved = 0
+on-arrival: stress += 3; food = 1; days_starved += 1
+tags: starve
+
+You can survive without food for a day. You will be fine. Just a bit hungry. Just a bit more tired than usual.
+
+@starve_3
+title: Do it.
+view-if: days_starved = 1
+on-arrival: stress += 3; food = 1; days_starved += 1; day_major += 1
+tags: starve
+
+You can survive without food for one more day. Nothing bad is going to happen, except for the fact that you feel too tired to exit your apartment or do work. A minor and temporary setback.
+
+@starve_4
+title: Do it.
+view-if: days_starved >= 2 and days_starved < 4
+on-arrival: stress += 4; food = 1; days_starved += 1; day_major += 1
+tags: starve
+
+Another day of no food. Studies have shown that humans can survive for at least seven days without food. You should be fine. Just a bit tired. Just a stronger headache than usual. Just the feeling of wanting to vomit without anything in your stomach that can be vomitted.
+
+@starve_5
+title: Do it.
+view-if: days_starved >= 4
+on-arrival: stress += 5; food = 1; days_starved += 1; day_major += 1
+tags: starve
+
+Day ??? of no food. It is difficult to move. Everything hurts. You feel sick. You need to rest.
+
+- @anxiety: You are breaking down.

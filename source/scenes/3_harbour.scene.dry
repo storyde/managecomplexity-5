@@ -1,0 +1,135 @@
+title: Harbour 
+
+A delivery drone circles above the water, tilting for a better selfie angle.  
+
+Between crates, a child kneels in the dust, drawing with a stick.
+
+A vendor leans against his salt-stained booth and calls out:
+
+Vendor: One coin, one sip! Don't walk thirsty!
+
+- #harbour
+
+@vendor_scene
+title: Approach the vendor
+max-visits: 1
+tags: harbour
+
+You walk over. A small screen jitters with today’s news:
+
+Headline1: Storm rolling in from the eastern flats.
+
+Headline2: Blackouts hit again. 
+
+Headline3: The polycrisis is accelerating. 
+
+- #vendor
+
+@pay_vendor
+title: One bottle, please
+on-arrival: bought_water = 1
+max-visits: 1
+tags: vendor
+
+Me: One bottle, please.
+
+You count out a few coins into the vendor’s palm. He drops them into a tin that’s almost empty.
+
+The water tastes of metal, but it eases your throat. 
+
+- #vendor
+
+@ask_policrisis  
+title: What does it mean, "polycrisis"?
+on-arrival: info_last = "Polycrisis" if info_polycrisis = 0; info_polycrisis = 1
+tags: vendor
+max-visits: 1
+
+Me: What does it mean, "polycrisis"?
+
+The vendor squints at you, then gestures toward the dead power lines. 
+
+Vendor: It used to be simple. First a power outage. Then protests the next week.
+
+He counts them off on his fingers. 
+
+Vendor: Now the fields burn while water runs scarce, prices shoot up, people flee. Each one makes the others worse.
+
+He shrugs. 
+
+Vendor: That's what they call a polycrisis. One mess feeding the next.
+
+He leans back against his booth again.
+
+- #vendor
+
+@ask_direction 
+title: Do you know the way to the teahouse?
+on-arrival: know_way = 1; jrny_progress = 2 if jrny_progress < 2
+tags: vendor
+
+Me: Do you know the way to the teahouse?
+
+Vendor: Follow the water to the long pier. You'll know the teahouse by the paper lanterns. They leave them out even during storms.
+
+You thank him, follow his gaze along the water, and set off.
+
+Between crates and moored boats, the child is still drawing on the ground.
+
+- #quay
+
+@child_drawing
+title: Go closer
+view-if: know_way = 1 
+tags: quay
+
+It's only a few lines: a church. A school. A rocket.
+
+For a moment the wind holds its breath. 
+
+Then a gust from the coming storm sweeps through the harbour. The lines smear into grey dust again.
+
+- @way_teahouse
+
+@way_teahouse
+title: Head on to the teahouse
+unavailable-subtitle: (You don't know the way yet)
+choose-if: know_way = 1 
+tags: harbour, quay
+
+You walk along the quay and reach the teahouse. 
+
+Paper lanterns sway in the wind. Between them, wind chimes made from old teapots clink softly.
+
+A few steps from a window, a drone hovers, dropping crumbs to a swarm of pigeons. Then it falters, tips, and lands twitching on the ground.
+
+- #th_arrival
+
+@drone_pickup 
+title: Help the drone
+max-visits: 1
+on-arrival: helped_drone = 1
+tags: th_arrival
+
+You crouch and pick it up.
+
+A plastic string is tangled up in one of the rotors. 
+
+- #th_arrival
+
+@drone_string 
+title: Remove the string
+view-if: helped_drone = 1
+max-visits: 1
+on-arrival: helped_drone = 2
+tags: th_arrival
+
+You remove the string, press the rotor back into place, and trigger the drone to reboot.
+
+Its display flickers: 
+
+RoboDisplay: `Thank you!`
+
+The drone lifts off, circling once before playing again with the birds.
+
+- #th_arrival

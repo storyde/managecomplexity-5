@@ -1,0 +1,59 @@
+title: Progress
+
+# This scene contains information for the left sidebar.
+
+[? if display_jrny = 1 : [+ jrny_progress : qjrny_progress +] ?] [? if display_hctx = 1 : [+ hctx_progress : qhctx_progress +] ?] [? if display_fltr = 1 : [+ fltr_progress : qfltr_progress +] ?]
+[? if jrny_progress > 2 : <div class="progress-latest progress-latest-achievement"><p><strong>Achievements:</strong></p><div class="progress-badges">[? if jrny_progress > 2 : <span class="progress-badge">Teahouse entered</span> ?] [? if hctx_progress > 3 : <span class="progress-badge">Whole under Management</span> ?] [? if hctx_progress > 9 : <span class="progress-badge">Quality of life</span> ?] [? if hctx_progress > 12 : <span class="progress-badge">Holistic Context</span> ?] [? if fltr_progress > 6 : <span class="progress-badge">Decision filtered</span> ?] </div></div> ?]
+[? if fltr_result = "visited" and jrny_progress < 10 : <p class="progress-note"><strong>Finalize Filter Questions:</strong><br>Revisit skipped filters or finalize your decision.</p> ?]
+
+[? if holtext != 0 : <h1>Holistic Context:</h1> ?]
+[? if holtext != 0 : <div style="white-space: pre-wrap;">[+ holtext +]</div> ?]
+
+[? if holtext = 0 and decision_makers != 0 : <h2>Whole Under Management</h2> ?]
+[? if holtext = 0 and decision_makers != 0 : **Decision makers:** [+ decision_makers +] ?]
+[? if holtext = 0 and rb_physical != 0 : **Physical resources:** [+ rb_physical +] ?]
+[? if holtext = 0 and rb_human != 0 : **Social resources:** [+ rb_human +] ?]
+[? if holtext = 0 and wum_money != 0 : **Monetary resources:** [+ wum_money +] ?]
+[? if holtext = 0 and player = "org" and st_purpose != 0 : **Statement of Purpose:** [+ st_purpose +] ?]
+
+[? if holtext = 0 and qol_economic != 0 : <h2>Quality of Life</h2> ?]
+[? if holtext = 0 and qol_economic != 0 : **Economic well-being:** [+ qol_economic +] ?]
+[? if holtext = 0 and qol_balance != 0 : **And:** [+ qol_balance +] ?]
+[? if holtext = 0 and qol_relationships != 0 : **Relationships:** [+ qol_relationships +] ?]
+[? if holtext = 0 and qol_challenge != 0 : **Challenge:** [+ qol_challenge +] ?]
+[? if holtext = 0 and qol_growth != 0 : **Growth:** [+ qol_growth +] ?]
+[? if holtext = 0 and qol_purpose != 0 and player = "one" : **I am about:** [+ qol_purpose +] ?]
+[? if holtext = 0 and qol_purpose != 0 and player != "one" : **We are about:** [+ qol_purpose +] ?]
+[? if holtext = 0 and qol_aspiration != 0 and player = "one" : **I want to be:** [+ qol_aspiration +] ?]
+[? if holtext = 0 and qol_aspiration != 0 and player != "one" : **We want to be:** [+ qol_aspiration +] ?]
+[? if holtext = 0 and qol_accomplish != 0 and player = "one" : **I ultimately want to accomplish:** [+ qol_accomplish +] ?]
+[? if holtext = 0 and qol_accomplish != 0 and player != "one" : **We ultimately want to accomplish:** [+ qol_accomplish +] ?]
+[? if holtext = 0 and complement != 0 : [+ complement +] ?]
+
+[? if holtext = 0 and (frb_people != 0 or frb_environment != 0) : <h2>Future Resource Base</h2> ?]
+[? if holtext = 0 and frb_people != 0 : **Our behaviour:** [+ frb_people +] ?]
+[? if holtext = 0 and frb_environment != 0 : **Environment:** [+ frb_environment +] ?]
+
+[? if fltr_cause != 0 : <h2>Filter Questions: </h2> ?]
+
+[? if fltr_cause != 0 : **Cause and Effect:** [+ fltr_cause +] ?]
+
+[? if wl_social != 0 : **Social Weak Link:** [+ wl_social +] ?]
+
+[? if wl_biological != 0 : **Biological Weak Link:** [+ wl_biological +] ?]
+
+[? if wl_financial != 0 : **Financial Weak Link:** [+ wl_financial +] ?]
+
+[? if fltr_marginal != 0 : **Marginal Reaction:** [+ fltr_marginal +] ?]
+
+[? if fltr_profit != 0 : **Gross Profit:** [+ fltr_profit +] ?]
+
+[? if em_source != 0 : **Energy/Money Source:** [+ em_source +] ?]
+
+[? if em_use != 0 : **Energy/Money Use:** [+ em_use +] ?]
+
+[? if sus_behaviour != 0 : **Sustainability - Behaviour:** [+ sus_behaviour +] ?]
+
+[? if sus_environment != 0 : **Sustainability - Environment:** [+ us_environment +] ?]
+
+[? if fltr_gut != 0 : **Gut Feel:** [+ fltr_gut +] ?]

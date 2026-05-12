@@ -1,0 +1,94 @@
+title: Continue
+subtitle: Describe your future resource base
+on-arrival: hctx_progress = 11 if hctx_progress < 11; info_last = "Future Resource Base" if info_future_rsc_base = 0; info_future_rsc_base = 1
+
+Me: [+ complement +]
+
+Facilyn: Now we look ahead: To sustain the support of your social resource base, how do you need to show up?
+
+Facilyn: Keep in mind that people judge you by your behaviour, not your slogans. 
+
+- #behavior_aspects
+
+@frbp_explanation
+title: I'm not sure
+max-visits: 1
+order: 21
+tags: behavior_aspects
+
+Me: I'm not sure.
+
+Facilyn: Think from the point of view of the people you named in your whole under management: customers, clients, suppliers, family, friends, anyone you rely on. For example, for clients whose loyalty you want to maintain, you might need to be honest, reliable, producing quality work.
+
+Facilyn: What other personal qualities must you demonstrate to maintain trust?
+
+Facilyn: And include how you treat each other as decision-makers, too.
+
+Out in the harbour, a forklift idles beside a pallet of supplies while its driver checks a weather alert, then tucks the phone away.
+
+- #behavior_aspects
+
+@frbp_honest_transparent
+title: Honest, attentive and respectful
+on-arrival: frb_people = "honest, attentive and respectful"
+go-to: 21_frb_environment
+tags: behavior_aspects
+
+Me: Honest, attentive and respectful
+
+@frbp_collaborative_supportive
+title: Collaborative, fair and generous
+on-arrival: frb_people = "collaborative, fair and generous"
+go-to: 21_frb_environment
+tags: behavior_aspects
+
+Me: Collaborative, fair and generous
+
+@frbp_professional_innovative
+title: Steady, skilful and dependable
+on-arrival: frb_people = "steady, skilful and dependable"
+go-to: 21_frb_environment
+tags: behavior_aspects
+
+Me: Steady, skilful and dependable
+
+@frbp_ethical_responsible
+title: Principled, responsible and consistent
+on-arrival: frb_people = "principled, responsible and consistent"
+go-to: 21_frb_environment
+tags: behavior_aspects
+
+Me: Principled, responsible and consistent
+
+@frbp_empathetic_trustworthy
+title: Empathetic, prepared and transparent
+on-arrival: frb_people = "empathetic, prepared and transparent"
+go-to: 21_frb_environment
+tags: behavior_aspects
+
+Me: Empathetic, prepared and transparent
+
+@frbp_adaptive_proactive
+title: Adaptable, practical and open-minded
+on-arrival: frb_people = "adaptable, practical and open-minded"
+go-to: 21_frb_environment
+tags: behavior_aspects
+
+Me: Adaptable, practical and open-minded
+
+@frbp_custom
+title: Custom answer
+order: 20
+tags: behavior_aspects
+
+Me: Custom answer
+
+{!<textarea class="textarea" data-quality="frb_people" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
+
+- @frbp_custom_answer: Save
+
+@frbp_custom_answer
+title: Save
+go-to: 21_frb_environment
+
+Me: [+ frb_people +]

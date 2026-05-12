@@ -1,0 +1,106 @@
+title: Legal Notice
+is-special: true
+new-page: true
+
+{!
+<article class="article" aria-labelledby="legal-top">
+  <div class="article-hero article-hero--wide">
+    <div class="article-hero-text">
+      <p class="article-kicker">Legal information</p>
+      <h1 id="legal-top">Legal notice and disclaimer</h1>
+      <p class="article-tagline">
+        General legal information.
+      </p>
+
+      <nav class="article-nav" aria-label="Legal notice navigation">
+        <ul class="article-nav-list">
+          <li><a class="article-nav-link" href="#legal-scope">Scope</a></li>
+          <li><a class="article-nav-link" href="#legal-disclaimer">Disclaimer</a></li>
+          <li><a class="article-nav-link" href="#legal-links">External links</a></li>
+          <li><a class="article-nav-link" href="#legal-changes">Changes</a></li>
+        </ul>
+      </nav>
+
+      <div class="article-actions">
+        <button class="article-btn article-btn-primary" type="button" onclick="dendryUI.dendryEngine.goToScene('1_home');" aria-label="Back to the homepage">
+          Back to home
+        </button>
+        <button class="article-btn article-btn-secondary" type="button" onclick="dendryUI.dendryEngine.goToScene('credits');" aria-label="Open the credits">
+          Credits
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-grid">
+    <div class="article-card article-card-wide" id="legal-scope" aria-labelledby="legal-scope-title">
+      <h2 id="legal-scope-title">Scope and legal notice</h2>
+      <p>
+        This website is operated as a non-commercial, non-journalistic informational project.
+        A formal provider notice is not required for this kind of website in most jurisdictions.
+      </p>
+    </div>
+
+    <div class="article-card article-card-wide" id="legal-disclaimer" aria-labelledby="legal-disclaimer-title">
+      <h2 id="legal-disclaimer-title">Disclaimer</h2>
+      <p>
+        The content of this website is provided for general information purposes only and does not constitute legal, medical, financial, or other professional advice.
+      </p>
+      <p>
+        All information has been compiled with care. However, no representation or warranty is made regarding the timeliness, accuracy, completeness, reliability, or suitability of the information provided.
+      </p>
+      <p>
+        The use of information from this website does not entitle the user to any specific result, outcome, or effect. Any action or decision taken on the basis of the information provided is the sole responsibility of the user.
+      </p>
+    </div>
+
+    <div class="article-card" id="legal-liability" aria-labelledby="legal-liability-title">
+      <h2 id="legal-liability-title">Liability</h2>
+      <p>
+        To the fullest extent permitted by applicable law, the operator accepts no liability for any direct, indirect, incidental, consequential, or other damage arising from the use or non-use of the information provided on this website.
+      </p>
+    </div>
+
+    <div class="article-card" id="legal-availability" aria-labelledby="legal-availability-title">
+      <h2 id="legal-availability-title">Availability</h2>
+      <p>
+        No guarantee is given that this website will be available at all times, without interruption, or free from technical errors or delays.
+      </p>
+    </div>
+
+    <div class="article-card" id="legal-links" aria-labelledby="legal-links-title">
+      <h2 id="legal-links-title">External links</h2>
+      <p>
+        This website may contain links to external websites over whose content the operator has no control. The respective provider or operator of those websites is solely responsible for their content.
+      </p>
+      <p>
+        The inclusion of a link does not imply endorsement, approval, partnership, or responsibility for the linked content, products, services, or viewpoints.
+      </p>
+    </div>
+
+    <div class="article-card" id="legal-third-party" aria-labelledby="legal-third-party-title">
+      <h2 id="legal-third-party-title">Third-party content</h2>
+      <p>
+        This disclaimer also applies to content published on this website by third parties, including comments, submissions, or forum-style contributions, where such features are available.
+      </p>
+    </div>
+
+    <div class="article-card article-card-wide" id="legal-changes" aria-labelledby="legal-changes-title">
+      <h2 id="legal-changes-title">Changes and severability</h2>
+      <p>
+        The operator may modify, supplement, delete, suspend, or discontinue this website or parts of it at any time without prior notice.
+      </p>
+      <p>
+        Should any individual provision of this notice be or become invalid, unlawful, or unenforceable, the validity of the remaining provisions remains unaffected to the extent permitted by applicable law.
+      </p>
+      <div class="article-actions article-actions-compact">
+        <a class="article-link-btn" href="#legal-top" aria-label="Back to the top of the legal notice">
+          Back to top
+        </a>
+      </div>
+    </div>
+  </div>
+</article>
+!}
+
+- @backSpecialScene: Back

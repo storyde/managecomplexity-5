@@ -1,0 +1,86 @@
+title: Priority
+on-arrival: progress = 18
+
+Facilyn: Now it gets personal. If there are things in your life same or more important than what we named so far, now is the time to put them in your quality of life statement.
+
+- #priority_aspects
+
+@qolp_priority_explanation
+title: Please explain a bit further
+max-visits: 1
+tags: priority_aspects
+
+Me: Please explain a bit further.
+
+Facilyn: This is your chance to capture anything else that is deeply important to you but hasn't fit into the other categories. Things like health, education, leisure, culture, or specific personal values.
+
+- #priority_aspects
+
+# Priority - All
+
+@qolp_health_education
+title: Enjoying good health and education
+on-arrival: qol-priority = "Enjoying good health and education"
+go-to: 18_frb_intro
+tags: priority_aspects
+
+Me: Enjoying good health and education.
+
+@qolp_balance_leisure
+title: Living a balanced life with time for leisure
+on-arrival: qol-priority = "Living a balanced life with time for leisure"
+go-to: 18_frb_intro
+tags: priority_aspects
+
+Me: Living a balanced life with time for leisure.
+
+# Priority - Individual
+
+@qolp_family_friends
+title: Spending quality time with family and friends
+view-if: part-of = "individual"
+on-arrival: qol-priority = "Spending quality time with family and friends"
+go-to: 18_frb_intro
+tags: priority_aspects
+
+Me: Spending quality time with family and friends.
+
+@qolp_cultural_pursuits
+title: Engaging in cultural and artistic pursuits
+view-if: part-of = "individual"
+on-arrival: qol-priority = "Engaging in cultural and artistic pursuits"
+go-to: 18_frb_intro
+tags: priority_aspects
+
+Me: Engaging in cultural and artistic pursuits.
+
+# Priority - Group
+
+@qolp_community_wellbeing
+title: Fostering the wellbeing of our community
+view-if: part-of = "group"
+on-arrival: qol-priority = "Fostering the wellbeing of our community"
+go-to: 18_frb_intro
+tags: priority_aspects
+
+Me: Fostering the wellbeing of our community.
+
+# Priority - Organisation
+
+@qolp_employee_wellbeing
+title: Ensuring the health and wellbeing of all members
+view-if: part-of = "org"
+on-arrival: qol-priority = "Ensuring the health and wellbeing of all members"
+go-to: 18_frb_intro
+tags: priority_aspects
+
+Me: Ensuring the health and wellbeing of all members.
+
+@qolp_social_responsibility
+title: Acting with social responsibility and ethical standards
+view-if: part-of = "org"
+on-arrival: qol-priority = "Acting with social responsibility and ethical standards"
+go-to: 18_frb_intro
+tags: priority_aspects
+
+Me: Acting with social responsibility and ethical standards.

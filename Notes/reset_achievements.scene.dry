@@ -1,0 +1,11 @@
+title: Reset achievements
+subtitle: Clears stored achievements 
+on-arrival: achievement_first_landing = 0; achievement_tea_companion = 0; achievement_holtext_created = 0; achievement_filter_navigator = 0; achievement_framework_finished = 0; achievement_weak_link_spotter = 0; achievement_test_achievement = 0; game_achievement_first_landing = 0; game_achievement_tea_companion = 0; game_achievement_holtext_created = 0; game_achievement_filter_navigator = 0; game_achievement_framework_finished = 0; game_achievement_weak_link_spotter = 0; game_achievement_test_achievement = 0; achvm_last = 0; {! this.state.achievements = {}; if (typeof localStorage !== 'undefined') { localStorage[this.game.title + '_achievements'] = JSON.stringify(this.state.achievements); } !}
+is-special: true
+new-page: true
+
+= Achievements 
+
+Your achievements have been reset.
+
+- @backSpecialScene: Back

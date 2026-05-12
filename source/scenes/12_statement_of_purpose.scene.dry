@@ -1,0 +1,296 @@
+title: Statement of Purpose
+subtitle: Defining what our organisation provides
+on-arrival: hctx_progress = 4 if hctx_progress < 4; info_last = "Stating our purpose" if info_stmt_purpose = 0; info_stmt_purpose = 1
+
+Facilyn: Next, we need your organisation’s Statement of Purpose.
+
+Facilyn: In plain words — what is your organisation here to do?
+
+- #stmt_of_purpose
+
+@stmp_explanation
+title: I am not how to formulate this.
+max-visits: 1
+order: 21
+tags: stmt_of_purpose
+
+Me: I am not how to formulate this.
+
+Facilyn: A Statement of Purpose captures the positive change your organisation creates. It's the "why" behind everything you do.
+
+Facilyn: For example, a hospital’s purpose isn’t “to make money from sick people.” It’s closer to: “to heal and restore health.”
+
+Facilyn: Which purpose fits your organisation best?
+
+Out in the harbour, a cargo drone hovers above the docks, job done, purpose pending.
+
+- #stmt_of_purpose
+
+# Statement of Purpose
+
+# Agriculture
+
+@stmp_agr_farm
+title: Growing food that keeps communities fed and well
+view-if: sector = "agriculture"
+on-arrival: st_purpose = "growing food that keeps communities fed and well"
+go-to: 13_qol_intro
+tags: stmt_of_purpose
+
+Me: Growing food that keeps communities fed and well
+
+@stmp_agr_coop
+title: Backing farmers and strengthening rural communities
+view-if: sector = "agriculture"
+on-arrival: st_purpose = "backing farmers and strengthening rural communities"
+go-to: 13_qol_intro
+tags: stmt_of_purpose
+
+Me: Backing farmers and strengthening rural communities
+
+@stmp_agr_ranch
+title: Tending land so future generations can thrive
+view-if: sector = "agriculture"
+on-arrival: st_purpose = "tending land so future generations can thrive"
+go-to: 13_qol_intro
+tags: stmt_of_purpose
+
+Me: Tending land so future generations can thrive
+
+# Business
+
+@stmp_bus_store
+title: Making daily life easier, steadier and more dependable
+view-if: sector = "business"
+on-arrival: st_purpose = "making daily life easier, steadier and more dependable"
+go-to: 13_qol_intro
+tags: stmt_of_purpose
+
+Me: Making daily life easier, steadier and more dependable
+
+@stmp_bus_insurance
+title: Helping people and organisations weather financial risk with confidence
+view-if: sector = "business"
+on-arrival: st_purpose = "helping people and organisations weather financial risk with confidence"
+go-to: 13_qol_intro
+tags: stmt_of_purpose
+
+Me: Helping people and organisations weather financial risk with confidence
+
+@stmp_bus_hospitality
+title: Creating welcoming places and experiences for travellers
+view-if: sector = "business"
+on-arrival: st_purpose = "creating welcoming places and experiences for travellers"
+go-to: 13_qol_intro
+tags: stmt_of_purpose
+
+Me: Creating welcoming places and experiences for travellers
+
+@stmp_bus_company
+title: Crafting useful services and products people can truly rely on
+view-if: sector = "business"
+on-arrival: st_purpose = "crafting useful services and products people can truly rely on"
+go-to: 13_qol_intro
+tags: stmt_of_purpose
+
+Me: Crafting useful services and products people can truly rely on
+
+# Culture
+
+@stmp_cul_arts
+title: Keeping culture, expression and creativity alive
+view-if: sector = "culture"
+on-arrival: st_purpose = "keeping culture, expression and creativity alive"
+go-to: 13_qol_intro
+tags: stmt_of_purpose
+
+Me: Keeping culture, expression and creativity alive
+
+@stmp_cul_heritage
+title: Preserving and sharing cultural heritage with care
+view-if: sector = "culture"
+on-arrival: st_purpose = "preserving and sharing cultural heritage with care"
+go-to: 13_qol_intro
+tags: stmt_of_purpose
+
+Me: Preserving and sharing cultural heritage with care
+
+@stmp_cul_newsroom
+title: Keeping the public informed through accurate, independent reporting
+view-if: sector = "culture"
+on-arrival: st_purpose = "keeping the public informed through accurate, independent reporting"
+go-to: 13_qol_intro
+tags: stmt_of_purpose
+
+Me: Keeping the public informed through accurate, independent reporting
+
+# Education
+
+@stmp_edu_kindergarten
+title: Creating a safe, nurturing place where young children learn and grow
+view-if: sector = "education"
+on-arrival: st_purpose = "creating a safe, nurturing place where young children learn and grow"
+go-to: 13_qol_intro
+tags: stmt_of_purpose
+
+Me: Creating a safe, nurturing place where young children learn and grow
+
+@stmp_edu_school
+title: Helping students grow, learn and step into their future with confidence
+view-if: sector = "education"
+on-arrival: st_purpose = "helping students grow, learn and step into their future with confidence"
+go-to: 13_qol_intro
+tags: stmt_of_purpose
+
+Me: Helping students grow, learn and step into their future with confidence
+
+@stmp_edu_university
+title: Advancing knowledge through research and preparing thoughtful leaders
+view-if: sector = "education"
+on-arrival: st_purpose = "advancing knowledge through research and preparing thoughtful leaders"
+go-to: 13_qol_intro
+tags: stmt_of_purpose
+
+Me: Advancing knowledge through research and preparing thoughtful leaders
+
+# Industry
+
+@stmp_ind_factory
+title: Making useful products that earn a place in everyday life
+view-if: sector = "industry"
+on-arrival: st_purpose = "making useful products that earn a place in everyday life"
+go-to: 13_qol_intro
+tags: stmt_of_purpose
+
+Me: Making useful products that earn a place in everyday life
+
+@stmp_ind_construction
+title: Building safe, lasting structures and infrastructure communities can depend on
+view-if: sector = "industry"
+on-arrival: st_purpose = "building safe, lasting structures and infrastructure communities can depend on"
+go-to: 13_qol_intro
+tags: stmt_of_purpose
+
+Me: Building safe, lasting structures and infrastructure communities can depend on
+
+@stmp_ind_logging
+title: Providing timber in ways that care for land and long-term need
+view-if: sector = "industry"
+on-arrival: st_purpose = "providing timber in ways that care for land and long-term need"
+go-to: 13_qol_intro
+tags: stmt_of_purpose
+
+Me: Providing timber in ways that care for land and long-term need
+
+# Nonprofit
+
+@stmp_nonprofit_service
+title: Meeting community needs and standing with people through hardship
+view-if: sector = "nonprofit"
+on-arrival: st_purpose = "meeting community needs and standing with people through hardship"
+go-to: 13_qol_intro
+tags: stmt_of_purpose
+
+Me: Meeting community needs and standing with people through hardship
+
+@stmp_nonprofit_advocacy
+title: Standing up for dignity, fairness and social justice
+view-if: sector = "nonprofit"
+on-arrival: st_purpose = "standing up for dignity, fairness and social justice"
+go-to: 13_qol_intro
+tags: stmt_of_purpose
+
+Me: Standing up for dignity, fairness and social justice
+
+@stmp_nonprofit_climate
+title: Protecting the living world and responding to climate change
+view-if: sector = "nonprofit"
+on-arrival: st_purpose = "protecting the living world and responding to climate change"
+go-to: 13_qol_intro
+tags: stmt_of_purpose
+
+Me: Protecting the living world and responding to climate change
+
+# Public service
+
+@stmp_pub_transport
+title: Keeping communities connected through safe, accessible transport
+view-if: sector = "publicservice"
+on-arrival: st_purpose = "keeping communities connected through safe, accessible transport"
+go-to: 13_qol_intro
+tags: stmt_of_purpose
+
+Me: Keeping communities connected through safe, accessible transport
+
+@stmp_pub_health
+title: Healing, preventing illness and helping people recover well
+view-if: sector = "publicservice"
+on-arrival: st_purpose = "healing, preventing illness and helping people recover well"
+go-to: 13_qol_intro
+tags: stmt_of_purpose
+
+Me: Healing, preventing illness and helping people recover well
+
+@stmp_pub_service
+title: Serving the public interest with care for the common good
+view-if: sector = "publicservice"
+on-arrival: st_purpose = "serving the public interest with care for the common good"
+go-to: 13_qol_intro
+tags: stmt_of_purpose
+
+Me: Serving the public interest with care for the common good
+
+@stmp_pub_parks
+title: Protecting and sharing natural heritage for generations to come
+view-if: sector = "publicservice"
+on-arrival: st_purpose = "protecting and sharing natural heritage for generations to come"
+go-to: 13_qol_intro
+tags: stmt_of_purpose
+
+Me: Protecting and sharing natural heritage for generations to come
+
+# Policymaking
+
+@stmp_pol_policy
+title: Representing citizens and shaping policy that serves the common good
+view-if: sector = "policymaking"
+on-arrival: st_purpose = "representing citizens and shaping policy that serves the common good"
+go-to: 13_qol_intro
+tags: stmt_of_purpose
+
+Me: Representing citizens and shaping policy that serves the common good
+
+@stmp_pol_city
+title: Caring for local communities through good governance and dependable municipal services
+view-if: sector = "policymaking"
+on-arrival: st_purpose = "caring for local communities through good governance and dependable municipal services"
+go-to: 13_qol_intro
+tags: stmt_of_purpose
+
+Me: Caring for local communities through good governance and dependable municipal services
+
+@stmp_pol_intl
+title: Building cooperation across borders through diplomacy
+view-if: sector = "policymaking"
+on-arrival: st_purpose = "building cooperation across borders through diplomacy"
+go-to: 13_qol_intro
+tags: stmt_of_purpose
+
+Me: Building cooperation across borders through diplomacy
+
+@stmp_custom
+title: Custom answer
+order: 20
+tags: stmt_of_purpose
+
+Me: Custom answer
+
+{!<textarea class="textarea" data-quality="st_purpose" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
+
+- @stmp_custom_answer: Save
+
+@stmp_custom_answer
+title: Save
+go-to: 13_qol_intro
+
+Me: [+ st_purpose +]

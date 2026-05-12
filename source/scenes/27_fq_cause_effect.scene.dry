@@ -1,0 +1,58 @@
+title: Cause and Effect Check
+subtitle: Addressing Root Causes
+on-arrival: display_fltr = 1; info_last = "Seven Checks" if info_filters = 0; info_filters = 1
+
+Facilyn: The first check helps you avoid treating symptoms while the real cause keeps doing its work.
+
+Facilyn: It asks: "Does this action address the root cause of the problem?"
+
+- #cause_effect
+
+@fqce_explanation
+title: I need help distinguishing cause from symptom
+on-display: info_last = "Cause and Effect" if info_cause_effect = 0; info_cause_effect = 1
+max-visits: 1
+order: 21
+tags: cause_effect
+
+Me: I need help distinguishing cause from symptom.
+
+Facilyn: Symptoms are what you notice. Causes are what produce them.
+
+Facilyn: If machines keep failing, the symptom is “broken machines.” The cause might be maintenance, training, worn parts — or a workflow that makes careful work impossible.
+
+Facilyn: Once you spot a cause, ask again: “And what causes that?” A few rounds usually gets you closer to the root.
+
+Someone outside tightens a loose sign bracket. The sign stops rattling for a moment — then the wind finds the next weak screw.
+
+- #cause_effect
+
+@fqce_pass
+title: Yes, it addresses the root cause
+on-arrival: fltr_cause = "Passed"
+go-to: 34_fq_result if filtered = 1; 28_fq_weak_link
+tags: cause_effect
+
+Me: Yes, it addresses the root cause.
+
+Facilyn: Good. You’re aiming at the root, not just the visible symptoms.
+
+@fqce_fail
+title: No, it only treats symptoms
+on-arrival: fltr_cause = "Failed"
+go-to: 34_fq_result if filtered = 1; 28_fq_weak_link
+tags: cause_effect
+
+Me: No, it only treats symptoms.
+
+Facilyn: That matters. Treating symptoms can buy time, but the problem usually returns. Consider what would address the deeper cause.
+
+@fqce_skip
+title: Not sure, let me review this check later
+on-arrival: fltr_cause = "Skipped"
+go-to: 34_fq_result if filtered = 1; 28_fq_weak_link
+tags: cause_effect
+
+Me: Not sure, let me review this check later.
+
+Facilyn: If you reach the end and still don’t have clarity, you can circle back. 

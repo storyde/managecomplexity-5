@@ -1,0 +1,414 @@
+title: Making our organisation profitable
+on-arrival: example_type = "Making our organisation profitable"
+new-page: true
+tags: choose_prblm
+
+Me: [+ prblm_type +]
+
+Behind the counter, a woman is sorting three small piles of paper with the care of someone handling sharp things. A supplier invoice. A staff wage sheet. A loan reminder glowing faintly on a cracked tablet.
+
+The teahouse is busy enough to look like success. Cups pass from hand to hand. Steam curls from kettles. In the back alcove, amber lamps are being turned low for the evening salon.
+
+But the woman behind the counter does not look successful. She looks cornered.
+
+Facilyn follows your gaze.
+
+Facilyn: Then we should not talk about profit in the abstract.
+
+The woman looks up.
+
+Facilyn: Dinara owns the teahouse.
+
+Dinara: Which is a poetic way of saying the bills know where I sleep.
+
+Facilyn: Good. Ask her.
+
+- #profit_arrival
+
+@profit_ask_problem
+title: Ask what is wrong
+tags: profit_arrival, profit_main
+max-visits: 1
+
+Me: What is wrong?
+
+Dinara lifts the wage sheet, then the supplier invoice, then taps the tablet.
+
+Dinara: If I am careful, I can pay the staff on time and keep the tea supplier patient.
+
+She taps the tablet once.
+
+Dinara: If I am less careful, I can also meet the loan payment without feeling personally mocked by arithmetic.
+
+Dinara: The harbour thinks this place is thriving.
+
+She flicks the wage sheet with one finger.
+
+Dinara: I appear to be running a fashionable way to become poor.
+
+- #profit_main
+
+@profit_ask_busy
+title: Ask how a full teahouse can still struggle
+tags: profit_arrival, profit_main
+max-visits: 1
+
+Me: This place looks full. How can it be struggling?
+
+Dinara gives a short laugh.
+
+Dinara: From the doorway it looks like prosperity.
+
+She gestures around the room.
+
+Dinara: From behind the counter it looks like wages, energy, spoilage, late tabs, and guests who stay three hours over one pot and call it atmosphere.
+
+Facilyn: A good distinction. Full is not the same as financially sound.
+
+- #profit_main
+
+@profit_ask_dinara
+title: Ask how long she has been dealing with this
+tags: profit_arrival, profit_main
+max-visits: 1
+
+Me: Has it been this bad for long?
+
+Dinara closes the tablet with one finger.
+
+Dinara: Not at first.
+
+Dinara: At first it was one difficult season. Then one loan to smooth the timing. Then one new offering that would surely bring in better margins. Then one more.
+
+Dinara: You can drift into trouble very respectably if you call every extra cost an investment in identity.
+
+- #profit_main
+
+@profit_ask_debt
+title: Ask whether the debt is the real problem
+tags: profit_arrival, profit_main
+max-visits: 1
+
+Me: Is the debt the real problem?
+
+Dinara: Debt is the part that sends messages in a polite font.
+
+Dinara: It is pressure. It is timing. It is humiliation with a due date.
+
+Facilyn: But pressure is not always cause.
+
+Facilyn: Sometimes it merely reveals the weakness already there.
+
+- #profit_main
+
+@profit_ask_salon
+title: Ask about the salon in the back
+tags: profit_arrival, profit_main
+max-visits: 1
+
+Me: What happens in the back alcove?
+
+Dinara glances toward the softly lit corner where people are settling onto cushions.
+
+Dinara: The evening salon.
+
+Dinara: Readings, music, conversation, long tastings, visiting speakers when I can afford them. It is why half the harbour loves this place.
+
+A pause.
+
+She watches a server straighten the cloth on a low table in the alcove.
+
+Dinara: It is also why I know exactly how expensive love can become.
+
+- #profit_main
+
+@profit_ask_root
+title: Ask what is really making the teahouse unprofitable
+tags: profit_main, profit_deeper_salon, profit_deeper_costs, profit_deeper_cash, profit_deeper_identity
+max-visits: 1
+
+Me: Then what is really making this teahouse unprofitable?
+
+Dinara lays the supplier invoice over the wage sheet, then the tablet over both.
+
+Dinara: We keep behaving as though next month will rescue this month.
+
+Dinara: So I add one more refined tea, one more elaborate sweet, one more salon night, one more small kindness to the room. I tell myself the fuller calendar will pay for the fuller costs.
+
+Dinara: Instead, the place gets more admired, more complicated, and less forgiving.
+
+Facilyn: That is close.
+
+Facilyn: Let me sharpen it.
+
+Facilyn: The deepest problem is not simply low income, high costs, or debt. It is that Dinara is making decisions from busyness, sentiment, and hoped-for income, without first knowing clearly which parts of the teahouse truly carry the overhead, which merely maintain it, and which quietly weaken it.
+
+Facilyn: In such a state, debt grows naturally. Unprofitability is not an accident. It is the expected result.
+
+- #profit_after_root
+
+@profit_ask_more_sales
+title: Ask why more customers are not enough
+tags: profit_main, profit_after_root
+max-visits: 1
+
+Me: If the room is full, why are more customers not enough?
+
+Dinara: Because a full room can still be badly used.
+
+Dinara: Some people order one thing and stay all evening. Some salon nights need more staff, more dishes, more cleaning, more cooling, more preparation.
+
+She lifts one shoulder.
+
+Dinara: Admiration is not a payment method.
+
+Facilyn: Exactly. Turnover, foot traffic, and affection are not the same as contribution.
+
+- #profit_deeper_costs
+
+@profit_deeper_plan_profit
+title: Ask why planning for profit would help
+tags: profit_deeper_costs
+max-visits: 1
+
+Me: Why would planning for profit help here?
+
+Facilyn: Because profit planned first becomes a discipline.
+
+Facilyn: It forces you to decide what this teahouse must keep as real profit before expenses expand to consume every hopeful coin.
+
+Facilyn: Without that discipline, every attractive idea finds room in the budget until reality closes the room again.
+
+Dinara: Which is another way of saying I have been planning beauty first and profit second, then acting surprised when profit feels personally slighted.
+
+- #profit_deeper_costs
+
+@profit_deeper_maintenance
+title: Ask whether every expense here is equally important
+tags: profit_deeper_costs
+max-visits: 1
+
+Me: Are all these expenses equally important?
+
+Facilyn: No.
+
+Facilyn: Some expenses merely keep the present shape of the teahouse going. Others would strengthen the business if they addressed the real weak point.
+
+Facilyn: If Dinara treats all expenses as sacred because each has a story attached to it, maintenance will quietly eat the future.
+
+Dinara: Which is exactly what a beloved place teaches you to do if you are not careful. Every cost arrives wearing the face of character.
+
+- #profit_deeper_costs
+
+@profit_ask_salon_deeper
+title: Ask why the salon might be hurting the business
+tags: profit_main, profit_after_root
+max-visits: 1
+
+Me: Why might the salon be hurting the business?
+
+Dinara looks toward the alcove again. A server carries in a tray of tiny glasses and sugared slices.
+
+Dinara: Because it feels like the soul of the place.
+
+Dinara: People linger. They praise it. They bring friends. They call the teahouse unforgettable.
+
+Dinara: But the salon keeps the room occupied for hours, requires extra preparation, draws more delicate stock, and tempts me to underprice the evening because I want the room full and the mood generous.
+
+From the alcove comes the first test note of a string instrument, soft as if the room itself were clearing its throat.
+
+Facilyn: In other words, a beloved enterprise may still be weak in contribution.
+
+Facilyn: That is exactly where gross profit thinking becomes useful. Not to destroy beauty, but to see clearly what beauty costs and what it actually returns.
+
+- #profit_deeper_salon
+
+@profit_deeper_gross_profit
+title: Ask what gross profit would show here
+tags: profit_deeper_salon
+max-visits: 1
+
+Me: What would gross profit show in a place like this?
+
+Facilyn: It would separate direct costs from fixed costs and ask which parts of the teahouse actually contribute most toward covering the overhead of the whole.
+
+Facilyn: It might reveal that one offering looks impressive, fills the room, and carries the identity of the business, but contributes surprisingly little once its direct costs are honestly counted.
+
+Dinara: Which would be an insulting but useful thing to know before I borrow money to preserve it.
+
+- #profit_deeper_salon
+
+@profit_deeper_identity
+title: Ask whether cutting a beloved feature would betray the teahouse
+tags: profit_deeper_salon
+max-visits: 1
+
+Me: Would cutting something beloved not betray the teahouse?
+
+Dinara's expression tightens.
+
+Dinara: That is exactly the thought that keeps expensive habits alive.
+
+Facilyn: No one has said cut.
+
+Facilyn: The point is to see clearly. Once you see clearly, many possible actions appear. Redesign. Reprice. Reduce frequency. Simplify. Shift emphasis. Or yes, stop.
+
+Facilyn: But until you see clearly, sentiment makes the decision in secret.
+
+Dinara: I would prefer not to be outmaneuvered by my own lanterns, cushions, and better instincts.
+
+- #profit_deeper_salon
+
+@profit_ask_cash
+title: Ask where the cash disappears first
+tags: profit_main, profit_after_root
+max-visits: 1
+
+Me: Where does the cash disappear first?
+
+Dinara counts on her fingers.
+
+Dinara: Stock that sits too long. Delicate things that spoil. Energy for cooling and late evenings. Small purchases made too often. Credit extended because I am tired and people are persuasive.
+
+Dinara: And then the loan payment arrives with the moral authority of mathematics.
+
+Facilyn: Cash flow strain is useful in one sense. It forces honesty about timing.
+
+Facilyn: A business can look profitable in the broad yearly story and still be pushed into unnecessary borrowing by badly timed expenses, late receipts, or too much money tied up in complexity.
+
+- #profit_deeper_cash
+
+@profit_deeper_cashflow
+title: Ask why timing matters so much
+tags: profit_deeper_cash
+max-visits: 1
+
+Me: Why does the timing matter so much if the whole year might still work?
+
+Dinara: Because suppliers, staff, and lenders refuse to be paid in annual averages.
+
+Facilyn: Exactly.
+
+Facilyn: Cash reality is monthly, sometimes weekly. If money arrives too late, even a plausible year can become a painful season of borrowing.
+
+Facilyn: This is why sound planning does not stop at totals. It asks when income comes, when expenses land, and whether the business can survive the gap without leaning harder on paper promises.
+
+- #profit_deeper_cash
+
+@profit_deeper_late_tabs
+title: Ask whether kindness and late tabs are part of the problem
+tags: profit_deeper_cash
+max-visits: 1
+
+Me: Are the late tabs part of the problem, then?
+
+Dinara: They are part of the story.
+
+Dinara: Not the whole story. But enough kind delays turn into one unkind month.
+
+Facilyn: Mercy is not the enemy. Vagueness is.
+
+Facilyn: If she does not know clearly which credit extended is deliberate and affordable, and which is merely drift, then she is not managing kindness. She is financing confusion.
+
+- #profit_deeper_cash
+
+@profit_ask_weak_link
+title: Ask what the weak link in this business might be
+tags: profit_main, profit_after_root
+max-visits: 1
+
+Me: Then what might the weak link in this business be?
+
+Dinara: That depends on which failure you mean.
+
+Facilyn nods slowly.
+
+Facilyn: In a business like this, the weakest link is often one of three things.
+
+Facilyn: Too much effort and stock may be going into offerings that do not return enough. Or the service may be designed beautifully but priced poorly. Or the money may be earned in principle and collected too late in practice.
+
+Facilyn: Resource conversion, product conversion, money conversion. If she spends heavily anywhere except the weakest of those, she can remain industrious and still fail to become more profitable.
+
+- #profit_deeper_identity
+
+@profit_deeper_next_dollar
+title: Ask where the next scarce dollar should go
+tags: profit_deeper_identity
+max-visits: 1
+
+Me: If money is scarce, where should the next dollar go?
+
+Facilyn: To the place where it has the greatest marginal reaction toward your goal.
+
+Facilyn: Not to the loudest cost. Not to the most charming tradition. Not to the latest anxiety.
+
+Facilyn: It goes where it moves the whole teahouse furthest toward what Dinara actually wants this business to be: secure, alive, and capable of serving people without eating itself.
+
+Dinara: Scarcity is cruel, but it is also clarifying.
+
+- #profit_deeper_identity
+
+@profit_ask_identity
+title: Ask what Dinara cannot bring herself to change
+tags: profit_main, profit_after_root
+max-visits: 1
+
+Me: What can you not bring yourself to change?
+
+Dinara does not answer at once.
+
+At last she glances toward the salon again.
+
+Dinara: I do not want this place to become efficient in the dead way.
+
+Dinara: I do not want to strip it down until it is merely hot water and transactions.
+
+Dinara: People come here because it feels like one of the last human rooms in the harbour.
+
+Facilyn: Good.
+
+Facilyn: That means the question is not whether to keep a soul. It is whether the present form of that soul is financially honest.
+
+- #profit_deeper_identity
+
+@profit_ask_facilyn_hint
+title: Ask whether Facilyn already sees possible directions
+tags: profit_main, profit_after_root, profit_deeper_salon, profit_deeper_costs, profit_deeper_cash, profit_deeper_identity
+max-visits: 1
+
+Me: You sound as though you already see a few possible directions.
+
+Facilyn: I do.
+
+Facilyn: Not one answer. Several possible directions.
+
+Facilyn: Simplify the menu or stock. Redesign the salon so admiration and contribution are not enemies. Reprice what is underpriced. Tighten credit and timing. Distinguish what truly carries the teahouse from what merely flatters it. Plan profit before promising the room away.
+
+Facilyn: Those are not conclusions. They are candidate actions.
+
+Dinara: Which is more helpful than sympathy and distinctly less soothing.
+
+Facilyn: Good.
+
+Facilyn: You should feel several possible actions beginning to form. But do not marry any of them yet.
+
+- #profit_after_root
+
+@profit_to_filters
+title: I understand the problem better. Let me test a possible action.
+tags: profit_main, profit_after_root, profit_deeper_salon, profit_deeper_costs, profit_deeper_cash, profit_deeper_identity
+go-to: 27_fq_cause_effect
+
+Me: I understand the problem better. Let me test a possible action.
+
+Dinara squares the invoices into one neat stack, but does not put them away.
+
+Dinara: Good.
+
+Dinara: If you come back with an action that helps this place breathe without turning it into a machine, I will listen.
+
+Facilyn: Good.
+
+Facilyn: Then begin where sound financial planning must begin.
+
+Facilyn: Does your proposed action address the root cause of unprofitability, or only the pressure it creates?

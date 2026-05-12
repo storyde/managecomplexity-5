@@ -1,0 +1,82 @@
+title: Test
+subtitle: Just a test choice
+is-special: true
+new-page: true
+
+= Test
+
+AI text improver test:
+
+- @ai_test: Test ai
+
+@ai_test
+title: Test ai
+
+Me: Test ai
+
+{!<textarea id="ai-textarea" class="textarea" data-quality="ai_text" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);">!}[+ ai_text +]{!</textarea>!}
+
+
+- @ai_answer: Save
+
+@ai_answer
+title: Get answer
+on-arrival: {! setTimeout(async function () {
+  var statusElement = document.getElementById("ai-status");
+  var outputElement = document.getElementById("ai-output");
+  var reviewElement = document.getElementById("ai-review");
+  var sourceText = Q.ai_text || "";
+  if (!sourceText) {
+    statusElement.textContent = "Please enter some text first.";
+    return;
+  }
+  statusElement.textContent = "Improving text...";
+  outputElement.textContent = sourceText;
+  reviewElement.textContent = "Reviewing text...";
+  try {
+    var response = await fetch("/api/improve-text", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ text: sourceText })
+    });
+    var responseBody = await response.json();
+    if (!response.ok) throw new Error(responseBody.error || "Ai did not respond.");
+    Q.ai_text = responseBody.improvedText || sourceText;
+    Q.ai_review = responseBody.review || "";
+    outputElement.textContent = Q.ai_text;
+    reviewElement.textContent = Q.ai_review ? "Review: " + Q.ai_review : "";
+    statusElement.textContent = "Text improved.";
+  } catch (error) {
+    statusElement.textContent = error.message || "Unable to improve the text right now.";
+    reviewElement.textContent = "Unable to review your text right now.";
+  }
+}, 0); !}
+
+RoboDisplay: {!<div id="ai-status" aria-live="polite"></div>!}
+
+Paper: {!<div id="ai-output" style="white-space: pre-wrap;">!}[+ ai_text +]{!</div>!}
+
+RoboDisplay: {!<div id="ai-review" aria-live="polite">!}[+ ai_review +]{!</div>!}
+
+
+<h2>Scene shortcuts</h2>
+
+Qualities will be missing using these links
+
+In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('33_framework_outro'); return false;">Scene Outro</a>!}
+
+In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('5_wum_intro');">5_wum_intro</a>!}
+
+In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('13_qol_intro');">13_qol_intro</a>!}
+
+In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('20_frb_people');">20_frb_people</a>!}
+
+In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('22_holtext');">22_holtext</a>!}
+
+In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('23_fq_intro');">23_fq_intro</a>!}
+
+In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('31_fq_results');">31_fq_results</a>!}
+
+In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('33_framework_outro');">33_framework_outro</a>!}
+
+- @backSpecialScene: Back

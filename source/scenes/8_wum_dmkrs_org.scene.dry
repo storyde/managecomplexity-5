@@ -1,0 +1,226 @@
+title: Define decision-makers
+on-arrival: info_last = "Decision Makers" if info_decision_makers = 0; info_decision_makers = 1; display_jrny = 0; display_hctx = 1
+
+Facilyn: Nice.
+
+Facilyn: So—let’s name the decision-makers. Who makes decisions in your organisation, or is expected to carry them out? And does anyone else have veto power?
+
+Facilyn: Try to be inclusive rather than exclusive. 
+
+- #decision_mkrs
+
+# Agriculture
+
+@dmkrs_agr_farm
+title: Farm owners, farm managers and staff.
+view-if: sector = "agriculture"
+on-arrival: decision_makers = "Farm owners, farm managers and staff."
+go-to: dmkrs_org_answer
+tags: decision_mkrs
+
+@dmkrs_agr_coop
+title: Cooperative members, staff and board of directors.
+view-if: sector = "agriculture"
+on-arrival: decision_makers = "Cooperative members, staff and board of directors."
+go-to: dmkrs_org_answer
+tags: decision_mkrs
+
+@dmkrs_agr_ranch
+title: Ranch owners, ranch managers and staff.
+view-if: sector = "agriculture"
+on-arrival: decision_makers = "Ranch owners, ranch managers and staff."
+go-to: dmkrs_org_answer
+tags: decision_mkrs
+
+# Business
+
+@dmkrs_bus_store
+title: Store owners, managers and staff.
+view-if: sector = "business"
+on-arrival: decision_makers = "Store owners, managers and staff."
+go-to: dmkrs_org_answer
+tags: decision_mkrs
+
+@dmkrs_bus_insurance
+title: Insurance executives, underwriters and staff.
+view-if: sector = "business"
+on-arrival: decision_makers = "Insurance executives, underwriters and staff."
+go-to: dmkrs_org_answer
+tags: decision_mkrs
+
+@dmkrs_bus_hospitality
+title: Hotel owners, managers and staff.
+view-if: sector = "business"
+on-arrival: decision_makers = "Hotel owners, managers and staff."
+go-to: dmkrs_org_answer
+tags: decision_mkrs
+
+@dmkrs_bus_company
+title: Company owners, managers and staff.
+view-if: sector = "business"
+on-arrival: decision_makers = "Company owners, managers and staff."
+go-to: dmkrs_org_answer
+tags: decision_mkrs
+
+# Culture
+
+@dmkrs_cul_arts
+title: Arts directors, curators and staff.
+view-if: sector = "culture"
+on-arrival: decision_makers = "Arts directors, curators and staff."
+go-to: dmkrs_org_answer
+tags: decision_mkrs
+
+@dmkrs_cul_heritage
+title: Heritage conservators, board members and staff.
+view-if: sector = "culture"
+on-arrival: decision_makers = "Heritage conservators, board members and staff."
+go-to: dmkrs_org_answer
+tags: decision_mkrs
+
+@dmkrs_cul_newsroom
+title: Media board members, editors and journalists.
+view-if: sector = "culture"
+on-arrival: decision_makers = "Media board members, editors and journalists."
+go-to: dmkrs_org_answer
+tags: decision_mkrs
+
+# Education
+
+@dmkrs_edu_kindergarten
+title: Kindergarten teachers and administrators.
+view-if: sector = "education"
+on-arrival: decision_makers = "Kindergarten teachers and administrators."
+go-to: dmkrs_org_answer
+tags: decision_mkrs
+
+@dmkrs_edu_school
+title: School administrators, teachers and the ministry of education.
+view-if: sector = "education"
+on-arrival: decision_makers = "School administrators, teachers and the ministry of education."
+go-to: dmkrs_org_answer
+tags: decision_mkrs
+
+@dmkrs_edu_university
+title: University faculty and administration.
+view-if: sector = "education"
+on-arrival: decision_makers = "University faculty and administration."
+go-to: dmkrs_org_answer
+tags: decision_mkrs
+
+# Industry
+
+@dmkrs_ind_factory
+title: Factory managers, production supervisors and staff.
+view-if: sector = "industry"
+on-arrival: decision_makers = "Factory managers, production supervisors and staff."
+go-to: dmkrs_org_answer
+tags: decision_mkrs
+
+@dmkrs_ind_construction
+title: Construction managers, project supervisors and staff.
+view-if: sector = "industry"
+on-arrival: decision_makers = "Construction managers, project supervisors and staff."
+go-to: dmkrs_org_answer
+tags: decision_mkrs
+
+@dmkrs_ind_logging
+title: Logging supervisors, forest managers and staff.
+view-if: sector = "industry"
+on-arrival: decision_makers = "Logging supervisors, forest managers and staff."
+go-to: dmkrs_org_answer
+tags: decision_mkrs
+
+# Nonprofit
+
+@dmkrs_nonprofit_service
+title: Service coordinators, board members and staff.
+view-if: sector = "nonprofit"
+on-arrival: decision_makers = "Service coordinators, board members and staff."
+go-to: dmkrs_org_answer
+tags: decision_mkrs
+
+@dmkrs_nonprofit_advocacy
+title: Advocacy leaders, campaign managers and staff.
+view-if: sector = "nonprofit"
+on-arrival: decision_makers = "Advocacy leaders, campaign managers and staff."
+go-to: dmkrs_org_answer
+tags: decision_mkrs
+
+@dmkrs_nonprofit_climate
+title: Environmental scientists and activists.
+view-if: sector = "nonprofit"
+on-arrival: decision_makers = "Environmental scientists and activists."
+go-to: dmkrs_org_answer
+tags: decision_mkrs
+
+# Public service
+
+@dmkrs_pub_transport
+title: Public transport executives, operations managers and staff.
+view-if: sector = "publicservice"
+on-arrival: decision_makers = "Public transport executives, operations managers and staff."
+go-to: dmkrs_org_answer
+tags: decision_mkrs
+
+@dmkrs_pub_health
+title: Hospital administrators and medical staff.
+view-if: sector = "publicservice"
+on-arrival: decision_makers = "Hospital administrators and medical staff."
+go-to: dmkrs_org_answer
+tags: decision_mkrs
+
+@dmkrs_pub_service
+title: Agency directors and department heads.
+view-if: sector = "publicservice"
+on-arrival: decision_makers = "Agency directors and department heads."
+go-to: dmkrs_org_answer
+tags: decision_mkrs
+
+@dmkrs_pub_parks
+title: Parks managers, recreation coordinators and staff.
+view-if: sector = "publicservice"
+on-arrival: decision_makers = "Parks managers, recreation coordinators and staff."
+go-to: dmkrs_org_answer
+tags: decision_mkrs
+
+# Policymaking
+
+@dmkrs_pol_policy
+title: Government officials and policy advisors.
+view-if: sector = "policymaking"
+on-arrival: decision_makers = "Government officials and policy advisors."
+go-to: dmkrs_org_answer
+tags: decision_mkrs
+
+@dmkrs_pol_city
+title: City council members and mayor.
+view-if: sector = "policymaking"
+on-arrival: decision_makers = "City council members and mayor."
+go-to: dmkrs_org_answer
+tags: decision_mkrs
+
+@dmkrs_pol_intl
+title: Ambassadors and diplomatic staff.
+view-if: sector = "policymaking"
+on-arrival: decision_makers = "Ambassadors and diplomatic staff."
+go-to: dmkrs_org_answer
+tags: decision_mkrs
+
+@dmkrs_org_custom
+title: Custom answer
+order: 20
+view-if: player = "org"
+tags: decision_mkrs
+
+Me: Custom answer
+
+{!<textarea class="textarea" data-quality="decision_makers" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
+
+- @dmkrs_org_answer: Save
+
+@dmkrs_org_answer
+title: Answer
+go-to: 9_wum_physical_res
+
+Me: [+ decision_makers +]

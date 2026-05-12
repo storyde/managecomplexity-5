@@ -1,0 +1,203 @@
+title: Main
+new-page: true
+max-choices: 7
+on-arrival: {!
+if (Q.next_day_scene_queue.length > 0) {
+    Q.has_next_day = 1;
+    Q.next_day_scene = Q.next_day_scene_queue.shift();
+} else {
+    Q.has_next_day = 0;
+}
+// make sure that mutual aid clears the thing...
+if ((Q.day_major >= 1 && Q.day_minor >= 1) || Q.daily_mutual_aid == 1 || Q.data_day == Q.day) {
+    Q.main_notes = " ";
+    if ((Q.day == 3 || Q.day == 10 || Q.day == 17) && !Q.mutual_aid_seen && Q.day_minor == 0) {
+        Q.main_notes += '<p>You see a flyer that has been slid under your door. "Mutual Aid Alliance hosting free community meals weekly at Moses Park." Below is a black-and-white picture of figures serving soup, and a time and an address. It is not too late. You can still go.</p>';
+    }
+}
+!}
+on-display: {!
+if (window && Q.has_next_day == 0) {
+    window.dendryUI.setBg('images/room1_filtered_dithered.png');
+    $('#main_notes').append($(Q.main_notes));
+}
+!}
+go-to-ref: next_day_scene if has_next_day > 0
+
+= Day [+ day +]
+
+Cash on hand: $[+ money +]
+
+Rent: $[+ rent +] (+ $50-100 in utilities, fees, etc.) due in [+ rent_due +] day[? if rent_due != 1 :s ?]
+
+Food: [+ food +] day[? if food != 1 :s ?] remaining
+
+Medicine: [+ medicine +] day[? if medicine != 1 :s ?] remaining
+
+[? if day = 0 and day_major = 0 : Your apartment is on the third floor of a six-story building, and has a floor area of approximately 15 square metres. There is a bed, a desk, and a small kitchen area with an electric stove and a refrigerator. You are lucky. There is everything you need to live in here. ?]
+
+# random dialogue choices
+[? if day_major = 0 : [+ day_dialogue +] ?]
+[? if day_major > 0 : [+ afternoon_dialogue +] ?]
+
+{!<div id="main_notes"></div>!}
+
+- #major
+- #minor
+- @end_of_day
+
+
+@end_of_day
+title: You're too tired to do anything else.
+view-if: (day_major >= 1 or day_minor >= 1 or stress > 10 or loneliness > 10) and (stress < stress_threshold)
+on-arrival: day += 1; rent_due -= 1; food -= 1; medicine -= 1; got_food_today = 0; got_medicine_today = 0; went_out_today = 0; day_entertainment = 0; daily_k = 0; daily_a = 0; daily_mutual_aid = 0
+go-to: eod_check
+
+@eod_check
+on-arrival: {!
+if (Q.day_major > 1 || Q.day_minor > 1) {
+    Q.stress += 1;
+}
+Q.day_major = 0;
+Q.day_minor = 0;
+Q.numb = 0;
+if (window) {
+    for (var i = 0; i < 21; i++) {
+        Q['name_' + i] = window.randomName();
+    }
+}
+console.log('eod_check_2');
+Q.main_notes = ' ';
+if (Q.rent == 0) {
+    Q.main_notes += '<p>Rent is due today. It will be automatically be deducted from your account at the end of the day.</p>';
+}
+if (Q.k_path == 1 && Q.day == Q.k_day + 2) {
+    Q.main_notes += '<p>You promised K- that you would meet her today.</p>';
+}
+if ((Q.day == 3 || Q.day == 10 || Q.day == 17) && !Q.mutual_aid_seen) {
+    Q.main_notes += '<p>You see a flyer that has been slid under your door. "Mutual Aid Alliance hosting free community meals weekly at Moses Park." Below is a black-and-white picture of figures serving soup, and a time and an address. It is not too late. You can still go.</p>';
+}
+// if you haven't viewed DNA in a few days, C- sends you a message.
+if (Q.day == Q.data_day + 3) {
+    Q.main_notes += "<p>You have received a message from C-, your supervisor at the Archives: <code>Hey Em, I hope you realize that you still need to do your job. I understand you're suffering from chronic fatigue, but so are many of us, and we're still working. Just one DNA dataset every few days. That's all you need. Worst case, we'll have no choice but to decertify you. But it probably won't come to that, would it?</code></p>";
+}
+if (Q.day == Q.data_day + 5) {
+    Q.main_notes += "<p>You have received a message from C-, your supervisor: <code>Hey Em, there are some things you should know. I pulled a lot of stops to let you just keep this job as a contractor. Everyone else in your position isn't with us anymore. When your output is this low, your profile gets more scrutiny. When your profile gets scrutiny, it becomes harder to justify your continued employment, especially given our recent budget cuts. I sincerely hope it doesn't come to that.</code></p>";
+}
+if (Q.day == Q.data_day + 8 && Q.has_contract > 0) {
+    Q.main_notes += "<p>You have received a message from C-, your supervisor: <code>Hey Em, they've started checking your personal files. I'm really sorry to say this, but your contract has been terminated. I've tried to stop them from looking too deeply, and I don't know if it worked. Be careful, Em. There's not much I can do, but I wish you all the best.</code></p> <p>Well then. You no longer have any sort of employment, not even as a contractor. And you are likely unemployable for obvious reasons. Life is great.</p>";
+    Q.has_contract = 0;
+}
+// set daily dialogue here.
+if (Q.stress <= Q.stress_threshold/2) {
+    Q.day_random += 1;
+    if (Q.day >= 1) {
+        Q.day_random = Math.floor(Math.random()*Q.low_anxiety_day_dialogues.length);
+    }
+    Q.day_dialogue = Q.low_anxiety_day_dialogues[Q.day_random];
+} else if (Q.stress <= Q.stress_threshold - 4) {
+    Q.day_random = Math.floor(Math.random()*Q.day_dialogues.length);
+    Q.day_dialogue = Q.day_dialogues[Q.day_random];
+} else {
+    Q.day_random = Math.floor(Math.random()*Q.high_stress_day_dialogues.length);
+    Q.day_dialogue = Q.high_stress_day_dialogues[Q.day_random];
+}
+Q.afternoon_random = Math.floor(Math.random()*Q.afternoon_dialogues.length);
+Q.afternoon_dialogue = Q.afternoon_dialogues[Q.afternoon_random];
+
+// TODO: Rubberbanding ???
+if (Q.day <6 && Q.stress > 10) {
+}
+if (Q.day >10 && Q.stress < 10) {
+}
+
+// set goto scene
+if (Q.day >= 20) {
+    Q.next_day_scene_queue.push("anxiety");
+}
+if (Q.with_s == 1) {
+    console.log('with s');
+    Q.next_day_scene_queue.push("k_3");
+}
+if (Q.food <= 0) {
+    console.log('food missing');
+    Q.next_day_scene_queue.push("food");
+}
+if (Q.rent_due <= 0) {
+    console.log('rent missing');
+    Q.next_day_scene_queue.push("main.rent_collection");
+}
+if (Q.medicine <= 0) {
+    console.log('medicine missing');
+    Q.next_day_scene_queue.push("medicine");
+}
+if (Q.k_path == 1 && Q.day > Q.k_day + 2) {
+    Q.next_day_scene_queue.push("k_bad");
+}
+// if you don't have anything else going on, you have dreams.
+if (Q.next_day_scene_queue.length == 0 && Q.dream_timer <= 0) {
+    Q.dream_timer = 1;
+    Q.next_day_scene_queue.push('dreams');
+} else {
+    Q.dream_timer -= 1;
+}
+if (Q.next_day_scene_queue.length > 0) {
+    Q.next_day_scene = Q.next_day_scene_queue.shift();
+    console.log('next day scene: ' + Q.next_day_scene);
+} else {
+    Q.next_day_scene = "main";
+}
+
+console.log('eod_check_end');
+!}
+set-bg: rgb(0,0,0)
+go-to-ref: next_day_scene
+
+
+
+@rent_collection
+new-page: true
+on-arrival: {!
+Q.additional_rent = Q.base_rent + 100;
+Q.base_rent = Q.additional_rent;
+Q.grocery_cost += 10;
+Q.takeout_cost += 5;
+Q.old_rent = Q.rent;
+Q.fees = 50 + Math.ceil(Math.random()*50);
+Q.total_rent = Q.rent + Q.fees;
+Q.paid_full = 0;
+Q.left_over = 0;
+Q.amount_paid = 0;
+Q.late_payment_fee = 0;
+if (Q.money < Q.total_rent) {
+    Q.amount_paid = Q.money;
+    Q.left_over = Q.total_rent - Q.amount_paid;
+    Q.rent = Q.left_over;
+    Q.money = 0;
+    Q.missed_rent += 1;
+    Q.late_payment_fee = 50 + Math.ceil(Math.random()*150);
+    Q.rent += Q.late_payment_fee;
+    Q.stress += 1;
+} else {
+    Q.money -= Q.total_rent;
+    Q.rent = 0;
+    Q.paid_full = 1;
+}
+Q.rent += Q.additional_rent;
+Q.rent_due = 7;
+!}
+go-to: eviction if missed_rent >= 2; main_rent if missed_rent < 2
+
+[? if paid_full = 1 : Your rent and additional costs were automatically deducted from your account. The rent was $[+ old_rent +] and fees plus utilities were $[+ fees +]. You have $[+ money +] remaining. ?]
+[? if paid_full = 0 : The rent due was $[+ old_rent +] and the fees were $[+ fees +]. Unfortunately, with $[+ amount_paid +], you did not have enough to cover the total amount due. All money in your account was automatically deducted, and the remaining balance was rolled over into the next rent payment, with an added late payment fee of $[+ late_payment_fee +]. If you miss the next payment, then you will be evicted. ?]
+
+[? if additional_rent > 500 : They are increasing rent to absurd levels, most likely for the purpose of evicting you from this building. There are many people who would like to live here, people with more money than you, and not enough apartments for everyone. Thus, the evictions. ?]
+
+Next bill: [+ rent +] due in [+ rent_due +] days.
+
+@main_rent
+
+- @main: Continue...
+
+@game_over
+game-over: true

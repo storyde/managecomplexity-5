@@ -1,0 +1,117 @@
+title: Purpose
+on-arrival: hctx_progress = 8 if hctx_progress < 8
+go-to: qolp_organisation if player = "org" 
+
+Facilyn: The next question is about your purpose: What are you about?
+
+[? if player = "one" : Facilyn: This is easier to answer as a group. Even alone, though, you can begin by asking who you care about or what feels worth doing. ?]
+
+- #qol_purpose
+
+@qolp_explanation
+title: What are these questions for?
+max-visits: 1
+order: 21
+tags: qol_purpose
+
+Me: What are these questions for?
+
+Facilyn: These questions help you find personal relevance in what you do. The first is about who you are right now. The next explores your future aspirations. The last is what you want to accomplish.
+
+She turns the cup in her hands, watching the last swirl of steam fade.
+
+- #qol_purpose
+
+# Purpose - Individual
+
+@qolp_ind_learning
+title: Learning, growing and staying open to what life can teach
+view-if: player = "one"
+on-arrival: qol_purpose = "learning, growing and staying open to what life can teach"
+go-to: 18_qol_contribution
+tags: qol_purpose
+
+Me: Learning, growing and staying open to what life can teach
+
+@qolp_ind_health
+title: Caring for health, vitality and participation
+view-if: player = "one"
+on-arrival: qol_purpose = "caring for health, vitality and participation"
+go-to: 18_qol_contribution
+tags: qol_purpose
+
+Me: Caring for health, vitality and participation
+
+@qolp_ind_creativity
+title: Creativity, invention and meaningful expression
+view-if: player = "one"
+on-arrival: qol_purpose = "creativity, invention and meaningful expression"
+go-to: 18_qol_contribution
+tags: qol_purpose
+
+Me: Creativity, invention and meaningful expression
+
+# Purpose - Group
+
+@qolp_grp_community
+title: Service, connection and showing up for community
+view-if: player = "group"
+on-arrival: qol_purpose = "service, connection and showing up for community"
+go-to: 18_qol_contribution
+tags: qol_purpose
+
+Me: Service, connection and showing up for community
+
+@qolp_grp_sustainability
+title: Caring for land and building something that lasts
+view-if: player = "group"
+on-arrival: qol_purpose = "caring for land and building something that lasts"
+go-to: 18_qol_contribution
+tags: qol_purpose
+
+Me: Caring for land and building something that lasts
+
+@qolp_grp_support
+title: Mutual care, solidarity and standing by one another
+view-if: player = "group"
+on-arrival: qol_purpose = "mutual care, solidarity and standing by one another"
+go-to: 18_qol_contribution
+tags: qol_purpose
+
+Me: Mutual care, solidarity and standing by one another
+
+@qolp_custom
+title: Custom answer
+order: 20
+tags: qol_purpose
+
+Me: Custom answer
+
+{!<textarea class="textarea" data-quality="qol_purpose" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
+
+- @qolp_custom_answer
+
+@qolp_custom_answer
+title: Save
+go-to: 18_qol_contribution
+
+Me: [+ qol_purpose +]
+
+# Purpose - Organisation - Statement of Purpose
+
+@qolp_organisation
+title: Organisational statement of purpose
+
+Facilyn: If you're working within an organisation, your Statement of Purpose most likely already answers this question: 
+
+{!<textarea class="textarea" data-quality="qol_purpose" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);">!}[+ st_purpose +]{!</textarea>!}
+
+- @qolp_org_custom_answer
+
+@qolp_org_custom_answer
+title: Save
+go-to: 18_qol_contribution
+
+Me: [+ qol_purpose +]
+
+Facilyn: The next two questions help you find personal meaning in that larger purpose. 

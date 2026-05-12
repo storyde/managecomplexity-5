@@ -1,0 +1,106 @@
+title: Sustainability Check
+subtitle: Long-term Thinking
+on-arrival: fltr_progress = 5 if fltr_progress < 5
+
+Facilyn: The sustainability check looks at long-term social and environmental consequences.
+
+Facilyn: "If we take this action will it lead toward or away from the future resource base described in our holistic context?"
+
+Facilyn: First: the social dimension — how your **Behaviour** shapes trust and relationships.
+
+- #sus_behavior
+
+# Behavior
+
+@fqsus_behavior_explanation
+title: I need help understanding this check
+max-visits: 1
+order: 21
+tags: sus_behavior
+
+Me: I need help understanding this check.
+
+Facilyn: Think about how your actions land with other people. If you described yourselves as [+ frb_people +], do your actions match that?
+
+- #sus_behavior
+
+@fqsus_behavior_toward
+title: It strengthens relationships with our social resource base
+on-arrival: sus_behaviour = "Passed"
+go-to: 34_fq_result if filtered = 1; fqsus_environment_intro
+tags: sus_behavior
+
+Me: It strengthens relationships with our social resource base.
+
+Facilyn: Excellent. Your behaviour aligns with the values and relationships you want to sustain.
+
+@fqsus_behavior_away
+title: It weakens relationships with our social resource base
+on-arrival: sus_behaviour = "Failed"
+go-to: 34_fq_result if filtered = 1; fqsus_environment_intro
+tags: sus_behavior
+
+Me: It weakens relationships with our social resource base.
+
+Facilyn: Be careful. Actions that damage trust or relationships can undermine your future social resource base.
+
+@fqsus_behavior_skip
+title: Skip behaviour check
+on-arrival: sus_behaviour = "Skipped"
+go-to: 34_fq_result if filtered = 1; fqsus_environment_intro
+tags: sus_behavior
+
+Me: Skip behaviour check.
+
+Facilyn: Be careful. This check almost always applies. 
+
+# Environment
+
+@fqsus_environment_intro
+title: Environment filter
+
+Facilyn: Now, the **Environment**. Will this action lead toward or away from the future landscape in your holistic context?
+
+- #sus_environment
+
+@fqsus_environment_explanation
+title: I need help understanding this check
+max-visits: 1
+order: 21
+tags: sus_environment
+
+Me: I need help understanding this check.
+
+Facilyn: Picture the future you want — [+ frb_environment +]. Does this action improve the ecosystem processes, or degrade them?
+
+- #sus_environment
+
+@fqsus_environment_toward
+title: It leads toward our future resource base
+on-arrival: sus_environment = "Passed"
+go-to: 34_fq_result if filtered = 1; 33_fq_gut_feel
+tags: sus_environment
+
+Me: It leads toward our future resource base.
+
+Facilyn: Great. You are building the environmental conditions necessary for your long-term success.
+
+@fqsus_environment_away
+title: It leads away from our future resource base
+on-arrival: sus_environment = "Failed"
+go-to: 34_fq_result if filtered = 1; 33_fq_gut_feel
+tags: sus_environment
+
+Me: It leads away from our future resource base.
+
+Facilyn: Caution. Degrading your ecosystem processes will eventually limit what you can achieve.
+
+@fqsus_environment_skip
+title: Skip environment check
+on-arrival: sus_environment = "Skipped"
+go-to: 34_fq_result if filtered = 1; 33_fq_gut_feel
+tags: sus_environment
+
+Me: Skip environment check.
+
+Facilyn: Caution. This applies even if you don’t manage land directly.

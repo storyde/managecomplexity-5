@@ -1,0 +1,127 @@
+title: Weak Link Checks
+subtitle: Identifying Vulnerabilities
+on-arrival: fltr_progress = 1 if fltr_progress < 1; info_last = "Weak Link" if info_weak_link = 0; info_weak_link = 1
+go-to: social_weak_link
+
+Facilyn: The next checks help you find the vulnerability that could undo everything else.
+
+Facilyn: A chain is only as strong as its weakest link. The same goes for decisions.
+
+@social_weak_link
+title: Social Weak Link — Relationships
+
+Facilyn: The social weak link check helps you spot conflict early:
+
+Facilyn: "Could this action, due to prevailing attitudes or beliefs, create a weak link between us and those whose support we need?" 
+
+- #social_wl
+
+@biological_weak_link
+title: Biological Weak Link — Organisms
+
+Facilyn: The biological weak link check looks for the greatest vulnerability when you’re dealing with plant or animal populations:
+
+Facilyn: "Does this action address the weakest point in the life cycle of this organism?"
+
+- #biological_wl
+
+@financial_weak_link
+title: Financial Weak Link — Production
+
+Facilyn: The financial weak link check looks at three areas of production: <br>resource conversion, <br>product conversion, <br>and marketing (or money conversion). 
+
+Facilyn: It asks:"Does this action address the weakest link in the chain of production?"
+
+- #financial_wl
+
+@fqwl_explanation
+title: I need more clarification on weak links
+max-visits: 1
+order: 21
+tags: weak_links
+
+Me: I need more clarification on weak links.
+
+Facilyn: If you ignore a weak link, you get repeated setbacks — or quiet failure.
+
+Facilyn: Social weak links are declining trust and support. Biological weak links are critical points in a life cycle. Financial weak links are bottlenecks in how value moves through your work.
+
+A security robot stops at the door, checks the lock, then points up at an open upstairs window with a look that says, “Really?”
+
+# Social Weak Link 
+
+@fqwl_social_pass
+title: No, it won't create conflict
+on-arrival: wl_social = "Passed"
+go-to: 34_fq_result if filtered = 1; biological_weak_link
+tags: social_wl
+
+Me: No, it won't create conflict.
+
+@fqwl_social_fail
+title: Yes, it could create conflict
+on-arrival: wl_social = "Failed"
+go-to: 34_fq_result if filtered = 1; biological_weak_link
+tags: social_wl
+
+Me: Yes, it could create conflict.
+
+@fqwl_social_skip
+title: Skip this check
+on-arrival: wl_social = "Skipped"
+go-to: 34_fq_result if filtered = 1; biological_weak_link
+tags: social_wl
+
+Me: Skip this check.
+
+# Biological Weak Link 
+
+@fqwl_biological_pass
+title: Yes, it addresses the weakest point
+on-arrival: wl_biological = "Passed"
+go-to: 34_fq_result if filtered = 1; financial_weak_link
+tags: biological_wl
+
+Me: Yes, it addresses the weakest point.
+
+@fqwl_biological_fail
+title: No, it does not address the weakest point
+on-arrival: wl_biological = "Failed"
+go-to: 34_fq_result if filtered = 1; financial_weak_link
+tags: biological_wl
+
+Me: No, it does not address the weakest point.
+
+@fqwl_biological_skip
+title: Skip this check
+on-arrival: wl_biological = "Skipped"
+go-to: 34_fq_result if filtered = 1; financial_weak_link
+tags: biological_wl
+
+Me: Skip this check.
+
+# Financial Weak Link 
+
+@fqwl_financial_pass
+title: Yes, it addresses the weakest link
+on-arrival: wl_financial = "Passed"
+go-to: 34_fq_result if filtered = 1; 29_fq_marginal_reaction
+tags: financial_wl
+
+Me: Yes, it addresses the weakest link.
+
+@fqwl_financial_fail
+title: No, it does not address the weakest link
+on-arrival: wl_financial = "Failed"
+go-to: 34_fq_result if filtered = 1; 29_fq_marginal_reaction
+tags: financial_wl
+
+Me: No, it does not address the weakest link.
+
+@fqwl_financial_skip
+title: Skip this check
+on-arrival: wl_financial = "Skipped"
+go-to: 34_fq_result if filtered = 1; 29_fq_marginal_reaction
+tags: financial_wl
+
+Me: Skip this check.

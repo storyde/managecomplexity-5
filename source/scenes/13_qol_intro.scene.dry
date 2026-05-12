@@ -1,0 +1,28 @@
+title: Quality of Life
+on-arrival: hctx_progress = 5 if hctx_progress < 5 and player = "org"; hctx_progress = 4 if hctx_progress < 4; info_last = "Quality of Life" if info_quality_life = 0; info_quality_life = 1
+
+Facilyn: Good
+
+Facilyn takes a long sip of her tea.
+
+Facilyn: Now we come to the heart of it — your Quality of Life Statement.
+
+Facilyn: Think of it as a clear picture of what you value, and how you want your life to be.
+
+Facilyn: We’ll move through a few areas: economic well-being, relationships, challenge and growth as well as purpose and contribution.
+
+- #qol_intro
+
+@qol_explanation
+title: Why do we need that?
+max-visits: 1
+order: 21
+tags: qol_intro
+
+Me: Why do we need that?
+
+Facilyn: It’s the “why” underneath your choices: what you’re about, what you want to become, what makes this feel worth doing.
+
+Facilyn: These areas just help you get specific, without turning it into a checklist.
+
+- #qol_intro

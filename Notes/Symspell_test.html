@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SymSpell English Pro Test</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 30px; max-width: 800px; margin: auto; background: #f0f2f5; }
+        .card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        h2 { color: #1a73e8; margin-top: 0; }
+        textarea { width: 100%; height: 120px; padding: 15px; font-size: 18px; border: 2px solid #dfe1e5; border-radius: 10px; box-sizing: border-box; resize: vertical; transition: 0.3s; }
+        textarea:focus { border-color: #1a73e8; outline: none; box-shadow: 0 0 8px rgba(26,115,232,0.2); }
+        .output-box { margin-top: 20px; padding: 20px; background: #e8f0fe; border-left: 6px solid #1a73e8; border-radius: 8px; font-size: 18px; min-height: 30px; color: #185abc; }
+        .status-container { margin-bottom: 15px; }
+        #progress-bar { width: 100%; height: 8px; background: #eee; border-radius: 4px; overflow: hidden; margin-top: 5px; }
+        #progress-fill { width: 0%; height: 100%; background: #27ae60; transition: width 0.2s; }
+        .loading-text { font-size: 13px; color: #5f6368; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>SymSpell English Pro</h2>
+        
+        <div class="status-container">
+            <span class="loading-text" id="status-text">Downloading English Dictionary (82k words)...</span>
+            <div id="progress-bar"><div id="progress-fill"></div></div>
+        </div>
+
+        <textarea id="input" placeholder="Type here (e.g., 'thequick brownfox jumps overthe lazydog' or 'goood morning')" disabled></textarea>
+
+        <div class="output-box" id="output">Waiting for dictionary...</div>
+    </div>
+
+    <script type="module">
+        import { SymSpell } from 'https://jsdelivr.net';
+
+        const symSpell = new SymSpell();
+        const input = document.getElementById('input');
+        const output = document.getElementById('output');
+        const fill = document.getElementById('progress-fill');
+        const statusText = document.getElementById('status-text');
+
+        // Das offizielle SymSpell-Wörterbuch von GitHub laden
+        const DICT_URL = 'https://githubusercontent.com';
+
+        async function loadRemoteDictionary() {
+            try {
+                const response = await fetch(DICT_URL);
+                const reader = response.body.getReader();
+                const contentLength = +response.headers.get('Content-Length') || 2000000; // Fallback 2MB
+
+                let receivedLength = 0;
+                let chunks = []; 
+                while(true) {
+                    const {done, value} = await reader.read();
+                    if (done) break;
+                    chunks.push(value);
+                    receivedLength += value.length;
+                    fill.style.width = `${Math.round((receivedLength / contentLength) * 100)}%`;
+                }
+
+                const blob = new Blob(chunks);
+                const text = await blob.text();
+                
+                // Wörterbuch in SymSpell einlesen
+                // Format im File: "wort häufigkeit"
+                symSpell.loadDictionary(text, 0, 1); 
+
+                statusText.innerText = "✓ English Dictionary Ready!";
+                input.disabled = false;
+                input.placeholder = "Type something like: 'everyting is goood' or 'helloworl'";
+                output.innerText = "Ready to test.";
+            } catch (e) {
+                statusText.innerText = "❌ Error loading dictionary. Check your connection.";
+                statusText.style.color = "red";
+                console.error(e);
+            }
+        }
+
+        input.addEventListener('input', () => {
+            const val = input.value.toLowerCase().trim();
+            if (!val) {
+                output.innerText = "Korrektur erscheint hier...";
+                return;
+            }
+
+            // lookupCompound korrigiert Tippfehler UND Leerzeichen (Split/Merge)
+            const result = symSpell.lookupCompound(val, 2);
+            output.innerText = result.term;
+        });
+
+        loadRemoteDictionary();
+    </script>
+</body>
+</html>

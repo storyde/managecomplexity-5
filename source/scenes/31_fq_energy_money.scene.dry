@@ -1,0 +1,104 @@
+title: Energy/Money Source Check
+subtitle: Sustainable Resource Management
+on-arrival: fltr_progress = 4 if fltr_progress < 4; info_last = "Energy/Money Source and Use" if info_source_use = 0; info_source_use = 1
+
+Facilyn: The next check applies to both energy and money. It has two parts.
+
+Facilyn: The first part examines the source:
+
+Facilyn: "Is the energy or money to be used in this action derived from the most appropriate source in terms of our holistic context?"
+
+- #em_source
+
+# Source
+
+@fqem_source_explanation
+title: I need help understanding this check
+max-visits: 1
+order: 21
+tags: em_source
+
+Me: I need help understanding this check.
+
+Facilyn: Is the source renewable or internal — or is it limited, polluting, or external with strings attached?
+
+- #em_source
+
+@fqem_source_pass
+title: The source is appropriate
+on-arrival: em_source = "Passed"
+go-to: 34_fq_result if filtered = 1; fqem_use_intro
+tags: em_source
+
+Me: The source is appropriate.
+
+Facilyn: Good. Using renewable, internal, or non-damaging sources builds resilience.
+
+@fqem_source_issues
+title: There are issues with the source
+on-arrival: em_source = "Failed"
+go-to: 34_fq_result if filtered = 1; fqem_use_intro
+tags: em_source
+
+Me: There are issues with the source.
+
+Facilyn: Noting this is important. Relying on finite or external sources with strings attached can create vulnerability.
+
+@fqem_source_skip
+title: Skip source check
+on-arrival: em_source = "Skipped"
+go-to: 34_fq_result if filtered = 1; fqem_use_intro
+tags: em_source
+
+Me: Skip source check.
+
+# Use
+
+@fqem_use_intro
+title: Energy/Money Use Check
+
+Facilyn: Now the second part of this filter is about the use:
+
+Facilyn: "Will the way in which the energy or money is used be in line with our holistic context?"
+
+- #em_use
+
+@fqem_use_explanation
+title: I need help understanding this check
+max-visits: 1
+order: 21
+tags: em_use
+
+Me: I need help understanding this check.
+
+Facilyn: Is the use constructive — building capacity, keeping things cycling — or is it mostly consumptive, draining, or addictive?
+
+- #em_use
+
+@fqem_use_pass
+title: The use is appropriate
+on-arrival: em_use = "Passed"
+go-to: 34_fq_result if filtered = 1; 32_fq_sustainability
+tags: em_use
+
+Me: The use is appropriate.
+
+Facilyn: Excellent. Investing in cyclical growth and in line with your holistic context creates lasting value.
+
+@fqem_use_issues
+title: There are issues with the use
+on-arrival: em_use = "Failed"
+go-to: 34_fq_result if filtered = 1; 32_fq_sustainability
+tags: em_use
+
+Me: There are issues with the use.
+
+Facilyn: Be cautious. Consumptive or addictive uses can drain resources without rebuilding them.
+
+@fqem_use_skip
+title: Skip use check
+on-arrival: em_use = "Skipped"
+go-to: 34_fq_result if filtered = 1; 32_fq_sustainability
+tags: em_use
+
+Me: Skip use check.

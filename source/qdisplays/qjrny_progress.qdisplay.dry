@@ -1,0 +1,8 @@
+ 
+# jrny_progress
+
+(0..0) <div class="progress-track"><div class="progress-track-head"><strong>Journey</strong><span>0 / 4</span></div><progress value="0" max="4">0</progress><div class="progress-track-status">Not started yet</div></div>
+(1..1) <div class="progress-track"><div class="progress-track-head"><strong>Journey</strong><span>1 / 4</span></div><progress value="1" max="4">1</progress><div class="progress-track-status">You reached the harbour</div></div>
+(2..2) <div class="progress-track"><div class="progress-track-head"><strong>Journey</strong><span>2 / 4</span></div><progress value="2" max="4">2</progress><div class="progress-track-status">You know the way to the teahouse</div></div>
+(3..3) <div class="progress-track"><div class="progress-track-head"><strong>Journey</strong><span>3 / 4</span></div><progress value="3" max="4">3</progress><div class="progress-track-status">You entered the teahouse</div></div>
+(4..4) <div class="progress-track progress-track-complete"><div class="progress-track-head"><strong>Journey</strong><span>4 / 4</span></div><progress value="4" max="4">4</progress><div class="progress-track-status">You learn the framework</div></div>

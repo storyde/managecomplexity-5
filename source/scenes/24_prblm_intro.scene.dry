@@ -1,0 +1,176 @@
+title: Looks good to me
+on-departure: display_fltr = 1
+tags: holtext_complete
+new-page: true
+
+Me: Looks good to me.
+
+Facilyn: Let’s place your holistic context in the left sidebar, so you can keep it in view.
+
+She slides a new sheet of paper on the table.
+
+Facilyn: To use this holistic context, we’ll run decisions through seven testing questions. They filter out actions that look good today, but take you off course tomorrow.
+
+Facilyn: What kind of problem do you want to work through as an example?
+
+- #choose_prblm
+
+@prblm_explanation
+title: Are the filter questions
+subtitle: different from an ordinary pros-and-cons list?
+max-visits: 1
+order: 21
+tags: choose_prblm
+
+Me: Are the filter questions different from an ordinary pros-and-cons list?
+
+Facilyn: The checks are not just a list of advantages and disadvantages. They are a set of filters designed to reveal whether an action is socially, financially, and environmentally sound in both the short and long term, relative to your Holistic Context.
+
+- #choose_prblm
+
+@prblm_custom
+title: Custom answer
+order: 20
+tags: choose_prblm
+
+Me: Custom answer
+
+{!<textarea class="textarea" data-quality="prblm_type" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
+
+- @prblm_chosen: Save
+
+@prblm_custom_answer
+title: Save
+go-to: prblm_chosen
+
+Me: [+ prblm_type +]
+
+Facilyn: Wonderful. 
+
+@prblm_personal
+title: A personal decision
+view-if: player = "one"
+on-arrival: prblm_type = "A personal decision"
+go-to: prblm_chosen
+tags: choose_prblm
+
+Me: [+ prblm_type +]
+
+Facilyn: Excellent. 
+
+@prblm_community
+title: A decision regarding family, friends or community
+view-if: player = "group"
+on-arrival: prblm_type = "A decision regarding family, friends or community"
+go-to: prblm_chosen
+tags: choose_prblm
+
+Me: [+ prblm_type +]
+
+Facilyn: Perfect. 
+
+@prblm_environmental
+title: An environmental or land management decision
+on-arrival: prblm_type = "An environmental or land management decision"; info_last = "Dust storms" if info_dust_storms = 0; info_dust_storms = 1
+go-to: prblm_chosen
+tags: choose_prblm
+
+Me: [+ prblm_type +]
+
+Facilyn: Wonderful. This touches on land use, conservation, sustainability practices, or environmental impact.
+
+@prblm_agricultural
+title: An agricultural decision
+view-if: sector = "agriculture"
+on-arrival: prblm_type = "An agricultural decision"
+go-to: prblm_chosen
+tags: choose_prblm
+
+Me: [+ prblm_type +]
+
+Facilyn: Great. This touches on crop selection, livestock management, equipment investment, or soil health practices.
+
+@prblm_business
+title: A business or work-related decision
+view-if: sector = "business"
+on-arrival: prblm_type = "A business or work-related decision"
+go-to: prblm_chosen
+tags: choose_prblm
+
+Me: [+ prblm_type +]
+
+Facilyn: An excellent choice. Business brings in money, people, resources — and long-term consequences.
+
+@prblm_cultural
+title: A cultural or creative decision
+view-if: sector = "culture"
+on-arrival: prblm_type = "A cultural or creative decision"
+go-to: prblm_chosen
+tags: choose_prblm
+
+Me: [+ prblm_type +]
+
+Facilyn: Intriguing. This touches on artistic projects, preservation of heritage, or community engagement through culture.
+
+@prblm_educational
+title: An educational or academic decision
+view-if: sector = "education"
+on-arrival: prblm_type = "An educational or academic decision"
+go-to: prblm_chosen
+tags: choose_prblm
+
+Me: [+ prblm_type +]
+
+Facilyn: Important. This touches on curriculum changes, research funding, student welfare, or institutional partnerships.
+
+@prblm_industrial
+title: An industrial or manufacturing decision
+view-if: sector = "industry"
+on-arrival: prblm_type = "An industrial or manufacturing decision"
+go-to: prblm_chosen
+tags: choose_prblm
+
+Me: [+ prblm_type +]
+
+Facilyn: A solid choice. This touches on production methods, supply chain adjustments, safety protocols, or resource efficiency.
+
+@prblm_nonprofit
+title: A nonprofit or advocacy decision
+view-if: sector = "nonprofit"
+on-arrival: prblm_type = "A nonprofit or advocacy decision"
+go-to: prblm_chosen
+tags: choose_prblm
+
+Me: [+ prblm_type +]
+
+Facilyn: Noble. This touches on campaign strategies, donor relations, volunteer management, or mission alignment.
+
+@prblm_public_service
+title: A public service or infrastructure decision
+view-if: sector = "publicservice"
+on-arrival: prblm_type = "A public service or infrastructure decision"
+go-to: prblm_chosen
+tags: choose_prblm
+
+Me: [+ prblm_type +]
+
+Facilyn: Vital. This touches on service delivery, infrastructure maintenance, public health initiatives, or emergency response.
+
+@prblm_policy
+title: A policymaking or governance decision
+view-if: sector = "policymaking"
+on-arrival: prblm_type = "A policymaking or governance decision"
+go-to: prblm_chosen
+tags: choose_prblm
+
+Me: [+ prblm_type +]
+
+Facilyn: Impactful. This could cover legislative changes, regulatory frameworks, international agreements, or budget allocations.
+
+@prblm_chosen
+title: Example decision
+go-to: 27_fq_cause_effect
+
+Facilyn: To choose your solution, you consider experience, experts' or friends' advice, and laws as always.  
+
+Facilyn: And when you come up with your preferred solution, before you take any action, you will run your decision through the seven context checks to see the likely effect on your whole. 

@@ -1,0 +1,438 @@
+title: A meeting with A-
+subtitle: An invitation to a meal
+audio: music/A6_Solitude.mp3
+tags: major
+max-visits: 1
+view-if: (day_major = 0 or day_minor = 0) and daily_a = 0 and a_path = 3 and a_loved = 1 and day >= a_day + 2 and stress < stress_threshold and day < last_day
+on-arrival: a_path = 4; daily_a = 0; day_major += 1; a_day = day; food += 3
+set-bg: images/city_dithered.png
+new-page: true
+
+
+The surroundings are far more upscale than any place you have been since... likely before the Cataclysm. You did not know that such palaces of luxury existed (or had ever been built) in the undercity. Crystalline decorations. Faux-wood tables. Artificial photosynthetic organisms. The meat is *organic cloned tissue*, unlike the typical algal or fungal or legume-based products. None of this feels real.
+
+A- had picked out a fancy metallic-sheen dress for you to wear for this occasion, to match hers and to fit in, which you are currently sullying with bio-steak juices. She has a bemused look as you ravenously devour the steak and mushrooms.
+
+"You're eating like a barbarian." She smiles as she delicately cuts her steak with a knife, and then places the piece in her mouth without staining her lipstick. "Want me to teach you how to eat properly?"
+
+- @teach_me
+- @beautiful
+- @help_rent: "I still need help paying rent..."
+- @desist
+
+@teach_me
+title: "Fine, teach me..."
+max-visits: 1
+
+"Fine, teach me..."
+
+She stands up to sit at your side of the booth. She places one of her hands on each of yours, and forces you to unclench the utensils.
+
+"This is all wrong. You're supposed to hold the knife with your dominant hand and the fork with your other hand. You're supposed to hold the steak with your fork while you cut."
+
+- @practice: You let her play with your hands.
+- @all_notice: All you notice is how closely she leans against you.
+- @how_learn: "How did you learn all this?"
+
+@practice
+
+You let her play with your hands. You are not listening, not really. You are letting your body go limp, letting A- take control. She is very close. She plays with your hands, guiding them along the food, using the knife in your hand to cut a piece of steak and place it in your mouth.
+
+"Now, chew," she says.
+
+This is your moment of daily physical contact. It allows the release of beneficial neurotransmitters, or something like that. Theoretically, it is supposed to reduce your level of anxiety, possibly. But your heart is beating faster.
+
+If anyone is watching, they are liable to have *misconceptions* (or the correct conceptions, rather) about your relationship. But no one is watching. No one seems to care.
+
+- @beautiful
+- @help_rent
+- @desist
+- @what_next: "What are we doing next?"
+
+@all_notice
+
+All you notice is how closely she leans against you, how closely she holds you.
+
+This is your moment of daily physical contact. It allows the release of beneficial neurotransmitters, or something like that. Theoretically, it is supposed to reduce your level of anxiety, possibly. But your heart is beating faster.
+
+If anyone is watching, they are liable to have *misconceptions* (or the correct conceptions, rather) about your relationship. But no one is watching. No one seems to care.
+
+- @beautiful
+- @help_rent
+- @desist
+- @what_next: "What are we doing next?"
+
+@how_learn
+
+"How did you learn all this?" you ask.
+
+A- shrugs. "Back when CityNet was still useful, they had etiquette lessons. Besides, I just watched people and learned from them. That's easy enough, isn't it? Now, chew."
+
+She has cut a piece of steak with the knife in your hand and placed it in your mouth.
+
+- @beautiful
+- @help_rent
+- @desist
+- @what_next: "What are we doing next?"
+
+@why_like
+max-visits: 1
+
+"Why do you even like me?"
+
+A- pauses for a moment. "Mutual history, I suppose. They say that shared struggles make people closer."
+
+- @is_that_all: "Is that all?"
+
+
+@is_that_all
+
+"Is that all?"
+
+"What do you want me to say? That I'm dissatisfied with my marriage so I'm looking for release? That I'm a pervert attracted to neogenic bodies?"
+
+"I don't know," you say.
+
+"Emotional inertia," she says. "It's a powerful force. Why the fuck do you like *me*? Actually, don't answer that."
+
+- @attractive: "Am I still physically attractive?"
+- @help_rent
+- @desist
+- @what_next
+
+@attractive
+
+"Am I still physically attractive?"
+
+She shrugs. "Of course."
+
+- @help_rent
+- @desist
+- @what_next
+
+
+@what_next
+title: "What are we doing next?"
+max-visits: 1
+
+"What are we doing next?" you ask. The meal is almost over; you have devoured your entire plate, while A- still has a small amount of leftovers that will likely be disposed. A horrific waste.
+
+"We can go back to my residence. It's going to be empty for a few hours at least. Or we could go to your place again."
+
+- @your_place: Go to A-'s place.
+- @my_place: Go to your place.
+- @separate: Actually, go your separate ways.
+
+
+@your_place
+on-arrival: a_loved += 1; a_visited = 1
+
+The two of you walk to A-'s apartment, located in the same district as the restaurant. It might as well be palatial compared to your own residence, although you know that the *true elites* have even more expansive residences, some even above the surface.
+
+"Sorry about the mess," she says, but there is no mess whatsoever.
+
+- @your_place_encounter: She kisses you, and then... [? if cw_enabled : (CW: sexual content) ?]
+- @your_place_separate: Eventually, the two of you separate.
+
+@your_place_encounter
+on-arrival: day_minor += 1; a_encounter += 1; at_as_place = 1
+set-bg: rgb(0,0,0)
+
+She wraps her arms around you, kisses you, takes you into her bedroom...
+
+...
+
+- @encounter_2: ...
+
+@your_place_separate
+
+It is a quiet hour, the two of you merely existing in the same space. A- complains about her work and family, while you eat her snacks, perhaps in the hope that consuming additional calories will decrease your hunger later on.
+
+Eventually, A- asks you to leave; her family is arriving soon.
+
+"This was fun. We should do this more often," she says. "Love you, Em."
+
+
+@my_place
+on-arrival: a_loved += 1; at_as_place = 0
+
+As in the last encounter, the two of you end up at your apartment.
+
+"It's kind of exciting, isn't it?" A- remarks. "It's such a tight space. It's like we can't do anything here except lay on top of each other. And besides, the neighbours can hear everything we do."
+
+- @my_place_encounter: She kisses you, and then... [? if cw_enabled : (CW: sexual content) ?]
+- @my_place_separate: Eventually, the two of you separate.
+
+
+@my_place_encounter
+on-arrival: day_minor += 1; a_encounter += 1; at_as_place = 0
+set-bg: rgb(0,0,0)
+
+She kisses you, and pulls you down onto the bed, on top of her...
+
+...
+
+- @encounter_2: ...
+
+@encounter_2
+new-page: true
+
+Finally the two of you disentangle. Your body aches. You feel tears dripping down your face, mixing with various bodily fluids.
+
+"How are you feeling?" A- asks.
+
+- @m_nothing_at_all: You are feeling nothing at all.
+- @m_better: "I'm feeling better."
+- @hold_on_to_her: Just hold on to her, for as long as you can.
+
+@m_nothing_at_all
+go-to: m_end
+
+You are feeling nothing at all, which is altogether not an unpleasant feeling. For a moment it was as if all of your crises could be forgotten.
+
+A- hugs you, and ruffles your hair.
+
+@m_better
+go-to: m_end
+
+"I'm feeling better," you say, and you are. For a moment it was as if all of your crises could be forgotten.
+
+A- hugs you, and ruffles your hair.
+
+@hold_on_to_her
+
+You hold on to her for as long as you can. She is warm, and you are cold. She is soft, and you are brittle. She is solid, and you are sublimating into nothingness.
+
+"Hey, Em? [? if at_as_place = 0 : I really have to go soon. ?][? if at_as_place = 1 : I hate to say this, but, you should probably go soon. ?] Love you, Em."
+
+- @leave_hold: You must let go.
+
+@leave_hold
+
+[? if at_as_place = 0 : Soon enough, A- dresses and leaves. You are tired. ?]
+[? if at_as_place = 1 : Soon enough, despite barely having the energy to walk, you have to leave; her family is returning soon. You could have lain in her soft bed forever. ?]
+
+@m_end
+
+"This was nice. We should do this more often," she says. "Love you, Em."
+
+[? if at_as_place = 0 : Soon enough, A- dresses and leaves. You are tired. ?]
+[? if at_as_place = 1 : Soon enough, despite barely having the energy to walk, you have to leave; her family is returning soon. You could have lain in her soft bed forever. ?]
+
+
+@my_place_separate
+
+You don't do much of anything. A- makes trifling complaints about her work and family; she knows that you are not paying attention, but does not seem to care. [? if food <= 3 : She is rather distraught at the lack of food in your room, and resolves to buy you more. ?][? if food > 3 : You share some snacks, and she resolves to augment your paltry pantry. ?]
+
+Eventually, A- leaves. She has work to do, a family to take care of.
+
+"This was fun. We should do this more often," she says. "Love you, Em."
+
+@nutrients
+title: Think of the nutritional content of A-'s bodily fluids.
+
+"How many calories was that?" you mumble.
+
+#####
+
+
+@separate
+
+"I have to..., um, do something," you say. "Sorry."
+
+"That's okay! We can meet again later."
+
+You go your separate ways from the restaurant. She lives nearby, while you have to take several trams home.
+
+
+@help_rent
+max-visits: 1
+title: "I still need help paying rent..."
+on-arrival: money += 200
+
+"I still need help paying rent..."
+
+"Of course. That's why we're here, isn't it?" A- looks into your eyes and makes a polite half-smile. "Here. I'll send you another $200." She punches the numbers on her mobile.
+
+"You know, it might be cheaper if... Never mind." She shakes her head. You do not press her on whatever she was going to say.
+
+- @beautiful
+- @desist
+- @what_next
+
+
+@beautiful
+title: "You're really beautiful tonight..."
+max-visits: 1
+
+"You're really beautiful tonight..."
+
+She was always so *good* at being a neogen. Her face was so much less readable than yours; she always made herself presentable. And there was her sing-song voice, with the *correct* resonance and pitch and intonation. Even now, she looks like a human woman, whereas you must appear as some sort of feral creature, a monstrosity unfit for bourgeois eyes.
+
+She shrugs. "Hey, it takes practice."
+
+- @getting: "How have you been getting practice?"
+- @how_stand
+- @help_rent
+- @desist
+- @what_next
+
+@getting
+max-visits: 1
+
+"How have you been getting practice?"
+
+"Oh, here and there, whenever I have some time to myself. I have more alone time than you might imagine, which is why we're here today."
+
+- @how_stand
+- @help_rent
+- @desist
+- @what_next
+
+
+@how_stand
+title: "How can you stand it?"
+max-visits: 1
+
+"How can you stand it?"
+
+"What do you mean?"
+
+"Living like this. Keeping everything a secret. While everyone else is..."
+
+A- grimaces. "I can't stand it. You're the only one keeping me sane."
+
+Quickly, she contorts her face back to a safe neutral. "There are more of us secret neogens than you think. Under different circumstances, you could've been here too. Remember when we talked about how we would outwardly desist when the crackdown came?"
+
+- @bad_pretending
+
+
+@bad_pretending
+title: "I'm not good at pretending.
+
+"I'm not good at pretending."
+
+"Well, in that case, I'm sorry. I can help you get better at pretending, if you'd like. It's a skill like any other. It takes some mental discipline. You learn to be numb. To control your thoughts and feelings, to ignore the hurt. Either that, or you learn to be invisible. To be quiet so no one suspects a thing. Eventually, you can forget yourself, forget what you once was. It doesn't feel *good*, but it works. Do you want to try?"
+
+- @shake_head: You shake your head.
+- @not_so_different: "That's not so different from my life now."
+
+@shake_head
+
+You shake your head.
+
+"Well, that's too bad. I suppose if you desisted, it would come across as something worse, given your current identification status." She chuckles. "I'm guessing you are not interested in fake identity documents?"
+
+You shake your head again.
+
+- @what_next
+
+@not_so_different
+
+"That's not so different from my life now."
+
+She makes a slight chuckle. "I suppose we all have our struggles. I sometimes wonder if I could have gone on a different path. Maybe only if I got bottom surgery." A wistful glance aside. "By the way, you never thanked me for writing all those letters. Pretending to be three different psychiatrists was hard. Making up all the stationary designs too."
+
+- @thank_you: "Thank you."
+
+@thank_you
+
+"Thank you."
+
+She laughs. "The misguided things we do for love. Whatever. It's not like he would've even read the letters. The Neogenic Medical Society was already gone. No more sanctions, except the final sanction." She grins, but doesn't quite laugh at her joke (was it a joke?).
+
+- @what_next
+
+
+@desist
+view-if: @data.c123 >= 1
+title: Finally ask about A-'s desistance.
+max-visits: 1
+
+"So, um, what happened to you?" you ask.
+
+"What do you mean?"
+
+Are you really ready to ask?
+
+- @yes_ask: Yes, ask her.
+- @no_ask: No, I'm not.
+
+@no_ask
+
+"Never mind."
+
+"Oh. Okay. Well, not much's happened to me. What about you?"
+
+You shrug.
+
+"Well, that sure is an Em answer."
+
+- @beautiful
+- @help_rent: "I still need help paying rent..."
+- @what_next
+
+
+@yes_ask
+
+"There were all those headlines about you. That you thought we were a cult and we were horrible..."
+
+"How long have you been waiting to ask that?"
+
+"I just saw the CityNet messages at the archives about you."
+
+"Oh, really? I thought CityNet had been wiped clean. The historicide and all that."
+
+- @citynet_archives: "There were some DNA archives left."
+
+
+@citynet_archives
+
+"There were some DNA archives left..."
+
+"Of course. It's always the fucking DNA. First it makes us legible, then it reveals us in other ways..." A- produces a coughing laugh. "Ancestors, I wish we had some DNA sequencers. They would've been so helpful in diagnosis, I can't believe they let some academics waste them on whatever it is you're doing."
+
+A pause. "Sorry, Em. I'm sure what you're doing is very valuable."
+
+- @archives_waste: "The Archives aren't a waste..."
+- @insist_archives: Insist on talking about *that*: "So what happened with those articles?"
+- @beautiful
+- @help_rent: "I still need help paying rent..."
+- @what_next
+
+
+@archives_waste
+
+"The Archives aren't a waste. There's useful history and science from the Ancestors..."
+
+"Oh, I'm sure," A- says. "The Ancestors. Very valuable indeed."
+
+- @insist_archives: Insist on talking about *that*: "So what happened with those articles?"
+- @beautiful
+- @help_rent: "I still need help paying rent..."
+- @what_next
+
+
+@insist_archives
+
+"So what happened with those articles? Were they lies?"
+
+A- sighs. "Do you *really* want to talk about that? It's over. It was, what, seven, eight years ago? There's nothing to talk about anymore. We were all idiots back then, and now none of it matters. Most of the people who cared are gone."
+
+- @how_stand
+- @not_know: You do not know what to say.
+
+
+@not_know
+
+You do not know what to say. You were going around in circles, an involute conversation.
+
+- @beautiful
+- @help_rent: "I still need help paying rent..."
+- @what_next
+
+
+@circles
+title: You were going in circles.
+
+You were going around in circles, an involute conversation.

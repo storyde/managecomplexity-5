@@ -1,0 +1,44 @@
+title: Info
+
+# This scene contains information for the right sidebar. 
+
+**🚧 This story is still under development.** <br>
+Please give us <a href="#tally-open=Me8Y0g&tally-layout=modal&tally-width=650&tally-emoji-text=👋&tally-emoji-animation=wave&tally-auto-close=4000">feedback</a> on the bugs 🐞 you find.
+
+[? if info_last != 0 : <p class="progress-latest progress-latest-info"><strong>Info added:</strong> [+ info_last +]</p> ?]
+
+[? if info_filters = 1 : <details><summary>What if an action fails a check?</summary><p>It does not always mean the action must be abandoned. It means you have discovered a risk or mismatch. You can redesign the action, compare it with alternatives, or proceed carefully while monitoring the specific weakness you uncovered.</p></details> ?]
+
+[? if info_gut_feel = 1 : <details><summary>Why is gut feel the last testing question?</summary><p>Because it uses the picture you built from the other checks. It asks how you feel about the action in terms of your values, relationships, and consequences for others.</p></details> ?]
+
+[? if info_source_use = 1 : <details><summary>Why ask where the money or energy comes from and how it will be used?</summary><p>Because not all money is equal once consequences are considered. A funding source, loan, subsidy, or burst of effort can create hidden dependency or pressure. This question checks whether both the source and the use fit your Holistic Context instead of undermining it later.</p></details> ?]
+
+[? if info_gross_profit = 1 : <details><summary>What is the difference between marginal reaction and gross profit analysis?</summary><p>Marginal analysis compares actions by evaluating the additional cost and benefit of one more unit, helping decide the next step. Gross profit analysis helps select products or enterprises based on their total contribution toward covering overheads and generating profit.</p></details> ?]
+
+[? if info_weak_link = 1 : <details><summary>Weak link</summary><p>A weak link is the point where progress is most constrained. In social terms it may be trust or support. In biological terms it may be the weakest point in an organism’s life cycle. In financial terms it may be the part of production that is limiting performance. Strengthening the weak link often gives the greatest leverage.</p></details> ?]
+
+[? if info_cause_effect = 1 : <details><summary>Cause-and-effect filter</summary><p>This filter helps to avoid treating symptoms while leaving the real problem untouched. If an action does not address the root cause, it may produce activity without progress and can even create new problems later.</p></details> ?]
+
+[? if info_dust_storms = 1 : <details><summary>Can better management help prevent dust storms?</summary><p>In many areas of the world, the reason for biodiversity loss is management. That means desertification is not only something that happens to us; it is something we can influence. If management has helped create bare soil, weak water cycling, and declining biodiversity, then better management can help reverse that pattern. By testing actions against the Holistic Context, addressing root causes, and prioritising soil cover in brittle environments, people can improve biodiversity and may therefore be able to slow, stop, or reverse desertification and the conditions that lead to dust storms.</p></details> ?]
+
+[? if info_holtext = 1 : <details><summary>Holistic context</summary><p>Your Holistic Context is your shared "north star" for decision-making. It describes:<br> • The quality of life you want<br> • The future resource base needed to sustain it</p></details> ?]
+
+[? if info_holtext = 1 : <details><summary>Why create a Holistic Context before making plans?</summary><p>Because plans are only useful if they move you toward the life and landscape you actually want. The Holistic Context gives decision makers a shared direction, so day-to-day choices, long-term strategy, and problem-solving are all tested against the same picture.</p></details> ?]
+
+[? if info_holtext = 1 and payer != "one" : <details><summary>Why create one shared Holistic Context?</summary><p>Because a whole cannot be managed well by people pulling in different directions. A shared Holistic Context helps the decision makers align around the same values, the same long-term outcomes, and the same standards for judging actions.</p></details> ?]
+
+[? if info_future_rsc_base = 1 : <details><summary>Future Resource Base</summary><p>The Future Resource Base describes the environment and behaviour needed to sustain your Quality of Life for the long term and for successors. It asks what must be true of your land, people, community, and finances if the life you want is to remain possible.</p></details> ?]
+
+[? if info_quality_life = 1 : <details><summary>Quality of Life</summary><p>A description of how you want your life to be within the whole you are managing. It is about the lived experience you want to create, covering things like meaningful work, good relationships, financial security, purpose, health, and the way you want to behave with one another.</p></details> ?]
+
+[? if info_stmt_purpose = 1 : <details><summary>Why stating our purpose?</summary><p>An organisation exists for a reason beyond the personal aims of the people in it. Stating that purpose first ensures the Holistic Context serves the organisation’s role as well as the needs of the people making decisions within it.</p></details> ?]
+
+[? if info_resources = 1 : <details><summary>Resources</summary><p>Everything you rely on to support your quality of life and plans. It includes physical resources (land, buildings, equipment) and human resources (people, partners, customers, neighbours, communities). Monetary resources are considered separately.</p></details> ?]
+
+[? if info_decision_makers = 1 : <details><summary>Decision makers</summary><p>Anyone who makes day-to-day decisions, carries them out, or has veto power over them. Being inclusive prevents hidden constraints later.</p></details> ?]
+
+[? if info_whole = 1 : <details><summary>Whole Under Management</summary><p>The Whole Under Management is the "unit" you are managing and making decisions for. It is defined by three things: <br> • Decision makers <br> • Resource base <br> • Money </p></details> ?]
+
+[? if info_complexity = 1 : <details><summary>Complexity</summary><p>Complexity refers to self-organising systems that in contrast to machines we do not produce, but manage.</p></details> ?]
+
+[? if info_polycrisis = 1 : <details><summary>Polycrisis</summary><p>A polycrisis is a situation where several crises happen at once and reinforce one another.</p></details> ?]

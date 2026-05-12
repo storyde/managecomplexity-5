@@ -1,0 +1,189 @@
+
+
+The power to regenerate lands and livelihoods lies not in our practices but in how we manage the ecological, financial, and social dynamics. More than just a grazing system, Holistic Management is a framework for making decisions amidst the ever-changing conditions of the living world.
+Specifically, it includes...
+A Decision-Making Framework
+
+For defining your north star, finding alignment amongst decision-makers, and ensuring your actions move you in the right direction
+
+
+
+
+matters most to you
+
+
+
+Inside, the light is amber and low. Steam rises in slow spirals from clay pots. Cups click softly against saucers. 
+
+
+
+A girl crouches beside a cleaning robot and quietly places a leaf in its path to see what it will do.
+
+Out in the harbour, a forklift idles beside a pallet of supplies while its driver checks a weather alert, then tucks the phone away.
+
+By the window, two friends argue gently about whether the rain is “starting” or “already here,” then settle for sharing the last dry seat.
+
+
+Facilyn examples:
+
+She cups her hands loosely around her tea as she speaks.
+
+She picks up the teabag wrapper again, almost absentmindedly.
+
+She pours fresh tea into your cup before continuing.
+
+She looks at the steam rising between you.
+
+Facilyn nods slowly.
+
+
+
+### Harbor Robot Moments
+
+A cleaning robot moves along the pier outside, pushing a thin line of seawater ahead of it.
+
+A harbor robot announces something quietly to itself. The words are lost in the wind before anyone can hear them.
+
+
+### Teahouse Interior Moments
+
+Two people by the window exchange a few quiet words and then return to looking at the harbor.
+
+Near the door, someone pauses to brush the wind from their coat before sitting down.
+
+
+
+### Distant Harbor Activity
+
+A buoy dips and rises in the slow movement of the tide.
+
+A distant engine hums steadily and then fades again.
+
+
+
+### Quiet Observations Facilyn Might Notice
+
+
+For a moment she watches the steam rise between you, as if following its slow movement.
+
+
+She pauses mid-sentence, listening to the soft clink of cups being stacked behind the counter.
+
+For a second she studies the pattern the tea leaves leave against the cup.
+
+She glances at the door as it opens briefly, letting in a gust of salt air.
+
+She rests her fingers against the warm teacup, thinking.
+
+Facilyn glances toward another table where someone quietly closes a book.
+
+Her eyes move to the horizon for a moment before she continues.
+
+She listens briefly as the wind rattles the teahouse sign outside.
+
+Facilyn watches the reflection of the harbor light shifting on the window.
+
+She lets a small silence settle before speaking again.
+
+
+
+### Light Comic Relief Moments
+
+Outside, a drone tries to land on a buoy, wobbles slightly, and decides to circle once more before committing.
+
+A harbor robot rolls past the teahouse window carrying a sign that reads “Temporary Detour.”  
+It pauses, turns the sign around, studies it for a moment, and continues.
+
+Two seagulls stand directly in the path of a cleaning robot.  
+The robot stops politely.  
+The seagulls do not move.
+
+A small service drone hovers uncertainly over the outdoor tables before realizing there are no orders waiting for it.
+
+A child waves enthusiastically at a passing cargo drone.  
+After a moment, the drone flashes a small acknowledgment light.
+
+A maintenance robot carefully adjusts a warning cone that the wind immediately tips over again.
+
+Someone at a nearby table tries to photograph their tea.  
+The steam refuses to cooperate.
+
+A harbor robot announces, very clearly, “Task complete.”  
+No one reacts.  
+It waits a few seconds before rolling away.
+
+Outside, a gull lands on a sensor mast and stares directly into the camera.
+
+A drone approaches the pier, begins a landing sequence, then slowly ascends again as a cat claims the spot first.
+
+Two children attempt to count how many drones pass overhead.  
+They lose track somewhere around eight.
+
+A cleaning robot pushes a leaf along the dock for several meters before the wind returns it to where it started.
+
+A gull steals something from a harbor worker’s lunch and is chased for exactly three determined steps.
+
+A cargo robot pauses beside a stack of crates as if reconsidering the entire concept of lifting things.
+
+A delivery drone stops mid-air for a recalibration cycle while a gull circles it with open curiosity.
+
+A small harbor robot repeatedly attempts to scan a decorative statue near the pier.
+
+The statue remains unmoved by the attention.
+
+A child crouches beside a maintenance robot and asks it a long, serious question.
+
+The robot responds with a short status beep.
+
+The child seems satisfied.
+
+Outside the teahouse window, someone tries to open an umbrella into the wind.
+
+The wind strongly disagrees.
+
+A gull lands on the railing, looks inside the teahouse for a moment, and then leaves with visible disappointment.
+
+A drone carefully detours around a flock of seagulls, which have no intention of returning the courtesy.
+
+A security robot patrols past the teahouse, stopping to scan a potted plant, apparently convinced it might be a disguised intruder.
+
+A cargo robot pauses beside a stack of containers, apparently reassessing the cost-benefit of lifting anything ever again.
+
+A small dog stares suspiciously at a cleaning robot passing along the dock. The robot, perhaps equally suspicious, pauses and slowly rolls around it.
+
+
+
+
+
+
+ {!
+if (!Q.holtext) {
+    const qolEconomic = Q["qol-economic"] || "";
+    const qolBalance = Q["qol-balance"] || "";
+    const qolRelationships = Q["qol-relationships"] || "";
+    const qolChallenge = Q["qol-challenge"] || "";
+    const qolGrowth = Q["qol-growth"] || "";
+    const qolPurpose = Q["qol-purpose"] || "";
+    const qolAspiration = Q["qol-aspiration"] || "";
+    const qolAccomplish = Q["qol-accomplish"] || "";
+    const complement = Q.complement || "";
+    const frbPeople = Q["frb-people"] || "";
+    const frbEnvironment = Q["frb-environment"] || "";
+
+    if (Q.player === "one") {
+        Q.holtext = `I want ${qolEconomic} in a balanced life with ${qolBalance}. My relationships will be grounded in ${qolRelationships}. I thrive on ${qolChallenge} and want to be free to ${qolGrowth}. I find purpose in ${qolPurpose}. I seek to be ${qolAspiration} and want to contribute to ${qolAccomplish}.
+${complement}
+
+I will act in ways that are ${frbPeople}.
+
+All to be ensured, for many generations to come, on a foundation of ${frbEnvironment}.`;
+    } else if (Q.player === "group" || Q.player === "org") {
+        Q.holtext = `We want ${qolEconomic} in balanced lives with ${qolBalance}. Our relationships will be grounded in ${qolRelationships}. We thrive on ${qolChallenge} and want to be free to ${qolGrowth}. We find purpose in ${qolPurpose}. We seek to be ${qolAspiration} and want to contribute to ${qolAccomplish}.
+${complement}
+
+We will act in ways that are ${frbPeople}.
+
+All to be ensured, for many generations to come, on a foundation of ${frbEnvironment}.`;
+    }
+}
+!}

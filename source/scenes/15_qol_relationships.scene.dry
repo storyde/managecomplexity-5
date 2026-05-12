@@ -1,0 +1,76 @@
+title: Relationships
+subtitle: How We Connect With Others
+on-arrival: hctx_progress = 6 if hctx_progress < 6
+
+Facilyn: Next: Relationships. 
+
+Facilyn: Focus on the outcome you want in your relationships. 
+
+Facilyn: Describe what good relationships look like when people treat each other with care.
+
+- #relationship_aspects
+
+@qolr_explanation
+title: What do you mean exactly?
+max-visits: 1
+order: 21
+tags: relationship_aspects
+
+Me: What do you mean exactly?
+
+Facilyn: Instead of “we need better communication,” describe the result: “we work as a team, stay calm under pressure, and still enjoy each other.”
+
+Facilyn: You’re painting a picture you can recognise when you’re living it.
+
+A harbour-bot and a lighthouse-bot linger at a lonely buoy, trading sea-glass and jokes after a long night guiding ships — until the buoy starts giggling and confesses it’s actually a tiny submarine-bot that parked there for the company.
+
+- #relationship_aspects
+
+@qolr_harmony_care
+title: Warmth, care and ease in one another's presence
+on-arrival: qol_relationships = "warmth, care and ease in one another's presence"
+go-to: 16_qol_challenge_growth
+tags: relationship_aspects
+
+Me: Warmth, care and ease in one another's presence
+
+@qolr_open_communication
+title: Open communication, mutual trust and real enjoyment of each other's company
+on-arrival: qol_relationships = "open communication, mutual trust and real enjoyment of each other's company"
+go-to: 16_qol_challenge_growth
+tags: relationship_aspects
+
+Me: Open communication, mutual trust and real enjoyment of each other's company
+
+@qolr_effective_teamwork
+title: Good teamwork, shared understanding and laughter that makes hard things lighter
+on-arrival: qol_relationships = "good teamwork, shared understanding and laughter that makes hard things lighter"
+go-to: 16_qol_challenge_growth
+tags: relationship_aspects
+
+Me: Good teamwork, shared understanding and laughter that makes hard things lighter
+
+@qolr_remaining_calm
+title: Mutual respect, steady support and honest communication
+on-arrival: qol_relationships = "mutual respect, steady support and honest communication"
+go-to: 16_qol_challenge_growth
+tags: relationship_aspects
+
+Me: Mutual respect, steady support and honest communication
+
+@qolr_custom
+title: Custom answer
+order: 20
+tags: relationship_aspects
+
+Me: Custom answer
+
+{!<textarea class="textarea" data-quality="qol_relationships" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
+
+- @qolr_custom_answer: Save
+
+@qolr_custom_answer
+title: Save
+go-to: 16_qol_challenge_growth
+
+Me: [+ qol_relationships +]

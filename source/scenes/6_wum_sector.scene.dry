@@ -1,0 +1,83 @@
+title: Got it
+view-if: player = "org"
+tags: whole_u_mgmt
+new-page: true
+
+Me: Got it.
+
+Facilyn: I’m curious — what sector does your organisation sit in?
+
+- #org_sector
+
+@sector_agriculture
+title: Agriculture
+on-arrival: sector = "agriculture"
+go-to: 8_wum_dmkrs_org
+tags: org_sector
+
+Me: Agriculture
+
+@sector_business
+title: Business
+on-arrival: sector = "business"
+go-to: 8_wum_dmkrs_org
+tags: org_sector
+
+Me: Business
+
+@sector_culture
+title: Culture
+on-arrival: sector = "culture"
+go-to: 8_wum_dmkrs_org
+tags: org_sector
+
+Me: Culture
+
+@sector_education
+title: Education
+on-arrival: sector = "education"
+go-to: 8_wum_dmkrs_org
+tags: org_sector
+
+Me: Education
+
+@sector_industry
+title: Industry
+on-arrival: sector = "industry"
+go-to: 8_wum_dmkrs_org
+tags: org_sector
+
+Me: Industry
+
+@sector_nonprofit
+title: Nonprofit
+on-arrival: sector = "nonprofit"
+go-to: 8_wum_dmkrs_org
+tags: org_sector
+
+Me: Nonprofit
+
+@sector_publicservice
+title: Public service
+on-arrival: sector = "publicservice"
+tags: org_sector
+
+Me: Public service
+
+Facilyn: Is your organisation involved in public policymaking?
+
+- @policy_yes
+- @policy_no
+
+@policy_yes
+title: Yes, we create public policies
+on-arrival: sector = "policymaking"
+go-to: 8_wum_dmkrs_org
+
+Me: Yes, we create public policies.
+
+@policy_no
+title: No, we are not
+go-to: 8_wum_dmkrs_org
+
+Me: No, we are not.

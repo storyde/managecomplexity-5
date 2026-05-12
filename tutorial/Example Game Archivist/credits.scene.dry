@@ -1,0 +1,56 @@
+title: Credits
+
+Written by Autumn Chen.
+
+Coded using {!<a href="https://github.com/aucchen/dendry">dendry</a>!}, originally by Ian Millington with heavy modifications from the author.
+
+= Acknowledgments
+
+Thanks to Arlo @magiciansvoyage, Jinx @lapinlunairegames, Travis Moy, and Zoe M. for their testing, discussions, and amazing feedback.
+
+
+= Text
+
+Some of the text in this game is adapted from Wikipedia, the Free Encyclopedia. Sources are included where they appear in the game text. Some portions of abstracts from scientific publications are included, with citations below.
+
+= Music
+
+{!<a href="https://midiguru.wordpress.com/2023/05/20/game-changes/">Music composed by Jim Aikin</a>!}
+
+Unofficial soundtrack: {!<a href="https://open.spotify.com/playlist/4X9RQqkMnikpfSzG4Cxq3i">here</a>!}.
+
+= Images
+
+`monitor_dithered.png`: modified from https://commons.wikimedia.org/wiki/File:Belinea-monitor19crt.jpg
+
+`monitor_2_dithered.png`: modified from https://commons.wikimedia.org/wiki/File:HP_Ultra_VGA_1280_text_mode_%E2%80%A2_3.jpg
+
+`monitor_3_dithered.png`: modified from https://commons.wikimedia.org/wiki/File:Kfc_ck1428g_monitor_observe.jpg
+
+All other images by the author. The backgrounds were edited from photographs using GIMP filters and dithering with ImageMagick.
+
+= Science
+
+There are a number of real-world papers referenced in the story from the field of DNA data storage, with abstracts included in the game text.
+
+> Shipman, S., Nivala, J., Macklis, J. et al. CRISPR–Cas encoding of a digital movie into the genomes of a population of living bacteria. Nature 547, 345–349 (2017). https://doi.org/10.1038/nature23017
+
+> Yim, S.S., McBee, R.M., Song, A.M. et al. Robust direct digital-to-biological data storage in living cells. Nat Chem Biol 17, 246–253 (2021). https://doi.org/10.1038/s41589-020-00711-4
+
+> Grass, R.N., Heckel, R., Puddu, M., Paunescu, D. and Stark, W.J. (2015), Robust Chemical Preservation of Digital Information on DNA in Silica with Error-Correcting Codes. Angew. Chem. Int. Ed., 54: 2552-2555. https://doi.org/10.1002/anie.201411378
+
+> Liu, Y., Ren, Y., Li, J., Wang, F., Wang, F., Ma, C. et al. (2022). In vivo processing of digital information molecularly with targeted specificity and robust reliability. Science advances, 8(31), https://doi.org/10.1126/sciadv.abo7415
+
+> Organick, L., Nguyen, B. H., McAmis, R., Chen, W. D., Kohll, A. X., Dumas, S., Grass, R. N., Ceze, L., Strauss, K., An Empirical Comparison of Preservation Methods for Synthetic DNA Data Storage. Small Methods 2021, 5, 2001094. https://doi.org/10.1002/smtd.202001094 
+
+This is a work of fiction; the technologies described in the game are not used in a scientifically accurate fashion.
+
+
+- @one: Start game
+- @postgame_credits: Endings
+- @game_over: End game.
+
+
+@game_over
+view-if: started = 1
+game-over: true

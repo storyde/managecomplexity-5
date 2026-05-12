@@ -1,0 +1,376 @@
+title: A call from K-.
+subtitle: Many calls, in fact.
+view-if: k_path = 3 and day >= k_day + 3 and (day_major = 0 or day_minor = 0) and day < last_day and stress < stress_threshold
+on-arrival: k_path = 4; day_minor += 1; stress += 1
+frequency: 1000
+priority: 10
+tags: minor
+new-page: true
+
+You receive a phone call from K-'s household.
+
+"Mama? I mean, Aunt Em?"
+
+"Yes, S-?"
+
+"Something's wrong with mom. She's just sitting here. Not moving. Talking to herself. When I talk to her she doesn't say anything."
+
+- @go_there: "Okay. I'll be there."
+
+@go_there
+
+"Okay, I'll be there."
+
+You rush to K-'s apartment, as fast as you can, which is still 30 minutes by trolley. You climb up the stairs to her second floor apartment. S- opens the door.
+
+K- sits catatonic in front of the TV, screen, tuned to a rather ineffective relaxation program. Her eyes are open. She is muttering to herself, unintelligible words.
+
+- @you_okay: "Are you okay?"
+- @water: Give her some water or something.
+- @tea: Make tea.
+
+@you_okay
+
+"Are you okay?"
+
+She turns to look at you. "No I'm fucking not okay. What do you think?"
+
+"Mom is talking to you," says S-. "Wow."
+
+- @hug_her: Hug her?
+- @water: Give her some water or something.
+- @tea: Make tea.
+
+@hug_her
+go-to: thanks
+on-arrival: k_romance += 1; stress -= 1
+
+The endorphins released by physical contact will help her. Right?
+
+So you hug her.
+
+"Thanks. The endorphins released by physical contact are really helping me right now."
+
+@water
+go-to: thanks
+
+You pour a cup of hot water. K- drinks.
+
+"Thanks."
+
+@tea
+go-to: thanks
+
+She has concentrated tea powder. You boil a pot of hot water, and mix the tea. K- drinks.
+
+"Thanks."
+
+@thanks
+
+# TODO: edit this
+
+Finally she turns off the monitor, and faces you.
+
+"I've figured it out," says K-. "We were doing an experiment on the ameliorative nanoplague effect. I was looking at the clinical data on the subjects. It was the mortality rates among nominally healthy patients; they obviously weren't volunteers. And the age distribution, and the weird hormonal profiles. I'm such an idiot. It should have been obvious, but a part of me didn't want to know."
+
+- @rehab: "The rehabilitation centres..."
+- @fuck: "Fuck."
+- @silent: Stay silent. Let K- talk.
+
+@rehab
+go-to: its_obvious
+
+"The rehabilitation centres..."
+
+@fuck
+go-to: its_obvious
+
+"Fuck."
+
+@silent
+go-to: its_obvious
+
+You stay silent, and wait for her to continue.
+
+@its_obvious
+
+"It's obvious, isn't it?" She sighs. "I didn't have to know. I'm just a molecular biologist. I work with cells, not human subjects. I didn't have to read those files. Fuck." She starts to sniffle.
+
+"And you know what I did, after thinking about it what I've been doing for the first time in forever?" she continues. "I tried praying to God of all things. Well guess what, God isn't fucking listening!"
+
+She is crying. You hand her a tissue. "Thanks," she says again.
+
+- @who: "Who did you *think* the trials were being run on?"
+- @silent_2: Stay silent.
+- @help: "Is there a way to help these people?"
+
+@who
+go-to: is_bad
+
+"Who did you *think* the trials were being run on?" You must sound cold.
+
+"I don't know! We do a lot of human samples. Most of it... God, I don't think about that stuff, never. I just work on cells. Am I a bad person for that?"
+
+
+@silent_2
+go-to: is_bad
+
+A pause. "Am I a bad person?" she asks.
+
+@help
+go-to: is_bad
+
+"Is there a way to help these people?"
+
+"I don't know. What do I do, go to the *media*? They'll commend the government's foresight in giving prisoners a socially useful function." A pause. "Am I a bad person?"
+
+@is_bad
+
+- @bad_person: "Yeah. Probably."
+- @not_bad: "No, you're not a bad person...
+- @its_complicated: "It's complicated..."
+- @it_doesnt_matter: "It doesn't really matter."
+
+
+@bad_person
+
+"Yeah. Probably."
+
+"Thanks for telling the truth."
+
+- @im_bad_too: "But maybe I'm a bad person too..."
+
+@not_bad
+
+"No, you're not a bad person..."
+
+"That's objectively false. I don't appreciate being lied to."
+
+- @im_bad_too: "But maybe I'm a bad person too..."
+
+@im_bad_too
+on-arrival: im_bad_too = 1
+
+"But maybe I'm a bad person too. Maybe we all are..."
+
+"Oh my God, Em! This is not about you! You're supposed to tell me how much I fucked up and how much you hate me!" She hits herself on the chest with a fist.
+
+- @k_fallen: She falls.
+
+
+@its_complicated
+
+"It's complicated..."
+
+"That's a really fucking absolutionist answer. Sorry, but I believe in objective truth." She hits herself on the chest with a fist.
+
+- @k_fallen: She falls.
+
+
+@it_doesnt_matter
+
+"It doesn't really matter..."
+
+"That's a really fucking absolutionist answer. Sorry, but I believe in objective truth." She hits herself on the chest with a fist.
+
+- @k_fallen: She falls.
+
+
+@k_fallen
+
+K- has fallen on the floor. You share a glance with S-.
+
+- @help_her: Carry her to bed.
+- @cook: Cook something.
+- @clean: Clean up the apartment.
+- @leave_her: Leave her.
+
+@leave_her
+choose-if: 1 = 0
+unavailable-subtitle: You can't.
+
+@help_her
+
+Unfortunately, you are not physically strong enough to move her.
+
+- @cook: Cook something.
+- @clean: Clean up the apartment.
+
+@cook
+
+There are no more groceries left in the refrigerator, but K- has a large supply of high-quality white, brown, and glutinous rice, mung beans, red beans, lentils, and even some dried dates. It must have been expensive. You wash a mixture of rice and various beans in a pot, fill it to the marking with water, add more sweetener than usual, and put it into the pressure cooker. This can hardly be considered cooking, but it will do, for now.
+
+S- is reading a picture book on the couch. You sit next to K- as the rice is cooking. She places her hand on yours, and squeezes. You squeeze back.
+
+- @eat: The porridge is ready.
+
+@eat
+on-arrival: food += 1
+go-to: k_apology
+
+"S-, have you eaten yet?", you ask.
+
+He shakes his head. The three of you gather around the kitchen counter. K- has finally gotten up by herself. You serve three bowls. It tastes good, better than your usual. Sweet.
+
+"Thanks," says K-.
+
+"Thank you Aunt Em," says S-.
+
+"Um. Yeah. It's fine," you say.
+
+@clean
+
+The apartment is messy, almost as messy as yours. Socks and clothes lay strewn about the living room, along with empty wrappers and clumps of long black hair. You find a broom and dustpan, and begin sweeping.
+
+"Can I help?" asks S-.
+
+"Um, just move all the clothes out of the way." 
+
+Together the two of you clean the living room floor, until it looks almost suitable for human habitation. Then you begin folding the clothes.
+
+- @k_gets_up: K- has gotten up.
+
+
+@k_gets_up
+go-to: k_apology
+
+K- has finally gotten up by herself. Her tears have stopped, but her eyes are still red. "You don't have to do this, you know."
+
+"I'm doing this because I want to," you say.
+
+
+
+@k_apology
+
+"By the way, sorry for snapping at you," she says.
+
+"It's okay..."
+
+"Do you still need money? I can give you some right now."
+
+- @yes_money: "Yes, I still need it..."
+- @money_job: "Not after what you just told me..."
+- @no_money: "No. Keep it."
+
+
+@yes_money
+on-arrival: money += 100
+go-to: are_you_okay
+
+"Yes, I need it... Sorry."
+
+"No, it's fine. Here's a hundred."
+
+- @are_you_okay: "Are you going to be okay?"
+
+@money_job
+on-arrival: dont_take_money = 1
+
+"Not after what you just told me..."
+
+"Fine. That makes sense. But I thought you'd be more pragmatic. Sorry."
+
+- @are_you_okay: "Are you going to be okay?"
+
+@no_money
+on-arrival: dont_take_money = 1
+
+"No. Keep it."
+
+"Are you sure?"
+
+"Yes."
+
+- @are_you_okay: "Are you going to be okay?"
+
+@are_you_okay
+
+"Are you going to be okay?"
+
+"Probably. I'm feeling better now. Just needed a good cry." She smiles. "It's fine. I'm just gonna quit this job. Look for another one."
+
+- @maybe_help: "Maybe you should keep the job..."
+- @rebels_help: "Maybe you could keep the job and give the information to R-."
+- @good_for_you: "Good for you."
+- @not_enough: "Maybe that's not enough..."
+
+@maybe_help
+on-arrival: k_quit_job = 0; k_keep_job = 1
+
+"Maybe you should keep the job."
+
+"Oh, why should I keep the job?"
+
+- @you_need_money: "You and S- need the money."
+- @i_need_money: "I need the money."
+- @replace_you: "They'll just replace you with someone who doesn't have a conscience."
+- @information: "The information might be helpful eventually."
+
+@you_need_money
+go-to: nothing_to_do
+
+"You and S- need the money."
+
+K- sighs. "You're right. I'll think about it. Thanks again for coming here, by the way."
+
+@i_need_money
+view-if: dont_take_money = 0
+go-to: nothing_to_do
+
+"I need the money."
+
+K- laughs. "You're honest. [? if im_bad_too = 1 : And you're right, you really are a bad person. ?] Thanks. I'll think about it."
+
+@replace_you
+go-to: nothing_to_do
+
+"They'll just replace you with someone who doesn't have a conscience."
+
+K- sighs. "You're right. I'll think about it. Thanks again for coming here, by the way."
+
+@information
+go-to: nothing_to_do
+
+"The information might be helpful eventually."
+
+"Really? Are you thinking of planning a rescue?"
+
+"I don't know... Maybe there are still rebels out there."
+
+"Right... I'll think about it. Thanks again for coming here, by the way."
+
+@nothing_to_do
+
+There is nothing more for you to do here. Saying your goodbyes to the two of them, you return home.
+
+
+
+@rebels_help
+view-if: support_mutual_aid = 1
+on-arrival: k_quits_job = 0; k_rebel = 1; k_keep_job = 1
+go-to: nothing_to_do
+
+"Maybe you could keep the job and give the information to R-."
+
+"Huh, she's still alive? And still playing at revolution?"
+
+You nod.
+
+K- thinks for a moment. "Okay. Maybe you can talk to her sometime. Ask her what she thinks. Thanks again for coming here, by the way."
+
+
+@good_for_you
+on-arrival: k_quits_job = 1
+
+"Good for you..."
+
+She sighs. "Maybe we'll have to downsize. Maybe I won't be able to give you money anymore."
+
+"It's fine..."
+
+"By the way, thanks for coming here. I'll be fine now."
+
+*If she quits the job she won't be able to financially support you anymore* is a thought you have. But you quickly push it aside. Saying your goodbyes to the two of them, you return home.
+
+@not_enough
+on-arrival: k_quits_job = 1

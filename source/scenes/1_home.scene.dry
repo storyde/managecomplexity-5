@@ -1,0 +1,196 @@
+title: Home
+on-arrival: display_jrny = 1
+is-special: true
+new-page: true
+
+{!
+<article class="article article--landing" aria-labelledby="home-top">
+  <div class="article-hero">
+    <div class="article-hero-text">
+      <p class="article-kicker">Discover how to</p>
+      <h1 id="home-top">Manage Complexity</h1>
+      <p class="article-tagline">
+        Get a taste of how our world is managed into crisis — and learn a framework to prevent it.
+      </p>
+
+      <nav class="article-nav" aria-label="Homepage navigation">
+        <ul class="article-nav-list">
+          <li><a class="article-nav-link" href="#home-learning-groups">Further learning</a></li>
+          <li><a class="article-nav-link" href="#home-about-us">About us</a></li>
+          <li><a class="article-nav-link" href="#home-faq">FAQ</a></li>
+          <li><a class="article-nav-link" href="#home-feedback">Feedback</a></li>
+        </ul>
+      </nav>
+
+      <div class="article-actions">
+        <button class="article-btn article-btn-primary" type="button" onclick="dendryUI.dendryEngine.goToScene('2_intro');" aria-label="Start playing the story">
+          Start playing
+        </button>
+        <button class="article-btn article-btn-secondary" type="button" onclick="dendryUI.dendryEngine.goToScene('tutorial');" aria-label="Open the tutorial">
+          Tutorial
+        </button>
+        <button class="article-btn article-btn-ghost" type="button" onclick="dendryUI.dendryEngine.goToScene('credits');" aria-label="View credits">
+          Credits
+        </button>
+        <button class="article-btn article-btn-ghost" type="button" onclick="dendryUI.dendryEngine.goToScene('legal_notice');" aria-label="View legal notice">
+          Legal notice
+        </button>
+        <button class="article-btn article-btn-ghost" type="button" onclick="dendryUI.dendryEngine.goToScene('zz_test');" aria-label="View test">
+          Test
+        </button>
+      </div>
+    </div>
+
+    <figure class="article-hero-media" aria-label="Atmospheric image">
+      <img
+        class="article-hero-img"
+        src="assets/imgs/bug.jpg"
+        alt="A colorful bug."
+        loading="lazy"
+        decoding="async"
+        width="1200"
+        height="800"
+      >
+      <figcaption class="article-hero-caption"><strong>🚧 This story is still under development.</strong><br> Please give us <a href="#tally-open=Me8Y0g&tally-layout=modal&tally-width=650&tally-emoji-text=👋&tally-emoji-animation=wave&tally-auto-close=4000">feedback</a> on the bugs 🐞 you find.</figcaption>
+    </figure>
+  </div>
+
+  <div class="article-grid">
+    <div class="article-card" id="home-language" aria-labelledby="home-language-title">
+      <div class="article-callout" role="note" aria-labelledby="home-language-title">
+        <h3 id="home-language-title">Choose your language</h3>
+        <p>
+          Translations will be added soon.
+        </p>
+        <div class="article-actions article-actions-compact">
+          <button class="article-link-btn" type="button" disabled aria-label="English (current)">
+            English (current)
+          </button>
+          <button class="article-link-btn" type="button" disabled aria-label="German (coming soon)">
+            German (coming soon)
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-card" id="home-about" aria-labelledby="home-about-title">
+      <h2 id="home-about-title" class="article-rotating-headline" aria-label="Complexity is wild">
+        <span class="article-rotating-line" aria-hidden="true">
+          <span class="article-rotating-prefix">Complexity is</span>
+          <span class="article-rotating-wordbox">
+            <span class="article-rotating-word">wild</span>
+            <span class="article-rotating-word">dynamic</span>
+            <span class="article-rotating-word">emergent</span>
+            <span class="article-rotating-word">nonlinear</span>
+            <span class="article-rotating-word">generative</span>
+          </span>
+        </span>
+      </h2>
+      <p>
+        Align your management with reality.
+      </p>
+      <p>
+        This project is an interactive introduction to a new management framework: navigating complexity with a shared holistic context.
+      </p>
+    </div>
+
+    <div class="article-card article-card-wide" id="home-learning-groups" aria-labelledby="home-learning-groups-title">
+      <h2 id="home-learning-groups-title">Further learning</h2>
+      <p>
+        Learn by practicing real decisions together.
+      </p>
+
+      <div class="article-grid article-grid--compact">
+        <div class="article-card" id="home-join-group" aria-labelledby="home-join-group-title">
+          <h3 id="home-join-group-title">Join an event</h3>
+          <p>Join a learning event. Or start one with friends, colleagues, or neighbors.</p>
+          <div class="article-actions article-actions-compact">
+            <button class="article-link-btn" type="button" onclick="dendryUI.dendryEngine.goToScene('learning_events');" aria-label="Open learning events">
+              Learning events
+            </button>
+          </div>
+        </div>
+
+        <div class="article-card" id="home-host-group" aria-labelledby="home-host-group-title">
+          <h3 id="home-host-group-title">Professional facilitation</h3>
+          <p>Bring a trained facilitator to your team.</p>
+          <div class="article-actions article-actions-compact">
+            <button class="article-link-btn" type="button" onclick="dendryUI.dendryEngine.goToScene('facilitators');" aria-label="Open the facilitator booking page">
+              Book a facilitator
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="home-cta" class="article-card article-card-wide" aria-labelledby="home-cta-title">
+      <h2 id="home-cta-title">Ready?</h2>
+      <p>
+        Learn a way to make decisions that hold together socially, economically, and environmentally.
+      </p>
+      <div class="article-actions">
+        <button class="article-btn article-btn-primary" type="button" onclick="dendryUI.dendryEngine.goToScene('2_intro');" aria-label="Start playing now">
+          Start now
+        </button>
+        <button class="article-btn article-btn-secondary" type="button" onclick="dendryUI.dendryEngine.goToScene('tutorial');" aria-label="Open the tutorial">
+          Tutorial
+        </button>
+      </div>
+    </div>
+
+    <div class="article-card" id="home-about-us" aria-labelledby="home-about-us-title">
+      <h2 id="home-about-us-title">About us</h2>
+      <p>
+        We are a growing group of learners who care about better management of complex systems — not as an abstract idea, but as a daily practice.
+      </p>
+    </div>
+
+    <div class="article-card" id="home-funding" aria-labelledby="home-funding-title">
+      <div class="article-callout" role="note" aria-labelledby="home-funding-title">
+        <h3 id="home-funding-title">Donations</h3>
+        <p>
+          If you want to support this project, consider donating.
+        </p>
+        <div class="article-actions article-actions-compact">
+          <button class="article-link-btn" type="button" disabled aria-label="Donate (coming soon)">
+            Coming soon
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-card article-card-wide" id="home-faq" aria-labelledby="home-faq-title">
+      <h2 id="home-faq-title">FAQ</h2>
+      <details>
+        <summary>Is this about the alignment-problem?</summary>
+        <p>Exactly. The alignment-problem is often discussed in relation to AI, but humans face it too: our actions can drift away from what we actually value. This framework helps bring decisions back into alignment with the whole we intend to serve.</p>
+      </details>
+      <details>
+        <summary>Is this only for professional managers?</summary>
+        <p>No. We all manage our lives and our environment, regardless of our profession. This story is designed as a guided introduction, so no prior knowledge is needed.</p>
+      </details>
+      <details>
+        <summary>Is this meant for individuals or organisations?</summary>
+        <p>Both. The framework scales from personal decisions to teams and organisations, as long as the “whole” is defined clearly.</p>
+      </details>
+    </div>
+
+    <div class="article-card article-card-wide" id="home-feedback" aria-labelledby="home-feedback-title">
+      <h2 id="home-feedback-title">Feedback</h2>
+      <p>
+        Help us improve the learning experience.
+      </p>
+      <div class="article-actions article-actions-compact">
+        <button class="article-link-btn" type="button" aria-label="Leave feedback" data-tally-open="Me8Y0g" data-tally-layout="modal" data-tally-width="650" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" data-tally-auto-close="4000">
+          Leave feedback
+        </button>
+        <a class="article-link-btn" href="#home-top" aria-label="Back to the top of the homepage">
+          Back to top
+        </a>
+      </div>
+    </div>
+  </div>
+</article>
+!}
+
+- @backSpecialScene: Back

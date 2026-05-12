@@ -1,0 +1,50 @@
+title: Marginal reaction
+on-arrival: fltr_progress = 2 if fltr_progress < 2
+
+Facilyn: The marginal reaction check helps you use time, money, and energy well — especially when you’re choosing between options that already passed the other checks.
+
+Facilyn: "Which action will provide the greatest return toward the goal for each additional unit of money or time invested?"
+
+- #marginal_reaction
+
+@fqmr_explanation
+title: I need help understanding this check
+max-visits: 1
+order: 21
+tags: marginal_reaction
+
+Me: I need help understanding this check.
+
+Facilyn: Think of it as asking "What's the biggest bang for your buck?" Compare not just the total benefits, but the benefits relative to what you're investing. A small action with modest benefits might have better returns than a large action with bigger benefits if it requires much less investment.
+
+Facilyn: Consider time, money, energy — and opportunity cost. What else could you do with those same resources?
+
+A cargo robot pauses beside a stack of containers, apparently reassessing the cost-benefit of lifting anything ever again.
+
+- #marginal_reaction
+
+@fqmr_pass
+title: It provides the highest return on investment
+on-arrival: fltr_marginal = "Passed"
+go-to: 34_fq_result if filtered = 1; 30_fq_gross_profit
+tags: marginal_reaction
+
+Me: It provides the highest return on investment.
+
+@fqmr_fail
+title: It does not provide the highest return on investment
+on-arrival: fltr_marginal = "Failed"
+go-to: 34_fq_result if filtered = 1; 30_fq_gross_profit
+tags: marginal_reaction
+
+Me: It does not provide the highest return on investment.
+
+Facilyn: Fair. You might reconsider, or find a way to improve the return. Sometimes low returns are worth it for other reasons — but it helps to see the trade-off clearly.
+
+@fqmr_skip
+title: Not sure, let's move on
+on-arrival: fltr_marginal = "Skipped"
+go-to: 34_fq_result if filtered = 1; 30_fq_gross_profit
+tags: marginal_reaction
+
+Me: Not sure, let's move on.

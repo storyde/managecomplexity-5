@@ -1,0 +1,328 @@
+title: How about calming these dust storms?
+on-arrival: example_type = "How about calming these dust storms?"; info_last = "Dust storms" if info_dust_storms = 0; info_dust_storms = 1
+new-page: true
+tags: choose_prblm
+
+Me: [+ prblm_type +]
+
+Facilyn: A good place to start. Do you have any sense yet of what is really driving them?
+
+Before you can answer, the teahouse door lurches inward, letting in a slice of copper-grey light, then slams back against its frame.
+
+A man in a sand-colored field coat pauses on the threshold, breathing through the dust. Fine grit clings to his eyebrows and the seams of his sleeves. Under one arm he carries a weatherproof map tube. In the other hand is a cloth bundle gone dark at the corners.
+
+Facilyn: Rane. You made it in.
+
+Rane: Yes. What a storm.
+
+He notices you, gives a short nod, and sets the bundle on the table. When he unwraps it, several gray grass stems roll onto the wood beside a crescent of black ash.
+
+Rane: Eastern flats. Fresh from the reserve.
+
+Facilyn glances toward the window.
+
+Facilyn: Good timing. Ask him.
+
+- #duststorm_arrival
+
+@duststorm_arrival
+title: Isn't that storm coming off the eastern flats?
+tags: duststorm_arrival, duststorm_main
+max-visits: 1
+
+Me: Isn't that storm coming off the eastern flats?
+
+Rane: Yes. And by evening the papers will blame heat, wind, or bad luck. They never blame the management plan.
+
+Facilyn: Which makes it useful for us. The dust is obvious. The cause is not.
+
+- #duststorm_arrival
+
+@duststorm_ask_who
+title: Ask who he is
+tags: duststorm_arrival, duststorm_main
+max-visits: 1
+
+Me: You work in the eastern flats?
+
+Rane: Senior ranger.
+
+He peels one glove off finger by finger.
+
+Rane: Public tours, boundary checks, fire reports, erosion transects, and the occasional briefing where someone from the capital explains my own reserve to me.
+
+Facilyn hides a smile in her cup.
+
+Rane: It is one of the most protected landscapes in the region. Which sounds impressive right up until it arrives in town as airborne soil.
+
+- #duststorm_main
+
+@duststorm_ask_bundle
+title: Ask about the bundle
+tags: duststorm_arrival, duststorm_main
+max-visits: 1
+
+Me: What did you bring in with you?
+
+Rane nudges the stems with one finger.
+
+Rane: Evidence. Or souvenirs, if the ministry is writing the report.
+
+He points first to the gray stems, then to the ash.
+
+Rane: This is what the flats are becoming. First they stand gray and dead. Then we burn them. Then the wind does the editing.
+
+Facilyn: If you want to choose a wise action later, do not begin by grabbing the first fix that sounds impressive. Begin by understanding the failure properly.
+
+- #duststorm_main
+
+@duststorm_ask_miracle
+title: Ask what he means by "miracle reserve"
+tags: duststorm_arrival, duststorm_main
+max-visits: 1
+
+Me: Miracle reserve?
+
+Rane: Officially, the eastern flats are a restoration success story.
+
+He starts counting on dusty fingers.
+
+Rane: No farming. No settlements. No livestock herds. Pure rewilding. Protected more carefully than almost anywhere else in the region.
+
+Facilyn: On paper, it is what enlightened land care looks like.
+
+Facilyn: On the ground, it shows how efficiently we can produce desert while calling it care.
+
+- #duststorm_main
+
+@duststorm_ask_why_fail
+title: Ask why a protected reserve still throws dust
+tags: duststorm_main
+max-visits: 1
+
+Me: If the reserve is so protected, why is it still throwing dust into the harbour?
+
+Rane gives a tired smile.
+
+Rane: Because protected is not the same as functioning.
+
+Rane: Visitors see open space and call it wild. But on the transects I see more standing dead grass, wider bare spaces between plants, more capped ground after rain, and less new establishment every year.
+
+Facilyn: The reserve is trapped in a story that sounds wise but fits the wrong climate.
+
+Facilyn: In a humid environment, long rest can allow land to recover quickly. But the eastern flats are brittle. Rainfall is seasonal and unreliable, humidity is poorly distributed through the year, and old plant material breaks down slowly.
+
+Rane: From a distance it still photographs well. Up close it is a weakening grassland trying to pass as a protected one.
+
+- #duststorm_main
+
+@duststorm_ask_stems
+title: Pick up one of the gray stems
+tags: duststorm_main, duststorm_after_root
+max-visits: 1
+
+Me: What am I actually looking at here?
+
+You pick up one of the stems. It is so dry it weighs almost nothing. When you press it lightly between your fingers, it shatters and leaves pale fragments in your palm.
+
+Facilyn: Oxidised grassland.
+
+Facilyn: In brittle country, dead grass often does not break down quickly through biological decay the way people in humid regions expect. It stays upright, gray, and weathered. Sun, dry air, and time break it down chemically and physically instead.
+
+Rane: The brochures call it natural senescence. On the ground it behaves more like a warning.
+
+Facilyn: Because much of the material remains standing instead of being returned to the soil surface, it does not protect the soil well enough. Growth points stay shaded. Plants weaken. Their centers die. Bare gaps widen.
+
+Rane: And then the wind starts billing the harbour for our mistakes.
+
+- #duststorm_deeper_stems
+
+@duststorm_deeper_oxidation
+title: Ask what oxidation actually does to the grass plants
+tags: duststorm_deeper_stems
+max-visits: 1
+
+Me: What does oxidation actually do to the grass plants?
+
+Facilyn: It is slow, top-down breakdown in the open air. That matters because it does not return enough material quickly enough to the soil surface.
+
+Facilyn: The old stems remain standing. Light is blocked from growth points. New shoots are weakened. Over time, the centers of bunch grasses die and the spaces between plants widen.
+
+Rane: Which is why a place can still look grassy from the road and already be failing underfoot.
+
+- #duststorm_deeper_stems
+
+@duststorm_deeper_cover
+title: Ask why standing gray grass is not enough soil cover
+tags: duststorm_deeper_stems
+max-visits: 1
+
+Me: If there is still grass there, why is the soil not protected?
+
+Facilyn: Because in brittle country, a great deal of useful cover needs to lie on the soil surface, not merely stand above it.
+
+Facilyn: Standing dead grass can look like abundance. But if the soil between plants is bare, capped, and open to sun and wind, then the water cycle and mineral cycle are already weakening.
+
+Rane: That is what catches newcomers. They see stems. I see the ground between them.
+
+- #duststorm_deeper_stems
+
+@duststorm_ask_fire
+title: Ask about the ash and the burns
+tags: duststorm_main, duststorm_deeper_stems, duststorm_after_root
+max-visits: 1
+
+Me: And the ash?
+
+Rane unclips the map tube and rolls out a reserve map far enough to show several black-marked blocks across the eastern flats.
+
+Rane: Burn zones. Last month's line.
+
+Rane: When the old gray material builds up, headquarters authorizes prescribed burns. The official language is always the same: reduce fuel load, stimulate fresh growth, restore vigor.
+
+Facilyn: Fire removes the symptom beautifully for a short time.
+
+Facilyn: Then it leaves exposed soil, open to sun, wind, raindrop impact, runoff, and evaporation. In a brittle environment, that is a dangerous bargain.
+
+Rane: After a burn, the reserve looks tidier in photographs. Then the next dust storm comes off the flats and blows the accounting into town.
+
+Facilyn: So the burn treats the visible symptom of old gray grass while making the deeper weakness worse.
+
+- #duststorm_deeper_fire
+
+@duststorm_deeper_fire_water
+title: Ask what fire does to the water cycle here
+tags: duststorm_deeper_fire
+max-visits: 1
+
+Me: What does the burn change in the water cycle?
+
+Facilyn: It strips away litter and exposes soil to raindrop impact. Then the surface is more likely to cap, water is more likely to run off or evaporate, and less moisture remains available for plants and soil life.
+
+Facilyn: In other words, the reserve burns away part of the little protection it still has, then wonders why the next wind finds dust.
+
+- #duststorm_deeper_fire
+
+@duststorm_deeper_fire_appearance
+title: Ask why burning remains so tempting
+tags: duststorm_deeper_fire
+max-visits: 1
+
+Me: If burning fails, why does it remain so tempting?
+
+Rane: Because it looks decisive.
+
+Facilyn: And because it tidies the symptom. Gray standing grass looks like neglect. Ash and short green flushes look like action.
+
+Facilyn: Management repeatedly falls in love with what photographs well.
+
+- #duststorm_deeper_fire
+
+@duststorm_ask_rewilding
+title: Ask why rewilding is too slow here
+tags: duststorm_main, duststorm_deeper_stems, duststorm_deeper_fire, duststorm_after_root
+max-visits: 1
+
+Me: If the reserve is left alone long enough, would it not eventually recover?
+
+Rane looks toward the darkened window.
+
+Rane: Perhaps in ten thousand years. If the large herbivores returned. And especially if their predators returned too, to keep them bunched and moving. We removed that whole relationship, then called the silence healing.
+
+Facilyn: That is the trouble with the word rewilding. People hear it and imagine a fast moral correction. But climate still governs the pace. And the damage is already here.
+
+Facilyn: In the eastern flats, biological decay is weak for long parts of the year. In the dry season, many of the organisms of decay die back or go dormant. Succession from bare soil is painfully slow under those conditions.
+
+Rane: We call it patient management.
+
+He gives a dry half-shrug.
+
+Rane: Mostly we are being patient while the land keeps blowing away.
+
+- #duststorm_deeper_rewilding
+
+@duststorm_deeper_predators
+title: Ask why predators matter to this story
+tags: duststorm_deeper_rewilding
+max-visits: 1
+
+Me: You said the old relationship is gone. Why do predators matter here?
+
+Rane: Because predators once kept large herbivores bunched and moving.
+
+Facilyn: And in brittle grasslands, that movement mattered. It helped dead material return to the soil more biologically and more quickly than simple rest can manage on its own.
+
+Facilyn: Rane sees the failure clearly. What he is describing is not only the loss of animals, but the loss of a process.
+
+- #duststorm_deeper_rewilding
+
+@duststorm_deeper_timescale
+title: Ask why the timescale matters if recovery is still possible
+tags: duststorm_deeper_rewilding
+max-visits: 1
+
+Me: If recovery is possible at all, why does the timescale matter so much?
+
+Facilyn: Because communities, harbours, and decision makers live in decades, not geological patience.
+
+Facilyn: If a management approach requires centuries while the land is still losing soil now, then it is not a serious answer to the present problem.
+
+Rane: The harbour cannot wait ten thousand years for a better weather report.
+
+- #duststorm_deeper_rewilding
+
+@duststorm_ask_root_cause
+title: Ask what the real misunderstanding is
+tags: duststorm_main, duststorm_deeper_stems, duststorm_deeper_fire, duststorm_deeper_rewilding
+max-visits: 1
+
+Me: So what is the real misunderstanding?
+
+Facilyn folds the map closed with two fingers.
+
+Facilyn: That the eastern flats are failing because of too much disturbance.
+
+Facilyn: In truth, much of the damage comes from the wrong kind of rest. The land is being managed as though rest alone were enough in a brittle grassland.
+
+Facilyn: The reserve is managed as if total rest and very long-term rewilding were enough. When that predictably disappoints, fire is used to clear the symptoms. But the root problem remains: the soil is not being kept covered, old grasses are oxidising instead of breaking down biologically, the water cycle is weakening, and even the forming algae crust is not a sign of healthy recovery, but of succession stalling.
+
+Rane: We know how to protect a boundary. We know how to ban things. We know how to write burn plans.
+
+He looks at the broken stem beside your cup.
+
+Rane: What we still do not know how to do is get this dead grass to break down biologically before the flats turn it into dust.
+
+- #duststorm_after_root
+
+@duststorm_ask_facilyn_hint
+title: Ask whether Facilyn already suspects the missing process
+tags: duststorm_main, duststorm_deeper_stems, duststorm_deeper_fire, duststorm_deeper_rewilding, duststorm_after_root
+max-visits: 1
+
+Me: You sound as if you already suspect what is missing.
+
+Facilyn: I do.
+
+Facilyn: Rane sees the symptoms very well: oxidised grass, failed soil cover, burns that expose the ground, and a reserve resting itself toward desertification.
+
+Facilyn: I also suspect the land has lost a process that once returned old grass to the soil biologically and far more effectively than this management now allows.
+
+Facilyn: That points toward a family of possible solutions. But this is exactly where people go wrong: they rush toward a fix before they can describe the failure precisely.
+
+Facilyn: First be clear about the problem. Then the first filter question can do its work.
+
+- #duststorm_after_root
+
+@duststorm_to_filters
+title: I understand the problem better. Let me test a possible action.
+tags: duststorm_main, duststorm_deeper_stems, duststorm_deeper_fire, duststorm_deeper_rewilding, duststorm_after_root
+go-to: 27_fq_cause_effect
+
+Me: I understand the problem better. Let me test a possible action.
+
+Rane gathers the stems back into the cloth, but a black smear of ash remains on the table between you.
+
+Facilyn: Good. Hold your preferred action lightly for a moment.
+
+Facilyn: First we ask the most important opening question: does it address the root cause, or only the dust in the air?
+

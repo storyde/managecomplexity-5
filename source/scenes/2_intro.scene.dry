@@ -1,0 +1,43 @@
+title: Start 
+on-display: jrny_progress = "1" if jrny_progress < 1
+new-page: true
+
+= In the not-so-distant future, 
+
+in a country that once called itself stable, the strain of the polycrisis takes its toll.
+
+And the robots?
+
+They're still around, doing their own thing now.
+
+You arrive at the old harbour, following an invitation to grab some tea and discuss a way out of the polycrisis.
+
+You are here:  
+
+- #here_with
+
+@by_yourself
+title: On my own 
+subtitle: Currently without company
+on-arrival: player = "one"
+go-to: 3_harbour
+tags: here_with
+
+Me: On my own. 
+
+@with_group
+title: With family or friends
+on-arrival: player = "group"
+go-to: 3_harbour
+tags: here_with
+
+Me: As a group. 
+
+@for_organization
+title: On behalf of my organisation
+subtitle: Or with colleagues
+on-arrival: player = "org"
+go-to: 3_harbour
+tags: here_with
+
+Me: On behalf of my organisation. 
