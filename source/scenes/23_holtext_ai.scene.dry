@@ -4,20 +4,22 @@ tags: holtext_complete
 
 Me: Improve it.
 
-Facilyn places a small device next to the paper, scanning the text.
+Facilyn places a small device next to the paper. 
 
-Its display shows:
+It scans the text, then shows:
 
-RoboDisplay: Do you agree to have this text processed by Mistral AI?
+RoboDisplay: Do you agree to have your text processed by Mistral AI?
 
 - @ai_send
 - @ai_decline
 
 @ai_decline
-title: No, keep it as is
+title: No, thanks
 go-to: 24_prblm_intro
 
-Me: No, keep it as is.
+Me: No, thanks.
+
+Facilyn: There is no need to use AI for this. You can improve it over time and keep your own voice.
 
 @ai_send
 title: Yes, I agree
@@ -60,7 +62,7 @@ on-arrival: ai_text = holtext; ai_review = ""; {! setTimeout(function () {
     reviewElement.textContent = "Reviewing text...";
 
     try {
-      var systemPrompt = 'Improve the text for clarity and flow without changing its meaning or tone. Preserve the input’s paragraphing and line breaks (do not merge lines). Also provide a short review of the changes. Return valid JSON only in this shape: {"improvedText":"...","review":"..."}. Keep `review` under 25 words.';
+      var systemPrompt = 'Correct minor grammar issues in the text without changing its meaning or tone. Preserve the input’s paragraphing and line breaks (do not merge lines). Also check whether the text includes any bias or specific practice and point out in the review that it shouldn’t. Return valid JSON only using exactly this structure: {"improvedText":"...","review":"..."}. Do not include any extra text outside the JSON. Keep `review` under 25 words. If no specific practice is present, write a neutral review like: `No bias or practice detected.`';
       var response = await fetch("/ai/improve-text", {
         method: "POST",
         headers: { "content-type": "application/json" },
@@ -147,4 +149,4 @@ go-to: 24_prblm_intro
 
 Me: Discard this version.
 
-Facilyn: That’s the right call when the words already feel true. Keep your own voice — ownership matters most.
+Facilyn: That’s the right call when the words already feel true. Keep your own voice.
