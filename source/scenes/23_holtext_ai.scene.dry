@@ -1,5 +1,150 @@
 title: Improve it
-on-departure: 
+max-visits: 1 
 tags: holtext_complete
 
 Me: Improve it.
+
+Facilyn places a small device next to the paper, scanning the text.
+
+Its display shows:
+
+RoboDisplay: Do you agree to have this text processed by Mistral AI?
+
+- @ai_send
+- @ai_decline
+
+@ai_decline
+title: No, keep it as is
+go-to: 24_prblm_intro
+
+Me: No, keep it as is.
+
+@ai_send
+title: Yes, I agree
+on-arrival: ai_text = holtext; ai_review = ""; {! setTimeout(function () {
+  var maxElementChecks = 40;
+
+  function getLatestElement(selector) {
+    var elements = document.querySelectorAll(selector);
+    return elements.length ? elements[elements.length - 1] : null;
+  }
+
+  function parseAiResponse(responseText) {
+    if (typeof responseText !== "string") return null;
+    var trimmed = responseText.trim();
+    if (!trimmed) return null;
+    try {
+      return JSON.parse(trimmed);
+    } catch (error) {
+      var jsonMatch = trimmed.match(/```(?:json)?\s*([\s\S]*?)\s*```/i);
+      if (!jsonMatch) return null;
+      try {
+        return JSON.parse(jsonMatch[1]);
+      } catch (nestedError) {
+        return null;
+      }
+    }
+  }
+
+  async function improveText(statusElement, outputElement, reviewElement) {
+    var sourceText = Q.holtext || "";
+    outputElement.textContent = Q.ai_text || sourceText;
+    reviewElement.textContent = Q.ai_review ? "Review: " + Q.ai_review : "";
+
+    if (!sourceText) {
+      statusElement.textContent = "Please enter some text first.";
+      return;
+    }
+
+    statusElement.textContent = "Improving text...";
+    reviewElement.textContent = "Reviewing text...";
+
+    try {
+      var systemPrompt = 'Improve the text for clarity and flow without changing its meaning or tone. Preserve the input’s paragraphing and line breaks (do not merge lines). Also provide a short review of the changes. Return valid JSON only in this shape: {"improvedText":"...","review":"..."}. Keep `review` under 25 words.';
+      var response = await fetch("/ai/improve-text", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          messages: [
+            { role: "system", content: systemPrompt },
+            { role: "user", content: sourceText }
+          ],
+          temperature: 0.2,
+          max_tokens: 700
+        })
+      });
+
+      var responseBody = await response.json().catch(function () {
+        return {};
+      });
+      if (!response.ok) throw new Error(responseBody.error || "AI did not respond.");
+
+      var parsed = parseAiResponse(responseBody.response);
+      var improvedText = parsed && typeof parsed.improvedText === "string" ? parsed.improvedText : "";
+      var review = parsed && typeof parsed.review === "string" ? parsed.review : "";
+      if (!improvedText) throw new Error("The AI did not return any improved text.");
+
+      Q.ai_text = improvedText;
+      Q.ai_review = review;
+      outputElement.textContent = Q.ai_text;
+      reviewElement.textContent = Q.ai_review ? "Review: " + Q.ai_review : "";
+      statusElement.textContent = "Text improved.";
+    } catch (error) {
+      statusElement.textContent = error && error.message ? error.message : "Unable to improve the text right now.";
+      reviewElement.textContent = "Unable to review your text right now.";
+    }
+  }
+
+  function start(attempt) {
+    var statusElement = getLatestElement(".holtext-ai-status");
+    var outputElement = getLatestElement(".holtext-ai-output");
+    var reviewElement = getLatestElement(".holtext-ai-review");
+    if (!statusElement || !outputElement || !reviewElement) {
+      if (attempt < maxElementChecks) {
+        setTimeout(function () {
+          start(attempt + 1);
+        }, 25);
+      }
+      return;
+    }
+
+    improveText(statusElement, outputElement, reviewElement);
+  }
+
+  start(0);
+}, 0); !}
+
+RoboDisplay: {!<div class="holtext-ai-status" aria-live="polite"></div>!}
+
+The device hums softly, then projects onto the paper:
+
+Paper: {!<h1>Holistic Context:</h1><br><div class="holtext-ai-output" style="white-space: pre-wrap;" contenteditable="true" data-quality="ai_text" oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.innerText);">!}[+ ai_text +]</div>
+
+RoboDisplay: {!<div class="holtext-ai-review" aria-live="polite">!}[+ ai_review +]{!</div>!}
+
+- @ai_use_improvement
+- @ai_try_again
+- @ai_decline
+
+@ai_use_improvement
+title: Use this new version
+on-arrival: holtext = ai_text
+go-to: 24_prblm_intro
+
+Me: Use this new version.
+
+Facilyn: Great.
+
+@ai_try_again
+title: Try again
+go-to: ai_send
+
+Me: Try again.
+
+@ai_discard
+title: Discard this version
+go-to: 24_prblm_intro
+
+Me: Discard this version.
+
+Facilyn: That’s the right call when the words already feel true. Keep your own voice — ownership matters most.

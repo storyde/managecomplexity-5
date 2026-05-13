@@ -5,6 +5,26 @@ new-page: true
 
 = Test
 
+<h2>Scene shortcuts</h2>
+
+Qualities will be missing using these links
+
+In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('33_framework_outro'); return false;">Scene Outro</a>!}
+
+In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('5_wum_intro');">5_wum_intro</a>!}
+
+In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('13_qol_intro');">13_qol_intro</a>!}
+
+In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('20_frb_people');">20_frb_people</a>!}
+
+In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('22_holtext');">22_holtext</a>!}
+
+In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('23_fq_intro');">23_fq_intro</a>!}
+
+In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('31_fq_results');">31_fq_results</a>!}
+
+In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('33_framework_outro');">33_framework_outro</a>!}
+
 AI text improver test:
 
 - @ai_test: Test ai
@@ -14,13 +34,13 @@ title: Test ai
 
 Me: Test ai
 
-{!<textarea id="ai-textarea" class="textarea" data-quality="ai_text" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);">!}[+ ai_text +]{!</textarea>!}
+{!<textarea id="ai-textarea" class="textarea" data-quality="holtext" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);">!}[+ holtext +]{!</textarea>!}
 
 
-- @ai_answer: Save
+- @ai_answer
 
 @ai_answer
-title: Get answer
+title: Improve
 on-arrival: {! setTimeout(async function () {
   function parseAiResponse(responseText) {
     if (typeof responseText !== "string") return null;
@@ -42,7 +62,7 @@ on-arrival: {! setTimeout(async function () {
   var statusElement = document.getElementById("ai-status");
   var outputElement = document.getElementById("ai-output");
   var reviewElement = document.getElementById("ai-review");
-  var sourceText = Q.ai_text || "";
+  var sourceText = Q.holtext || "";
   if (!sourceText) {
     statusElement.textContent = "Please enter some text first.";
     return;
@@ -70,9 +90,9 @@ on-arrival: {! setTimeout(async function () {
     var improvedText = parsed && typeof parsed.improvedText === "string" ? parsed.improvedText.trim() : "";
     var review = parsed && typeof parsed.review === "string" ? parsed.review.trim() : "";
     if (!improvedText) throw new Error("The AI did not return any improved text.");
-    Q.ai_text = improvedText;
+    Q.holtext = improvedText;
     Q.ai_review = review;
-    outputElement.textContent = Q.ai_text;
+    outputElement.textContent = Q.holtext;
     reviewElement.textContent = Q.ai_review ? "Review: " + Q.ai_review : "";
     statusElement.textContent = "Text improved.";
   } catch (error) {
@@ -83,29 +103,9 @@ on-arrival: {! setTimeout(async function () {
 
 RoboDisplay: {!<div id="ai-status" aria-live="polite"></div>!}
 
-Paper: {!<div id="ai-output" style="white-space: pre-wrap;">!}[+ ai_text +]{!</div>!}
+Paper: {!<div id="ai-output" style="white-space: pre-wrap;">!}[+ holtext +]{!</div>!}
 
 RoboDisplay: {!<div id="ai-review" aria-live="polite">!}[+ ai_review +]{!</div>!}
 
-
-<h2>Scene shortcuts</h2>
-
-Qualities will be missing using these links
-
-In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('33_framework_outro'); return false;">Scene Outro</a>!}
-
-In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('5_wum_intro');">5_wum_intro</a>!}
-
-In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('13_qol_intro');">13_qol_intro</a>!}
-
-In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('20_frb_people');">20_frb_people</a>!}
-
-In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('22_holtext');">22_holtext</a>!}
-
-In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('23_fq_intro');">23_fq_intro</a>!}
-
-In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('31_fq_results');">31_fq_results</a>!}
-
-In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('33_framework_outro');">33_framework_outro</a>!}
 
 - @backSpecialScene: Back

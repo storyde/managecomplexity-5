@@ -36,3 +36,10 @@ Facilyn: This becomes your North Star. Not a goal you “finish,” but a refere
 Facilyn: Are you happy with this text or do you want to improve it using AI?
 
 - #holtext_complete
+
+@keep_holtext
+title: Looks good to me
+tags: holtext_complete
+go-to: 24_prblm_intro
+
+Me: Looks good to me.

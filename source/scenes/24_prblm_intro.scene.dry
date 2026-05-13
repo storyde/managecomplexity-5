@@ -1,11 +1,7 @@
-title: Looks good to me
+title: Choose Problem
 on-departure: display_fltr = 1
-tags: holtext_complete
-new-page: true
 
-Me: Looks good to me.
-
-Facilyn: Let’s place your holistic context in the left sidebar, so you can keep it in view.
+Facilyn: Let’s place your holistic context to the left, so you can keep it in view.
 
 She slides a new sheet of paper on the table.
 
@@ -16,8 +12,8 @@ Facilyn: What kind of problem do you want to work through as an example?
 - #choose_prblm
 
 @prblm_explanation
-title: Are the filter questions
-subtitle: different from an ordinary pros-and-cons list?
+title: Are the filter questions different
+subtitle: from an ordinary pros-and-cons list?
 max-visits: 1
 order: 21
 tags: choose_prblm
