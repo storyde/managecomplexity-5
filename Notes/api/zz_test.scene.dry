@@ -40,7 +40,7 @@ on-arrival: {! setTimeout(async function () {
       body: JSON.stringify({ text: sourceText })
     });
     var responseBody = await response.json();
-    if (!response.ok) throw new Error(responseBody.error || "Ai did not respond.");
+    if (!response.ok) throw new Error(responseBody.error || "AI did not respond.");
     Q.ai_text = responseBody.improvedText || sourceText;
     Q.ai_review = responseBody.review || "";
     outputElement.textContent = Q.ai_text;

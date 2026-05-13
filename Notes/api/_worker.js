@@ -34,7 +34,7 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
-    if (url.pathname === "/api/improve-text") {
+    if (url.pathname === "/ai/improve-text") {
       if (request.method === "OPTIONS") {
         return new Response(null, {
           headers: {
