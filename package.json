@@ -7,7 +7,8 @@
   "version": "1.0.0",
   "main": "out/html/index.html",
   "scripts": {
-    "dendry": "bun run ../dendry-chat/lib/cli/main.js make-html"
+    "dendryl": "bun run ../dendry-chat/lib/cli/main.js make-html",
+    "dendry": "dendry"
   },
   "keywords": [
     "dendry",

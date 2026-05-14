@@ -127,6 +127,15 @@
   /* Layout */
   --sidebar-width: 280px;
   --header-height: 60px;
+  --read-marker-label: "〜〜〜〜〜 New Content Below 〜〜〜〜〜";
+}
+
+html[lang|="fr"] {
+  --read-marker-label: "〜〜〜〜〜 Nouveau contenu ci-dessous 〜〜〜〜〜";
+}
+
+html[lang|="de"] {
+  --read-marker-label: "〜〜〜〜〜 Neuer Inhalt unten 〜〜〜〜〜";
 }
 
 /* ===================================
@@ -1933,22 +1942,22 @@ ul.choices li:focus-visible {
 /* Read Marker Styles */
 #read-marker {
   position: relative;
-  min-height: 1.75em;
+  min-height: var(--space-md);
   margin: var(--space-xxl) 0;
-  border: 0 !important;
+  border: 0;
   overflow: visible;
 }
 
 /* Read Marker label via pseudo-element */
 #read-marker::before {
-  content: "〜〜〜〜〜〜〜〜 New Content Below 〜〜〜〜〜〜〜〜";
+  content: var(--read-marker-label);
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: var(--accent-rust);
   font-weight: 650;
   letter-spacing: 0.1em;
-  color: var(--accent-rust);
   white-space: nowrap;
   animation: markerPulse 3s ease-in-out infinite;
 }
