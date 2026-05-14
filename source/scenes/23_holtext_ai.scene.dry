@@ -8,7 +8,7 @@ Facilyn places a small device next to the paper.
 
 It scans the text, then shows:
 
-RoboDisplay: Do you agree to have your text processed by Mistral AI?
+RoboDisplay: Do you agree to have your text processed by AI?
 
 - @ai_send
 - @ai_decline
