@@ -9,25 +9,25 @@ Facilyn: To use this holistic context, we’ll run decisions through seven testi
 
 Facilyn: What kind of problem do you want to work through as an example?
 
-- #choose_prblm
+- #problem_sel
 
 @prblm_explanation
 title: Are the filter questions different
 subtitle: from an ordinary pros-and-cons list?
 max-visits: 1
 order: 21
-tags: choose_prblm
+tags: problem_sel
 
 Me: Are the filter questions different from an ordinary pros-and-cons list?
 
 Facilyn: The checks are not just a list of advantages and disadvantages. They are a set of filters designed to reveal whether an action is socially, financially, and environmentally sound in both the short and long term, relative to your Holistic Context.
 
-- #choose_prblm
+- #problem_sel
 
 @prblm_custom
 title: Custom answer
 order: 20
-tags: choose_prblm
+tags: problem_sel
 
 Me: Custom answer
 
@@ -48,7 +48,7 @@ title: A personal decision
 view-if: player = "one"
 on-arrival: prblm_type = "A personal decision"
 go-to: prblm_chosen
-tags: choose_prblm
+tags: problem_sel
 
 Me: [+ prblm_type +]
 
@@ -59,7 +59,7 @@ title: A decision regarding family, friends or community
 view-if: player = "group"
 on-arrival: prblm_type = "A decision regarding family, friends or community"
 go-to: prblm_chosen
-tags: choose_prblm
+tags: problem_sel
 
 Me: [+ prblm_type +]
 
@@ -69,7 +69,7 @@ Facilyn: Perfect.
 title: An environmental or land management decision
 on-arrival: prblm_type = "An environmental or land management decision"; info_last = "Dust storms" if info_dust_storms = 0; info_dust_storms = 1
 go-to: prblm_chosen
-tags: choose_prblm
+tags: problem_sel
 
 Me: [+ prblm_type +]
 
@@ -80,7 +80,7 @@ title: An agricultural decision
 view-if: sector = "agriculture"
 on-arrival: prblm_type = "An agricultural decision"
 go-to: prblm_chosen
-tags: choose_prblm
+tags: problem_sel
 
 Me: [+ prblm_type +]
 
@@ -91,7 +91,7 @@ title: A business or work-related decision
 view-if: sector = "business"
 on-arrival: prblm_type = "A business or work-related decision"
 go-to: prblm_chosen
-tags: choose_prblm
+tags: problem_sel
 
 Me: [+ prblm_type +]
 
@@ -102,7 +102,7 @@ title: A cultural or creative decision
 view-if: sector = "culture"
 on-arrival: prblm_type = "A cultural or creative decision"
 go-to: prblm_chosen
-tags: choose_prblm
+tags: problem_sel
 
 Me: [+ prblm_type +]
 
@@ -113,7 +113,7 @@ title: An educational or academic decision
 view-if: sector = "education"
 on-arrival: prblm_type = "An educational or academic decision"
 go-to: prblm_chosen
-tags: choose_prblm
+tags: problem_sel
 
 Me: [+ prblm_type +]
 
@@ -124,7 +124,7 @@ title: An industrial or manufacturing decision
 view-if: sector = "industry"
 on-arrival: prblm_type = "An industrial or manufacturing decision"
 go-to: prblm_chosen
-tags: choose_prblm
+tags: problem_sel
 
 Me: [+ prblm_type +]
 
@@ -135,7 +135,7 @@ title: A nonprofit or advocacy decision
 view-if: sector = "nonprofit"
 on-arrival: prblm_type = "A nonprofit or advocacy decision"
 go-to: prblm_chosen
-tags: choose_prblm
+tags: problem_sel
 
 Me: [+ prblm_type +]
 
@@ -146,7 +146,7 @@ title: A public service or infrastructure decision
 view-if: sector = "publicservice"
 on-arrival: prblm_type = "A public service or infrastructure decision"
 go-to: prblm_chosen
-tags: choose_prblm
+tags: problem_sel
 
 Me: [+ prblm_type +]
 
@@ -157,7 +157,7 @@ title: A policymaking or governance decision
 view-if: sector = "policymaking"
 on-arrival: prblm_type = "A policymaking or governance decision"
 go-to: prblm_chosen
-tags: choose_prblm
+tags: problem_sel
 
 Me: [+ prblm_type +]
 

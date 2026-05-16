@@ -5,13 +5,13 @@ Facilyn: Now — what calls for your creativity?
 
 Facilyn: What kind of challenges help you become all you can be?
 
-- #challenge_aspects
+- #challenge_sel
 
 @qolc_explanation
 title: Please explain a bit further
 max-visits: 1
 order: 21
-tags: challenge_aspects
+tags: challenge_sel
 
 Me: Please explain a bit further.
 
@@ -21,7 +21,7 @@ Facilyn: Challenge and growth aren’t about stress or difficulty for their own 
 
 By the window, two friends argue gently about whether the rain is “starting” or “already here,” then settle for sharing the last dry bench.
 
-- #challenge_aspects
+- #challenge_sel
 
 # Challenge - All
 
@@ -29,13 +29,13 @@ By the window, two friends argue gently about whether the rain is “starting”
 title: Long-term stewardship that carries real responsibility
 on-arrival: qol_challenge = "long-term stewardship that carries real responsibility"
 go-to: qolc_answer
-tags: challenge_aspects
+tags: challenge_sel
 
 @qolc_curious_life
 title: Work that keeps curiosity alive and rewards patience and craft
 on-arrival: qol_challenge = "work that keeps curiosity alive and rewards patience and craft"
 go-to: qolc_answer
-tags: challenge_aspects
+tags: challenge_sel
 
 # Challenge - Individual
 
@@ -44,7 +44,7 @@ title: Patience, practice and growing into deeper capability
 view-if: player = "one"
 on-arrival: qol_challenge = "patience, practice and growing into deeper capability"
 go-to: qolc_answer
-tags: challenge_aspects
+tags: challenge_sel
 
 # Challenge - Group
 
@@ -53,7 +53,7 @@ title: Experimentation, shared learning and listening to nature's wisdom
 view-if: player = "group"
 on-arrival: qol_challenge = "experimentation, shared learning and listening to nature's wisdom"
 go-to: qolc_answer
-tags: challenge_aspects
+tags: challenge_sel
 
 # Challenge - Organisation
 
@@ -62,20 +62,20 @@ title: Bringing clarity and direction where confusion once reigned
 view-if: player = "org"
 on-arrival: qol_challenge = "bringing clarity and direction where confusion once reigned"
 go-to: qolc_answer
-tags: challenge_aspects
+tags: challenge_sel
 
 @qolc_freedom_flow
 title: Autonomy, responsibility and the charge of creative flow
 view-if: player = "org"
 on-arrival: qol_challenge = "autonomy, responsibility and the charge of creative flow"
 go-to: qolc_answer
-tags: challenge_aspects
+tags: challenge_sel
 
 @qolc_custom
 title: Custom answer
 order: 20
 on-arrival: customised += 1
-tags: challenge_aspects
+tags: challenge_sel
 
 Me: Custom answer
 
@@ -100,19 +100,19 @@ She pours fresh tea into your cup before continuing.
 
 Facilyn: And what do you want to be free to do in terms of inner growth?
 
-- #growth_aspects
+- #growth_sel
 
 @qolg_explanation
 title: I’m not sure how you mean that
 max-visits: 1
 order: 21
-tags: growth_aspects
+tags: growth_sel
 
 Me: I’m not sure how you mean that.
 
 Facilyn: Think about what helps you feel fulfilled. What lets you grow, as a person or a group? This is about freedom to pursue what gives life deeper meaning.
 
-- #growth_aspects
+- #growth_sel
 
 # Growth - All
 
@@ -120,19 +120,19 @@ Facilyn: Think about what helps you feel fulfilled. What lets you grow, as a per
 title: Keep learning, exploring and widening horizons
 on-arrival: qol_growth = "keep learning, exploring and widening horizons"
 go-to: qolg_answer
-tags: growth_aspects
+tags: growth_sel
 
 @qolg_traditions
 title: Carry shared traditions forward and celebrate them well
 on-arrival: qol_growth = "carry shared traditions forward and celebrate them well"
 go-to: qolg_answer
-tags: growth_aspects
+tags: growth_sel
 
 @qolg_balance
 title: Find our rhythm between work, life and the living world
 on-arrival: qol_growth = "find our rhythm between work, life and the living world"
 go-to: qolg_answer
-tags: growth_aspects
+tags: growth_sel
 
 # Growth - Individual
 
@@ -141,14 +141,14 @@ title: Practice spiritual or religious beliefs that give guidance and meaning
 view-if: player = "one"
 on-arrival: qol_growth = "practice spiritual or religious beliefs that give guidance and meaning"
 go-to: qolg_answer
-tags: growth_aspects
+tags: growth_sel
 
 @qolg_resilience
 title: Build inner peace and emotional resilience
 view-if: player = "one"
 on-arrival: qol_growth = "build inner peace and emotional resilience"
 go-to: qolg_answer
-tags: growth_aspects
+tags: growth_sel
 
 # Growth - Group
 
@@ -157,21 +157,21 @@ title: Live by conviction and act with integrity
 view-if: player = "group"
 on-arrival: qol_growth = "live by conviction and act with integrity"
 go-to: qolg_answer
-tags: growth_aspects
+tags: growth_sel
 
 @qolg_connection
 title: Deepen trust and belonging within community
 view-if: player = "group"
 on-arrival: qol_growth = "deepen trust and belonging within community"
 go-to: qolg_answer
-tags: growth_aspects
+tags: growth_sel
 
 @qolg_mentorship
 title: Share hard-won wisdom and mentor one another
 view-if: player = "group"
 on-arrival: qol_growth = "share hard-won wisdom and mentor one another"
 go-to: qolg_answer
-tags: growth_aspects
+tags: growth_sel
 
 # Growth - Organisation
 
@@ -180,20 +180,20 @@ title: Let collective purpose deepen in service of something larger
 view-if: player = "org"
 on-arrival: qol_growth = "let collective purpose deepen in service of something larger"
 go-to: qolg_answer
-tags: growth_aspects
+tags: growth_sel
 
 @qolg_innovation
 title: Build a culture that keeps learning, inventing and getting better
 view-if: player = "org"
 on-arrival: qol_growth = "build a culture that keeps learning, inventing and getting better"
 go-to: qolg_answer
-tags: growth_aspects
+tags: growth_sel
 
 @qolg_custom
 title: Custom answer
 order: 20
 on-arrival: customised += 1
-tags: growth_aspects
+tags: growth_sel
 
 Me: Custom answer
 

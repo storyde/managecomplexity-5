@@ -45,6 +45,29 @@ Avoid situations where a tag name is exactly the same as a quality variable name
 - `behavior_aspects` tag -> `behavior_sel`
 - `environment_aspects` tag -> `environment_sel`
 
+### Additional Normalization Candidates
+
+- Broader pass result: a few more grouped answer tags likely belong in the same `_sel` convention, even though they were not part of the original collision fix.
+- These should be reviewed before implementation, then renamed together in one consistency pass.
+
+### Candidate Rename Plan
+
+- `decision_mkrs` tag -> `dmakers_org_sel`
+- `org_sector` tag -> `sector_sel`
+- `stmt_of_purpose` tag -> `purpose_stmt_sel`
+- `physical_rcs` tag -> `physical_sel`
+- `human_rcs` tag -> `human_sel`
+- `monetary_rcs` tag -> `monetary_sel`
+- `choose_prblm` tag -> `problem_sel`
+
+### Scope Notes For Broader Pass
+
+- These candidates are all used as grouped selection tags for answer choices or answer-category menus.
+- `decision_mkrs` should become  `dmakers_org_sel` and kept as a second decision-maker tag family. It should not be merged into `dmakers_sel`.
+- `choose_prblm` should  drop the abbreviated stem at the same time it adopts `_sel`.
+- Do not fold structural or flow-control tags into this pass unless a separate naming cleanup is planned.
+- Leave tags such as `whole_u_mgmt`, `qol_intro`, `holtext_complete`, `cause_effect`, `gross_profit`, `em_source`, `em_use`, `sus_behavior`, `sus_environment`, `gut_feel`, and problem-branch tags like `duststorm_main` or `profit_main` unchanged for now.
+
 ### Implementation Notes
 
 - Update both the tag declarations and every `- #...` reference that points to them.

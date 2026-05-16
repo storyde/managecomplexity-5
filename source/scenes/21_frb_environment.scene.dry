@@ -8,13 +8,13 @@ Facilyn: Describe how the land and environment must be, far into the future, to 
 
 Facilyn: We'll think in terms of the four ecosystem processes: water cycle, mineral cycle, community dynamics, and energy flow.
 
-- #environment_aspects
+- #environment_sel
 
 @frbe_explanation
 title: What are the ecosystem processes?
 max-visits: 1
 order: 21
-tags: environment_aspects
+tags: environment_sel
 
 Me: What are the ecosystem processes?
 
@@ -36,31 +36,31 @@ Outside, the rain grows heavier. A worker pulls a cover across a crate near the 
 
 They pause briefly, watching the rain find its way into the harbor in a hundred small streams.
 
-- #environment_aspects
+- #environment_sel
 
 @frbe_detailed_scientific
 title: Resilient water and mineral cycles, strong community dynamics, steady energy flow and rich biodiversity
 on-arrival: frb_environment = "resilient water and mineral cycles, strong community dynamics, steady energy flow and rich biodiversity"
 go-to: frbe_answer
-tags: environment_aspects
+tags: environment_sel
 
 @frbe_descriptive_visionary
 title: Healthy, biologically rich land with covered soils, clean running water, active nutrient cycling and webs of life that keep energy moving
 on-arrival: frb_environment = "healthy, biologically rich land with covered soils, clean running water, active nutrient cycling and webs of life that keep energy moving"
 go-to: frbe_answer
-tags: environment_aspects
+tags: environment_sel
 
 @frbe_simple_grounded
 title: Stable, productive surroundings with fertile covered soils, clean water, functioning water and mineral cycles, and biodiversity that strengthens community dynamics and energy flow
 on-arrival: frb_environment = "stable, productive surroundings with fertile covered soils, clean water, functioning water and mineral cycles, and biodiversity that strengthens community dynamics and energy flow"
 go-to: frbe_answer
-tags: environment_aspects
+tags: environment_sel
 
 @frbe_custom
 title: Custom answer
 order: 20
 on-arrival: customised += 1
-tags: environment_aspects
+tags: environment_sel
 
 Me: Custom answer
 

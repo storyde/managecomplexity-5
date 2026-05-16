@@ -1,7 +1,7 @@
 title: How about calming these dust storms?
 on-arrival: example_type = "How about calming these dust storms?"; info_last = "Dust storms" if info_dust_storms = 0; info_dust_storms = 1
 new-page: true
-tags: choose_prblm
+tags: problem_sel
 
 Me: [+ prblm_type +]
 

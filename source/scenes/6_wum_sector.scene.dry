@@ -7,13 +7,13 @@ Me: Got it.
 
 Facilyn: I’m curious — what sector does your organisation sit in?
 
-- #org_sector
+- #sector_sel
 
 @sector_agriculture
 title: Agriculture
 on-arrival: sector = "agriculture"
 go-to: 8_wum_dmkrs_org
-tags: org_sector
+tags: sector_sel
 
 Me: Agriculture
 
@@ -21,7 +21,7 @@ Me: Agriculture
 title: Business
 on-arrival: sector = "business"
 go-to: 8_wum_dmkrs_org
-tags: org_sector
+tags: sector_sel
 
 Me: Business
 
@@ -29,7 +29,7 @@ Me: Business
 title: Culture
 on-arrival: sector = "culture"
 go-to: 8_wum_dmkrs_org
-tags: org_sector
+tags: sector_sel
 
 Me: Culture
 
@@ -37,7 +37,7 @@ Me: Culture
 title: Education
 on-arrival: sector = "education"
 go-to: 8_wum_dmkrs_org
-tags: org_sector
+tags: sector_sel
 
 Me: Education
 
@@ -45,7 +45,7 @@ Me: Education
 title: Industry
 on-arrival: sector = "industry"
 go-to: 8_wum_dmkrs_org
-tags: org_sector
+tags: sector_sel
 
 Me: Industry
 
@@ -53,14 +53,14 @@ Me: Industry
 title: Nonprofit
 on-arrival: sector = "nonprofit"
 go-to: 8_wum_dmkrs_org
-tags: org_sector
+tags: sector_sel
 
 Me: Nonprofit
 
 @sector_publicservice
 title: Public service
 on-arrival: sector = "publicservice"
-tags: org_sector
+tags: sector_sel
 
 Me: Public service
 

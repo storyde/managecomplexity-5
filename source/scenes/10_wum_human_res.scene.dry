@@ -5,13 +5,13 @@ Facilyn: Great.
 
 Facilyn: And who influences — or is influenced by — your decisions, without having the power to veto them?
 
-- #human_rcs
+- #human_sel
 
 @rbhm_explanation
 title: What is their role?
 max-visits: 1
 order: 21
-tags: human_rcs
+tags: human_sel
 
 Me: What is their role?
 
@@ -19,7 +19,7 @@ Facilyn: They may not decide, but they still matter. Often they’re essential t
 
 Outside, a child crouches beside a cleaning robot and quietly places a leaf in its path to see what it will do.
 
-- #human_rcs
+- #human_sel
 
 # Individual
 
@@ -28,21 +28,21 @@ title: Friends, neighbours and local community
 view-if: player = "one"
 on-arrival: rb_human = "Friends, neighbours and local community"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 @rbhm_ind_urban
 title: Friends, neighbours and work associates
 view-if: player = "one"
 on-arrival: rb_human = "Friends, neighbours and work associates"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 @rbhm_ind_nomad
 title: Fellow travellers and host communities
 view-if: player = "one"
 on-arrival: rb_human = "Fellow travellers and host communities"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 # Group
 
@@ -51,21 +51,21 @@ title: Neighbors and local authorities
 view-if: player = "group"
 on-arrival: rb_human = "Neighbors and local authorities"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 @rbhm_grp_family_biz
 title: Customers and suppliers
 view-if: player = "group"
 on-arrival: rb_human = "Customers and suppliers"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 @rbhm_grp_urban_col
 title: Friends and neighbours
 view-if: player = "group"
 on-arrival: rb_human = "Friends and neighbours"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 # Agriculture
 
@@ -74,21 +74,21 @@ title: Extended family, customers, suppliers and advisors
 view-if: sector = "agriculture"
 on-arrival: rb_human = "Extended family, customers, suppliers and advisors"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 @rbhm_agr_coop
 title: Cooperative members, customers and suppliers
 view-if: sector = "agriculture"
 on-arrival: rb_human = "Cooperative members, customers and suppliers"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 @rbhm_agr_ranch
 title: Veterinarians and land stewards
 view-if: sector = "agriculture"
 on-arrival: rb_human = "Veterinarians and land stewards"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 # Business
 
@@ -97,28 +97,28 @@ title: Customers and suppliers
 view-if: sector = "business"
 on-arrival: rb_human = "Customers and suppliers"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 @rbhm_bus_insurance
 title: Customers and regulators
 view-if: sector = "business"
 on-arrival: rb_human = "Customers and regulators"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 @rbhm_bus_hospitality
 title: Guests and tourism board
 view-if: sector = "business"
 on-arrival: rb_human = "Guests and tourism board"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 @rbhm_bus_company
 title: Clients and contractors
 view-if: sector = "business"
 on-arrival: rb_human = "Clients and contractors"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 # Culture
 
@@ -127,21 +127,21 @@ title: Audience representatives and funders
 view-if: sector = "culture"
 on-arrival: rb_human = "Audience representatives and funders"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 @rbhm_cul_heritage
 title: Community representatives and cultural stakeholders
 view-if: sector = "culture"
 on-arrival: rb_human = "Community representatives and cultural stakeholders"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 @rbhm_cul_newsroom
 title: Audience representatives and legal counsel
 view-if: sector = "culture"
 on-arrival: rb_human = "Audience representatives and legal counsel"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 # Education
 
@@ -150,21 +150,21 @@ title: Parents and early childhood specialists
 view-if: sector = "education"
 on-arrival: rb_human = "Parents and early childhood specialists"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 @rbhm_edu_school
 title: Parents and ministry of education
 view-if: sector = "education"
 on-arrival: rb_human = "Parents and ministry of education"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 @rbhm_edu_university
 title: Students, alumni and academic community
 view-if: sector = "education"
 on-arrival: rb_human = "Students, alumni and academic community"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 # Industry
 
@@ -173,21 +173,21 @@ title: Workers and union representatives
 view-if: sector = "industry"
 on-arrival: rb_human = "Workers and union representatives"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 @rbhm_ind_construction
 title: Clients and local residents
 view-if: sector = "industry"
 on-arrival: rb_human = "Clients and local residents"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 @rbhm_ind_logging
 title: Environmental officers and local communities
 view-if: sector = "industry"
 on-arrival: rb_human = "Environmental officers and local communities"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 # Nonprofit
 
@@ -196,21 +196,21 @@ title: Beneficiaries and donors
 view-if: sector = "nonprofit"
 on-arrival: rb_human = "Beneficiaries and donors"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 @rbhm_nonprofit_advocacy
 title: Supporters and opponents
 view-if: sector = "nonprofit"
 on-arrival: rb_human = "Supporters and opponents"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 @rbhm_nonprofit_climate
 title: Environmental scientists and activists.
 view-if: sector = "nonprofit"
 on-arrival: rb_human = "Environmental scientists and activists"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 # Public service
 
@@ -219,28 +219,28 @@ title: Passengers and transport authorities
 view-if: sector = "publicservice"
 on-arrival: rb_human = "Passengers and transport authorities"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 @rbhm_pub_health
 title: Patients and carers
 view-if: sector = "publicservice"
 on-arrival: rb_human = "Patients and carers"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 @rbhm_pub_service
 title: Citizens and community representatives.
 view-if: sector = "publicservice"
 on-arrival: rb_human = "Citizens and community representatives"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 @rbhm_pub_parks
 title: Local communities and visitors
 view-if: sector = "publicservice"
 on-arrival: rb_human = "Local communities and visitors"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 # Policymaking
 
@@ -249,26 +249,26 @@ title: Citizens and stakeholder representatives
 view-if: sector = "policymaking"
 on-arrival: rb_human = "Citizens and stakeholder representatives"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 @rbhm_pol_city
 title: Local residents and business representatives
 view-if: sector = "policymaking"
 on-arrival: rb_human = "Local residents and business representatives"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 @rbhm_pol_intl
 title: Citizens and diplomatic counterparts
 view-if: sector = "policymaking"
 on-arrival: rb_human = "Citizens and diplomatic counterparts"
 go-to: rbhm_answer
-tags: human_rcs
+tags: human_sel
 
 @rbhm_custom
 title: Custom answer
 order: 20
-tags: human_rcs
+tags: human_sel
 
 Me: Custom answer
 

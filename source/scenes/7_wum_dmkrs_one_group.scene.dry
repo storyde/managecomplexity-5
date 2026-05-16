@@ -12,13 +12,13 @@ Facilyn: For now, do you want to focus on just yourself?
 
 Facilyn: Or should we expand the “whole” — include anyone you live with, decide with, or who can veto your choices?
 
-- #decision_makers
+- #dmakers_sel
 
 @dmkrs_explanation
 title: What difference does it make?
 max-visits: 1
 order: 21
-tags: decision_makers
+tags: dmakers_sel
 
 Me: What difference does it make?
 
@@ -40,7 +40,7 @@ She looks back at you.
 
 Facilyn: Exclude a real stakeholder, and you end up negotiating with a fire hydrant.
 
-- #decision_makers
+- #dmakers_sel
 
 @dmkrs_me
 title: Just me.
@@ -48,7 +48,7 @@ subtitle: I am making the decisions in my life.
 view-if: player = "one"
 on-arrival: decision_makers = "Me"
 go-to: 9_wum_physical_res
-tags: decision_makers
+tags: dmakers_sel
 
 Me: Just me. I am making the decisions in my life.
 
@@ -60,7 +60,7 @@ subtitle: that I live or decide with.
 view-if: player = "one"
 on-arrival: decision_makers = "Me and people I live or decide with"; player = "group"
 go-to: 9_wum_physical_res
-tags: decision_makers
+tags: dmakers_sel
 
 Me: Let's include the people that I live or decide with.
 
@@ -79,7 +79,7 @@ Facilyn: Let’s start with the decision-makers. In your group, who makes decisi
 
 Facilyn: Try to be inclusive rather than exclusive. 
 
-- #decision_makers
+- #dmakers_sel
 
 @dmkrs_group_and_veto
 title: Group members 
@@ -87,7 +87,7 @@ subtitle: and others with veto power
 view-if: player = "group"
 on-arrival: decision_makers = "Group members and others with veto power"
 go-to: 9_wum_physical_res
-tags: decision_makers
+tags: dmakers_sel
 
 Me: [+ decision_makers +]
 
@@ -98,7 +98,7 @@ title: Just us
 view-if: player = "group"
 on-arrival: decision_makers = "Us"
 go-to: 9_wum_physical_res
-tags: decision_makers
+tags: dmakers_sel
 
 Me: Just us.
 
@@ -108,7 +108,7 @@ Facilyn: Good. That gives us the decision makers for your whole under management
 title: Custom answer
 order: 20
 view-if: player != "org"
-tags: decision_makers
+tags: dmakers_sel
 
 Me: Custom answer
 

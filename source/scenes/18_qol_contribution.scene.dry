@@ -3,7 +3,7 @@ on-arrival: hctx_progress = 9 if hctx_progress < 9
 
 Facilyn: What do you want to be?
 
-- #qol_aspiration
+- #aspiration_sel
 
 # Aspiration - All
 
@@ -11,19 +11,19 @@ Facilyn: What do you want to be?
 title: A steady source of strength and reassurance
 on-arrival: qol_aspiration = "a steady source of strength and reassurance"
 go-to: qolas_answer
-tags: qol_aspiration
+tags: aspiration_sel
 
 @qolas_positive_force
 title: A brave and constructive force for change
 on-arrival: qol_aspiration = "a brave and constructive force for change"
 go-to: qolas_answer
-tags: qol_aspiration
+tags: aspiration_sel
 
 @qolas_collaborative_partner
 title: A partner people trust, enjoy and feel strengthened by
 on-arrival: qol_aspiration = "a partner people trust, enjoy and feel strengthened by"
 go-to: qolas_answer
-tags: qol_aspiration
+tags: aspiration_sel
 
 # Aspiration - Individual
 
@@ -32,14 +32,14 @@ title: A balanced, joyful and fully alive person
 view-if: player = "one"
 on-arrival: qol_aspiration = "a balanced, joyful and fully alive person"
 go-to: qolas_answer
-tags: qol_aspiration
+tags: aspiration_sel
 
 @qolas_ind_learner
 title: A curious, lifelong learner with room to keep exploring
 view-if: player = "one"
 on-arrival: qol_aspiration = "a curious, lifelong learner with room to keep exploring"
 go-to: qolas_answer
-tags: qol_aspiration
+tags: aspiration_sel
 
 # Aspiration - Group
 
@@ -48,7 +48,7 @@ title: A loving, dependable and inclusive community
 view-if: player = "group"
 on-arrival: qol_aspiration = "a loving, dependable and inclusive community"
 go-to: qolas_answer
-tags: qol_aspiration
+tags: aspiration_sel
 
 # Aspiration - Organisation
 
@@ -57,20 +57,20 @@ title: A resilient organisation people can trust to endure and adapt
 view-if: player = "org"
 on-arrival: qol_aspiration = "a resilient organisation people can trust to endure and adapt"
 go-to: qolas_answer
-tags: qol_aspiration
+tags: aspiration_sel
 
 @qolas_innovative_pioneer
 title: A bold pioneer exploring new ground
 view-if: player = "org"
 on-arrival: qol_aspiration = "a bold pioneer exploring new ground"
 go-to: qolas_answer
-tags: qol_aspiration
+tags: aspiration_sel
 
 @qolas_custom
 title: Custom answer
 order: 20
 on-arrival: customised += 1
-tags: qol_aspiration
+tags: aspiration_sel
 
 Me: Custom answer
 
@@ -93,7 +93,7 @@ Facilyn: Great.
 
 Facilyn: And in terms of contribution, what do you ultimately want to accomplish?
 
-- #qol_accomplish
+- #accomplish_sel
 
 # Accomplishment - All
 
@@ -101,19 +101,19 @@ Facilyn: And in terms of contribution, what do you ultimately want to accomplish
 title: Building conditions that leave future generations better off
 on-arrival: qol_accomplish = "building conditions that leave future generations better off"
 go-to: qolac_answer
-tags: qol_accomplish
+tags: accomplish_sel
 
 @qolac_regenerate_systems
 title: Restoring damaged social and ecological systems
 on-arrival: qol_accomplish = "restoring damaged social and ecological systems"
 go-to: qolac_answer
-tags: qol_accomplish
+tags: accomplish_sel
 
 @qolac_empower_others
 title: Helping others grow into their own strength and potential
 on-arrival: qol_accomplish = "helping others grow into their own strength and potential"
 go-to: qolac_answer
-tags: qol_accomplish
+tags: accomplish_sel
 
 # Accomplishment - Individual
 
@@ -122,14 +122,14 @@ title: Building a life of deep meaning and quiet joy
 view-if: player = "one"
 on-arrival: qol_accomplish = "building a life of deep meaning and quiet joy"
 go-to: qolac_answer
-tags: qol_accomplish
+tags: accomplish_sel
 
 @qolac_ind_potential
 title: Bringing unique potential into the world
 view-if: player = "one"
 on-arrival: qol_accomplish = "bringing unique potential into the world"
 go-to: qolac_answer
-tags: qol_accomplish
+tags: accomplish_sel
 
 # Accomplishment - Group
 
@@ -138,14 +138,14 @@ title: Building a resilient, supportive and vibrant community
 view-if: player = "group"
 on-arrival: qol_accomplish = "building a resilient, supportive and vibrant community"
 go-to: qolac_answer
-tags: qol_accomplish
+tags: accomplish_sel
 
 @qolac_bridge_divides
 title: Healing divides and fostering deep understanding
 view-if: player = "group"
 on-arrival: qol_accomplish = "healing divides and fostering deep understanding"
 go-to: qolac_answer
-tags: qol_accomplish
+tags: accomplish_sel
 
 # Accomplishment - Organisation
 
@@ -154,20 +154,20 @@ title: Solving hard problems that truly matter
 view-if: player = "org"
 on-arrival: qol_accomplish = "solving hard problems that truly matter"
 go-to: qolac_answer
-tags: qol_accomplish
+tags: accomplish_sel
 
 @qolac_org_ethical
 title: Innovation that is ethical, responsible and worthy of trust
 view-if: player = "org"
 on-arrival: qol_accomplish = "innovation that is ethical, responsible and worthy of trust"
 go-to: qolac_answer
-tags: qol_accomplish
+tags: accomplish_sel
 
 @qolac_custom
 title: Custom answer
 order: 20
 on-arrival: customised += 1
-tags: qol_accomplish
+tags: accomplish_sel
 
 Me: Custom answer
 

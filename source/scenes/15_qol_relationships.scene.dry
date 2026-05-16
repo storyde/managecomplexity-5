@@ -8,13 +8,13 @@ Facilyn: Focus on the outcome you want in your relationships.
 
 Facilyn: Describe what good relationships look like when people treat each other with care.
 
-- #relationship_aspects
+- #relationship_sel
 
 @qolr_explanation
 title: What do you mean exactly?
 max-visits: 1
 order: 21
-tags: relationship_aspects
+tags: relationship_sel
 
 Me: What do you mean exactly?
 
@@ -24,37 +24,37 @@ Facilyn: You’re painting a picture you can recognise when you’re living it.
 
 A harbour-bot and a lighthouse-bot linger at a lonely buoy, trading sea-glass and jokes after a long night guiding ships — until the buoy starts giggling and confesses it’s actually a tiny submarine-bot that parked there for the company.
 
-- #relationship_aspects
+- #relationship_sel
 
 @qolr_harmony_care
 title: Warmth, care and ease in one another's presence
 on-arrival: qol_relationships = "warmth, care and ease in one another's presence"
 go-to: qolr_answer
-tags: relationship_aspects
+tags: relationship_sel
 
 @qolr_open_communication
 title: Open communication, mutual trust and real enjoyment of each other's company
 on-arrival: qol_relationships = "open communication, mutual trust and real enjoyment of each other's company"
 go-to: qolr_answer
-tags: relationship_aspects
+tags: relationship_sel
 
 @qolr_effective_teamwork
 title: Good teamwork, shared understanding and laughter that makes hard things lighter
 on-arrival: qol_relationships = "good teamwork, shared understanding and laughter that makes hard things lighter"
 go-to: qolr_answer
-tags: relationship_aspects
+tags: relationship_sel
 
 @qolr_remaining_calm
 title: Mutual respect, steady support and honest communication
 on-arrival: qol_relationships = "mutual respect, steady support and honest communication"
 go-to: qolr_answer
-tags: relationship_aspects
+tags: relationship_sel
 
 @qolr_custom
 title: Custom answer
 order: 20
 on-arrival: customised += 1
-tags: relationship_aspects
+tags: relationship_sel
 
 Me: Custom answer
 

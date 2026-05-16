@@ -8,13 +8,13 @@ Facilyn: Now we look ahead: To sustain the support of your social resource base,
 
 Facilyn: Keep in mind that people judge you by your behaviour, not your slogans. 
 
-- #behavior_aspects
+- #behavior_sel
 
 @frbp_explanation
 title: I'm not sure
 max-visits: 1
 order: 21
-tags: behavior_aspects
+tags: behavior_sel
 
 Me: I'm not sure.
 
@@ -26,49 +26,49 @@ Facilyn: And include how you treat each other as decision-makers, too.
 
 Out in the harbour, a forklift idles beside a pallet of supplies while its driver checks a weather alert, then tucks the phone away.
 
-- #behavior_aspects
+- #behavior_sel
 
 @frbp_honest_transparent
 title: Honest, attentive and respectful
 on-arrival: frb_people = "honest, attentive and respectful"
 go-to: frbp_answer
-tags: behavior_aspects
+tags: behavior_sel
 
 @frbp_collaborative_supportive
 title: Collaborative, fair and generous
 on-arrival: frb_people = "collaborative, fair and generous"
 go-to: frbp_answer
-tags: behavior_aspects
+tags: behavior_sel
 
 @frbp_professional_innovative
 title: Steady, skilful and dependable
 on-arrival: frb_people = "steady, skilful and dependable"
 go-to: frbp_answer
-tags: behavior_aspects
+tags: behavior_sel
 
 @frbp_ethical_responsible
 title: Principled, responsible and consistent
 on-arrival: frb_people = "principled, responsible and consistent"
 go-to: frbp_answer
-tags: behavior_aspects
+tags: behavior_sel
 
 @frbp_empathetic_trustworthy
 title: Empathetic, prepared and transparent
 on-arrival: frb_people = "empathetic, prepared and transparent"
 go-to: frbp_answer
-tags: behavior_aspects
+tags: behavior_sel
 
 @frbp_adaptive_proactive
 title: Adaptable, practical and open-minded
 on-arrival: frb_people = "adaptable, practical and open-minded"
 go-to: frbp_answer
-tags: behavior_aspects
+tags: behavior_sel
 
 @frbp_custom
 title: Custom answer
 order: 20
 on-arrival: customised += 1
-tags: behavior_aspects
+tags: behavior_sel
 
 Me: Custom answer
 

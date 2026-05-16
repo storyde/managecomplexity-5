@@ -6,13 +6,13 @@ Facilyn: The next question is about your purpose: What are you about?
 
 [? if player = "one" : Facilyn: This is easier to answer as a group. Even alone, though, you can begin by asking who you care about or what feels worth doing. ?]
 
-- #qol_purpose
+- #purpose_sel
 
 @qolp_explanation
 title: What are these questions for?
 max-visits: 1
 order: 21
-tags: qol_purpose
+tags: purpose_sel
 
 Me: What are these questions for?
 
@@ -20,7 +20,7 @@ Facilyn: These questions help you find personal relevance in what you do. The fi
 
 She turns the cup in her hands, watching the last swirl of steam fade.
 
-- #qol_purpose
+- #purpose_sel
 
 # Purpose - Individual
 
@@ -29,21 +29,21 @@ title: Learning, growing and staying open to what life can teach
 view-if: player = "one"
 on-arrival: qol_purpose = "learning, growing and staying open to what life can teach"
 go-to: qolp_answer
-tags: qol_purpose
+tags: purpose_sel
 
 @qolp_ind_health
 title: Caring for health, vitality and participation
 view-if: player = "one"
 on-arrival: qol_purpose = "caring for health, vitality and participation"
 go-to: qolp_answer
-tags: qol_purpose
+tags: purpose_sel
 
 @qolp_ind_creativity
 title: Creativity, invention and meaningful expression
 view-if: player = "one"
 on-arrival: qol_purpose = "creativity, invention and meaningful expression"
 go-to: qolp_answer
-tags: qol_purpose
+tags: purpose_sel
 
 # Purpose - Group
 
@@ -52,27 +52,27 @@ title: Service, connection and showing up for community
 view-if: player = "group"
 on-arrival: qol_purpose = "service, connection and showing up for community"
 go-to: qolp_answer
-tags: qol_purpose
+tags: purpose_sel
 
 @qolp_grp_sustainability
 title: Caring for land and building something that lasts
 view-if: player = "group"
 on-arrival: qol_purpose = "caring for land and building something that lasts"
 go-to: qolp_answer
-tags: qol_purpose
+tags: purpose_sel
 
 @qolp_grp_support
 title: Mutual care, solidarity and standing by one another
 view-if: player = "group"
 on-arrival: qol_purpose = "mutual care, solidarity and standing by one another"
 go-to: qolp_answer
-tags: qol_purpose
+tags: purpose_sel
 
 @qolp_custom
 title: Custom answer
 order: 20
 on-arrival: customised += 1
-tags: qol_purpose
+tags: purpose_sel
 
 Me: Custom answer
 

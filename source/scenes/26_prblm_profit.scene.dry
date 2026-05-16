@@ -1,7 +1,7 @@
 title: Making our organisation profitable
 on-arrival: example_type = "Making our organisation profitable"
 new-page: true
-tags: choose_prblm
+tags: problem_sel
 
 Me: [+ prblm_type +]
 

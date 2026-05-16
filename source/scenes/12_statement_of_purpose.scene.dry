@@ -6,13 +6,13 @@ Facilyn: Next, we need your organisation’s Statement of Purpose.
 
 Facilyn: In plain words — what is your organisation here to do?
 
-- #stmt_of_purpose
+- #purpose_stmt_sel
 
 @stmp_explanation
 title: I am not how to formulate this.
 max-visits: 1
 order: 21
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: I am not how to formulate this.
 
@@ -24,7 +24,7 @@ Facilyn: Which purpose fits your organisation best?
 
 Out in the harbour, a cargo drone hovers above the docks, job done, purpose pending.
 
-- #stmt_of_purpose
+- #purpose_stmt_sel
 
 # Statement of Purpose
 
@@ -35,7 +35,7 @@ title: Growing food that keeps communities fed and well
 view-if: sector = "agriculture"
 on-arrival: st_purpose = "growing food that keeps communities fed and well"
 go-to: 13_qol_intro
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: Growing food that keeps communities fed and well
 
@@ -44,7 +44,7 @@ title: Backing farmers and strengthening rural communities
 view-if: sector = "agriculture"
 on-arrival: st_purpose = "backing farmers and strengthening rural communities"
 go-to: 13_qol_intro
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: Backing farmers and strengthening rural communities
 
@@ -53,7 +53,7 @@ title: Tending land so future generations can thrive
 view-if: sector = "agriculture"
 on-arrival: st_purpose = "tending land so future generations can thrive"
 go-to: 13_qol_intro
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: Tending land so future generations can thrive
 
@@ -64,7 +64,7 @@ title: Making daily life easier, steadier and more dependable
 view-if: sector = "business"
 on-arrival: st_purpose = "making daily life easier, steadier and more dependable"
 go-to: 13_qol_intro
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: Making daily life easier, steadier and more dependable
 
@@ -73,7 +73,7 @@ title: Helping people and organisations weather financial risk with confidence
 view-if: sector = "business"
 on-arrival: st_purpose = "helping people and organisations weather financial risk with confidence"
 go-to: 13_qol_intro
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: Helping people and organisations weather financial risk with confidence
 
@@ -82,7 +82,7 @@ title: Creating welcoming places and experiences for travellers
 view-if: sector = "business"
 on-arrival: st_purpose = "creating welcoming places and experiences for travellers"
 go-to: 13_qol_intro
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: Creating welcoming places and experiences for travellers
 
@@ -91,7 +91,7 @@ title: Crafting useful services and products people can truly rely on
 view-if: sector = "business"
 on-arrival: st_purpose = "crafting useful services and products people can truly rely on"
 go-to: 13_qol_intro
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: Crafting useful services and products people can truly rely on
 
@@ -102,7 +102,7 @@ title: Keeping culture, expression and creativity alive
 view-if: sector = "culture"
 on-arrival: st_purpose = "keeping culture, expression and creativity alive"
 go-to: 13_qol_intro
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: Keeping culture, expression and creativity alive
 
@@ -111,7 +111,7 @@ title: Preserving and sharing cultural heritage with care
 view-if: sector = "culture"
 on-arrival: st_purpose = "preserving and sharing cultural heritage with care"
 go-to: 13_qol_intro
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: Preserving and sharing cultural heritage with care
 
@@ -120,7 +120,7 @@ title: Keeping the public informed through accurate, independent reporting
 view-if: sector = "culture"
 on-arrival: st_purpose = "keeping the public informed through accurate, independent reporting"
 go-to: 13_qol_intro
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: Keeping the public informed through accurate, independent reporting
 
@@ -131,7 +131,7 @@ title: Creating a safe, nurturing place where young children learn and grow
 view-if: sector = "education"
 on-arrival: st_purpose = "creating a safe, nurturing place where young children learn and grow"
 go-to: 13_qol_intro
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: Creating a safe, nurturing place where young children learn and grow
 
@@ -140,7 +140,7 @@ title: Helping students grow, learn and step into their future with confidence
 view-if: sector = "education"
 on-arrival: st_purpose = "helping students grow, learn and step into their future with confidence"
 go-to: 13_qol_intro
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: Helping students grow, learn and step into their future with confidence
 
@@ -149,7 +149,7 @@ title: Advancing knowledge through research and preparing thoughtful leaders
 view-if: sector = "education"
 on-arrival: st_purpose = "advancing knowledge through research and preparing thoughtful leaders"
 go-to: 13_qol_intro
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: Advancing knowledge through research and preparing thoughtful leaders
 
@@ -160,7 +160,7 @@ title: Making useful products that earn a place in everyday life
 view-if: sector = "industry"
 on-arrival: st_purpose = "making useful products that earn a place in everyday life"
 go-to: 13_qol_intro
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: Making useful products that earn a place in everyday life
 
@@ -169,7 +169,7 @@ title: Building safe, lasting structures and infrastructure communities can depe
 view-if: sector = "industry"
 on-arrival: st_purpose = "building safe, lasting structures and infrastructure communities can depend on"
 go-to: 13_qol_intro
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: Building safe, lasting structures and infrastructure communities can depend on
 
@@ -178,7 +178,7 @@ title: Providing timber in ways that care for land and long-term need
 view-if: sector = "industry"
 on-arrival: st_purpose = "providing timber in ways that care for land and long-term need"
 go-to: 13_qol_intro
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: Providing timber in ways that care for land and long-term need
 
@@ -189,7 +189,7 @@ title: Meeting community needs and standing with people through hardship
 view-if: sector = "nonprofit"
 on-arrival: st_purpose = "meeting community needs and standing with people through hardship"
 go-to: 13_qol_intro
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: Meeting community needs and standing with people through hardship
 
@@ -198,7 +198,7 @@ title: Standing up for dignity, fairness and social justice
 view-if: sector = "nonprofit"
 on-arrival: st_purpose = "standing up for dignity, fairness and social justice"
 go-to: 13_qol_intro
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: Standing up for dignity, fairness and social justice
 
@@ -207,7 +207,7 @@ title: Protecting the living world and responding to climate change
 view-if: sector = "nonprofit"
 on-arrival: st_purpose = "protecting the living world and responding to climate change"
 go-to: 13_qol_intro
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: Protecting the living world and responding to climate change
 
@@ -218,7 +218,7 @@ title: Keeping communities connected through safe, accessible transport
 view-if: sector = "publicservice"
 on-arrival: st_purpose = "keeping communities connected through safe, accessible transport"
 go-to: 13_qol_intro
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: Keeping communities connected through safe, accessible transport
 
@@ -227,7 +227,7 @@ title: Healing, preventing illness and helping people recover well
 view-if: sector = "publicservice"
 on-arrival: st_purpose = "healing, preventing illness and helping people recover well"
 go-to: 13_qol_intro
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: Healing, preventing illness and helping people recover well
 
@@ -236,7 +236,7 @@ title: Serving the public interest with care for the common good
 view-if: sector = "publicservice"
 on-arrival: st_purpose = "serving the public interest with care for the common good"
 go-to: 13_qol_intro
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: Serving the public interest with care for the common good
 
@@ -245,7 +245,7 @@ title: Protecting and sharing natural heritage for generations to come
 view-if: sector = "publicservice"
 on-arrival: st_purpose = "protecting and sharing natural heritage for generations to come"
 go-to: 13_qol_intro
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: Protecting and sharing natural heritage for generations to come
 
@@ -256,7 +256,7 @@ title: Representing citizens and shaping policy that serves the common good
 view-if: sector = "policymaking"
 on-arrival: st_purpose = "representing citizens and shaping policy that serves the common good"
 go-to: 13_qol_intro
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: Representing citizens and shaping policy that serves the common good
 
@@ -265,7 +265,7 @@ title: Caring for local communities through good governance and dependable munic
 view-if: sector = "policymaking"
 on-arrival: st_purpose = "caring for local communities through good governance and dependable municipal services"
 go-to: 13_qol_intro
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: Caring for local communities through good governance and dependable municipal services
 
@@ -274,14 +274,14 @@ title: Building cooperation across borders through diplomacy
 view-if: sector = "policymaking"
 on-arrival: st_purpose = "building cooperation across borders through diplomacy"
 go-to: 13_qol_intro
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: Building cooperation across borders through diplomacy
 
 @stmp_custom
 title: Custom answer
 order: 20
-tags: stmt_of_purpose
+tags: purpose_stmt_sel
 
 Me: Custom answer
 
