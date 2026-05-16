@@ -69,6 +69,7 @@ tags: qol_aspiration
 @qolas_custom
 title: Custom answer
 order: 20
+on-arrival: customised += 1
 tags: qol_aspiration
 
 Me: Custom answer
@@ -165,6 +166,7 @@ tags: qol_accomplish
 @qolac_custom
 title: Custom answer
 order: 20
+on-arrival: customised += 1
 tags: qol_accomplish
 
 Me: Custom answer

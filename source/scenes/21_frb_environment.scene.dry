@@ -59,6 +59,7 @@ tags: environment_aspects
 @frbe_custom
 title: Custom answer
 order: 20
+on-arrival: customised += 1
 tags: environment_aspects
 
 Me: Custom answer

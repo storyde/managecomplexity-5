@@ -74,6 +74,7 @@ tags: challenge_aspects
 @qolc_custom
 title: Custom answer
 order: 20
+on-arrival: customised += 1
 tags: challenge_aspects
 
 Me: Custom answer
@@ -191,6 +192,7 @@ tags: growth_aspects
 @qolg_custom
 title: Custom answer
 order: 20
+on-arrival: customised += 1
 tags: growth_aspects
 
 Me: Custom answer

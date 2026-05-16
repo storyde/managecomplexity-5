@@ -31,6 +31,7 @@ tags: economic_aspects
 @qolew_custom
 title: Custom answer
 order: 20
+on-arrival: customised += 1
 tags: economic_aspects
 
 Me: Custom answer
@@ -128,6 +129,7 @@ tags: balance_aspects
 @qolewb_custom
 title: Custom answer
 order: 20
+on-arrival: customised += 1
 tags: balance_aspects
 
 Me: Custom answer

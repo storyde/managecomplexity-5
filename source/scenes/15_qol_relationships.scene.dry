@@ -53,6 +53,7 @@ tags: relationship_aspects
 @qolr_custom
 title: Custom answer
 order: 20
+on-arrival: customised += 1
 tags: relationship_aspects
 
 Me: Custom answer

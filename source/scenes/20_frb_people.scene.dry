@@ -67,6 +67,7 @@ tags: behavior_aspects
 @frbp_custom
 title: Custom answer
 order: 20
+on-arrival: customised += 1
 tags: behavior_aspects
 
 Me: Custom answer

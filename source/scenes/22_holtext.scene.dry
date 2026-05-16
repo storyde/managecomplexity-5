@@ -25,9 +25,9 @@ Facilyn: We can easily put them into full sentences.
 
 She fills in a few words, then hands you the Paper.
 
-Facilyn: Feel free to improve it and make it yours, using your own words. And make sure every decision-maker shares the same understanding of what each line means.
+Facilyn: [+ customised : qcustomised +] Feel free to improve it and make it yours. 
 
-Facilyn: When everyone has ownership, they can commit to it.
+Facilyn: Make sure every decision-maker shares the same understanding of what each line means. When everyone has ownership, they can commit to it.
 
 Paper: {!<h1>Holistic Context:</h1><br><div style="white-space: pre-wrap;" contenteditable="true" data-quality="holtext" oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.innerText);">!}[+ holtext +]</div>
 

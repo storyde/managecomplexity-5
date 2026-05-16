@@ -71,6 +71,7 @@ tags: qol_purpose
 @qolp_custom
 title: Custom answer
 order: 20
+on-arrival: customised += 1
 tags: qol_purpose
 
 Me: Custom answer
