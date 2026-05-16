@@ -27,28 +27,22 @@ Outside, a child crouches beside a cleaning robot and quietly places a leaf in i
 title: Friends, neighbours and local community
 view-if: player = "one"
 on-arrival: rb_human = "Friends, neighbours and local community"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Friends, neighbours and local community.
 
 @rbhm_ind_urban
 title: Friends, neighbours and work associates
 view-if: player = "one"
 on-arrival: rb_human = "Friends, neighbours and work associates"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Friends, neighbours and work associates.
 
 @rbhm_ind_nomad
 title: Fellow travellers and host communities
 view-if: player = "one"
 on-arrival: rb_human = "Fellow travellers and host communities"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Fellow travellers and host communities.
 
 # Group
 
@@ -56,28 +50,22 @@ Me: Fellow travellers and host communities.
 title: Neighbors and local authorities
 view-if: player = "group"
 on-arrival: rb_human = "Neighbors and local authorities"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Neighbors and local authorities.
 
 @rbhm_grp_family_biz
 title: Customers and suppliers
 view-if: player = "group"
 on-arrival: rb_human = "Customers and suppliers"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Customers and suppliers.
 
 @rbhm_grp_urban_col
 title: Friends and neighbours
 view-if: player = "group"
 on-arrival: rb_human = "Friends and neighbours"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Friends and neighbours.
 
 # Agriculture
 
@@ -85,28 +73,22 @@ Me: Friends and neighbours.
 title: Extended family, customers, suppliers and advisors
 view-if: sector = "agriculture"
 on-arrival: rb_human = "Extended family, customers, suppliers and advisors"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Extended family, customers, suppliers and advisors.
 
 @rbhm_agr_coop
 title: Cooperative members, customers and suppliers
 view-if: sector = "agriculture"
 on-arrival: rb_human = "Cooperative members, customers and suppliers"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Cooperative members, customers and suppliers.
 
 @rbhm_agr_ranch
 title: Veterinarians and land stewards
 view-if: sector = "agriculture"
 on-arrival: rb_human = "Veterinarians and land stewards"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Veterinarians and land stewards.
 
 # Business
 
@@ -114,37 +96,29 @@ Me: Veterinarians and land stewards.
 title: Customers and suppliers
 view-if: sector = "business"
 on-arrival: rb_human = "Customers and suppliers"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Customers and suppliers.
 
 @rbhm_bus_insurance
 title: Customers and regulators
 view-if: sector = "business"
 on-arrival: rb_human = "Customers and regulators"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Customers and regulators.
 
 @rbhm_bus_hospitality
 title: Guests and tourism board
 view-if: sector = "business"
 on-arrival: rb_human = "Guests and tourism board"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Guests and tourism board.
 
 @rbhm_bus_company
 title: Clients and contractors
 view-if: sector = "business"
 on-arrival: rb_human = "Clients and contractors"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Clients and contractors.
 
 # Culture
 
@@ -152,28 +126,22 @@ Me: Clients and contractors.
 title: Audience representatives and funders
 view-if: sector = "culture"
 on-arrival: rb_human = "Audience representatives and funders"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Audience representatives and funders.
 
 @rbhm_cul_heritage
 title: Community representatives and cultural stakeholders
 view-if: sector = "culture"
 on-arrival: rb_human = "Community representatives and cultural stakeholders"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Community representatives and cultural stakeholders.
 
 @rbhm_cul_newsroom
 title: Audience representatives and legal counsel
 view-if: sector = "culture"
 on-arrival: rb_human = "Audience representatives and legal counsel"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Audience representatives and legal counsel.
 
 # Education
 
@@ -181,28 +149,22 @@ Me: Audience representatives and legal counsel.
 title: Parents and early childhood specialists
 view-if: sector = "education"
 on-arrival: rb_human = "Parents and early childhood specialists"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Parents and early childhood specialists.
 
 @rbhm_edu_school
 title: Parents and ministry of education
 view-if: sector = "education"
 on-arrival: rb_human = "Parents and ministry of education"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Parents and ministry of education.
 
 @rbhm_edu_university
 title: Students, alumni and academic community
 view-if: sector = "education"
 on-arrival: rb_human = "Students, alumni and academic community"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Students, alumni and academic community.
 
 # Industry
 
@@ -210,28 +172,22 @@ Me: Students, alumni and academic community.
 title: Workers and union representatives
 view-if: sector = "industry"
 on-arrival: rb_human = "Workers and union representatives"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Workers and union representatives.
 
 @rbhm_ind_construction
 title: Clients and local residents
 view-if: sector = "industry"
 on-arrival: rb_human = "Clients and local residents"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Clients and local residents.
 
 @rbhm_ind_logging
 title: Environmental officers and local communities
 view-if: sector = "industry"
 on-arrival: rb_human = "Environmental officers and local communities"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Environmental officers and local communities.
 
 # Nonprofit
 
@@ -239,28 +195,22 @@ Me: Environmental officers and local communities.
 title: Beneficiaries and donors
 view-if: sector = "nonprofit"
 on-arrival: rb_human = "Beneficiaries and donors"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Beneficiaries and donors.
 
 @rbhm_nonprofit_advocacy
 title: Supporters and opponents
 view-if: sector = "nonprofit"
 on-arrival: rb_human = "Supporters and opponents"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Supporters and opponents.
 
 @rbhm_nonprofit_climate
 title: Environmental scientists and activists.
 view-if: sector = "nonprofit"
 on-arrival: rb_human = "Environmental scientists and activists"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Environmental scientists and activists.
 
 # Public service
 
@@ -268,37 +218,29 @@ Me: Environmental scientists and activists.
 title: Passengers and transport authorities
 view-if: sector = "publicservice"
 on-arrival: rb_human = "Passengers and transport authorities"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Passengers and transport authorities.
 
 @rbhm_pub_health
 title: Patients and carers
 view-if: sector = "publicservice"
 on-arrival: rb_human = "Patients and carers"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Patients and carers.
 
 @rbhm_pub_service
 title: Citizens and community representatives.
 view-if: sector = "publicservice"
 on-arrival: rb_human = "Citizens and community representatives"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Citizens and community representatives.
 
 @rbhm_pub_parks
 title: Local communities and visitors
 view-if: sector = "publicservice"
 on-arrival: rb_human = "Local communities and visitors"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Local communities and visitors.
 
 # Policymaking
 
@@ -306,28 +248,22 @@ Me: Local communities and visitors.
 title: Citizens and stakeholder representatives
 view-if: sector = "policymaking"
 on-arrival: rb_human = "Citizens and stakeholder representatives"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Citizens and stakeholder representatives.
 
 @rbhm_pol_city
 title: Local residents and business representatives
 view-if: sector = "policymaking"
 on-arrival: rb_human = "Local residents and business representatives"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Local residents and business representatives.
 
 @rbhm_pol_intl
 title: Citizens and diplomatic counterparts
 view-if: sector = "policymaking"
 on-arrival: rb_human = "Citizens and diplomatic counterparts"
-go-to: 11_wum_money
+go-to: rbhm_answer
 tags: human_rcs
-
-Me: Citizens and diplomatic counterparts.
 
 @rbhm_custom
 title: Custom answer
@@ -338,10 +274,10 @@ Me: Custom answer
 
 {!<textarea class="textarea" data-quality="rb_human" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
 
-- @rbhm_custom_answer
+- @rbhm_answer: Save
 
-@rbhm_custom_answer
-title: Save
+@rbhm_answer
+title: Answer
 go-to: 11_wum_money
 
 Me: [+ rb_human +]

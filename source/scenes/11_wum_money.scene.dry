@@ -27,37 +27,29 @@ Behind the counter, someone taps a payment terminal twice, then gives up and tak
 title: Savings and income from produce
 view-if: player = "one"
 on-arrival: wum_money = "Savings and income from produce"
-go-to: 13_qol_intro
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Savings and income from produce.
 
 @wumm_ind_urban
 title: Salary and savings
 view-if: player = "one"
 on-arrival: wum_money = "Salary and savings"
-go-to: 13_qol_intro
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Salary and savings.
 
 @wumm_ind_nomad
 title: Savings and freelance income
 view-if: player = "one"
 on-arrival: wum_money = "Savings and freelance income"
-go-to: 13_qol_intro
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Savings and freelance income.
 
 @wumm_ind_student
 title: Some cash or savings
 view-if: player = "one"
 on-arrival: wum_money = "Some cash or savings"
-go-to: 13_qol_intro
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Some cash or savings.
 
 # Group
 
@@ -65,28 +57,22 @@ Me: Some cash or savings.
 title: Shared treasury and member contributions
 view-if: player = "group"
 on-arrival: wum_money = "Shared treasury and member contributions"
-go-to: 13_qol_intro
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Shared treasury and member contributions.
 
 @wumm_grp_family_biz
 title: Business revenue and family savings
 view-if: player = "group"
 on-arrival: wum_money = "Business revenue and family savings"
-go-to: 13_qol_intro
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Business revenue and family savings.
 
 @wumm_grp_urban_col
 title: Rent contributions and project grants
 view-if: player = "group"
 on-arrival: wum_money = "Rent contributions and project grants"
-go-to: 13_qol_intro
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Rent contributions and project grants.
 
 @wumm_custom
 title: Custom answer
@@ -98,13 +84,7 @@ Me: Custom answer
 
 {!<textarea class="textarea" data-quality="wum_money" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
 
-- @wumm_custom_answer
-
-@wumm_custom_answer
-title: Save
-go-to: 13_qol_intro
-
-Me: [+ wum_money +]
+- @wumm_answer: Save
 
 # Agriculture
 
@@ -112,28 +92,22 @@ Me: [+ wum_money +]
 title: Operating funds and crop revenue
 view-if: sector = "agriculture"
 on-arrival: wum_money = "Operating funds and crop revenue"
-go-to: 12_statement_of_purpose
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Operating funds and crop revenue.
 
 @wumm_agr_coop
 title: Sales revenue, member fees and potential loans
 view-if: sector = "agriculture"
 on-arrival: wum_money = "Sales revenue, member fees and potential loans"
-go-to: 12_statement_of_purpose
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Sales revenue, member fees and potential loans.
 
 @wumm_agr_ranch
 title: Livestock sales and land lease income
 view-if: sector = "agriculture"
 on-arrival: wum_money = "Livestock sales and land lease income"
-go-to: 12_statement_of_purpose
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Livestock sales and land lease income.
 
 # Business
 
@@ -141,37 +115,29 @@ Me: Livestock sales and land lease income.
 title: Working capital and revenue streams
 view-if: sector = "business"
 on-arrival: wum_money = "Working capital and revenue streams"
-go-to: 12_statement_of_purpose
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Working capital and revenue streams.
 
 @wumm_bus_insurance
 title: Premium income and reserve funds
 view-if: sector = "business"
 on-arrival: wum_money = "Premium income and reserve funds"
-go-to: 12_statement_of_purpose
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Premium income and reserve funds.
 
 @wumm_bus_hospitality
 title: Room revenue and food sales
 view-if: sector = "business"
 on-arrival: wum_money = "Room revenue and food sales"
-go-to: 12_statement_of_purpose
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Room revenue and food sales.
 
 @wumm_bus_company
 title: Client fees and investment capital
 view-if: sector = "business"
 on-arrival: wum_money = "Client fees and investment capital"
-go-to: 12_statement_of_purpose
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Client fees and investment capital.
 
 # Culture
 
@@ -179,28 +145,22 @@ Me: Client fees and investment capital.
 title: Grants and donations
 view-if: sector = "culture"
 on-arrival: wum_money = "Grants and donations"
-go-to: 12_statement_of_purpose
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Grants and donations.
 
 @wumm_cul_heritage
 title: Heritage funding and visitor fees
 view-if: sector = "culture"
 on-arrival: wum_money = "Heritage funding and visitor fees"
-go-to: 12_statement_of_purpose
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Heritage funding and visitor fees.
 
 @wumm_cul_newsroom
 title: Advertising revenue and subscriptions
 view-if: sector = "culture"
 on-arrival: wum_money = "Advertising revenue and subscriptions"
-go-to: 12_statement_of_purpose
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Advertising revenue and subscriptions.
 
 # Education
 
@@ -208,28 +168,22 @@ Me: Advertising revenue and subscriptions.
 title: Kindergarten budget and early childhood funding
 view-if: sector = "education"
 on-arrival: wum_money = "Kindergarten budget and early childhood funding"
-go-to: 12_statement_of_purpose
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Kindergarten budget and early childhood funding.
 
 @wumm_edu_school
 title: Government funding and tuition fees
 view-if: sector = "education"
 on-arrival: wum_money = "Government funding and tuition fees"
-go-to: 12_statement_of_purpose
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Government funding and tuition fees.
 
 @wumm_edu_university
 title: University endowment and research grants
 view-if: sector = "education"
 on-arrival: wum_money = "University endowment and research grants"
-go-to: 12_statement_of_purpose
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: University endowment and research grants.
 
 # Industry
 
@@ -237,28 +191,22 @@ Me: University endowment and research grants.
 title: Operating capital and investment funds
 view-if: sector = "industry"
 on-arrival: wum_money = "Operating capital and investment funds"
-go-to: 12_statement_of_purpose
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Operating capital and investment funds.
 
 @wumm_ind_construction
 title: Project financing and client payments
 view-if: sector = "industry"
 on-arrival: wum_money = "Project financing and client payments"
-go-to: 12_statement_of_purpose
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Project financing and client payments.
 
 @wumm_ind_logging
 title: Timber revenue and forestry investments
 view-if: sector = "industry"
 on-arrival: wum_money = "Timber revenue and forestry investments"
-go-to: 12_statement_of_purpose
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Timber revenue and forestry investments.
 
 # Nonprofit
 
@@ -266,28 +214,22 @@ Me: Timber revenue and forestry investments.
 title: Grants and donations
 view-if: sector = "nonprofit"
 on-arrival: wum_money = "Grants and donations"
-go-to: 12_statement_of_purpose
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Grants and donations.
 
 @wumm_nonprofit_advocacy
 title: Foundation grants and campaign contributions
 view-if: sector = "nonprofit"
 on-arrival: wum_money = "Foundation grants and campaign contributions"
-go-to: 12_statement_of_purpose
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Foundation grants and campaign contributions.
 
 @wumm_nonprofit_climate
 title: Environmental grants and conservation funding
 view-if: sector = "nonprofit"
 on-arrival: wum_money = "Environmental grants and conservation funding"
-go-to: 12_statement_of_purpose
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Environmental grants and conservation funding.
 
 # Public service
 
@@ -295,37 +237,29 @@ Me: Environmental grants and conservation funding.
 title: Ticket revenue and government subsidies
 view-if: sector = "publicservice"
 on-arrival: wum_money = "Ticket revenue and government subsidies"
-go-to: 12_statement_of_purpose
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Ticket revenue and government subsidies.
 
 @wumm_pub_health
 title: Government budget and insurance reimbursements
 view-if: sector = "publicservice"
 on-arrival: wum_money = "Government budget and insurance reimbursements"
-go-to: 12_statement_of_purpose
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Government budget and insurance reimbursements.
 
 @wumm_pub_service
 title: Government budget and public service funding
 view-if: sector = "publicservice"
 on-arrival: wum_money = "Government budget and public service funding"
-go-to: 12_statement_of_purpose
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Government budget and public service funding.
 
 @wumm_pub_parks
 title: Conservation budget and park fees
 view-if: sector = "publicservice"
 on-arrival: wum_money = "Conservation budget and park fees"
-go-to: 12_statement_of_purpose
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Conservation budget and park fees.
 
 # Policymaking
 
@@ -333,28 +267,22 @@ Me: Conservation budget and park fees.
 title: National budget and treasury funds
 view-if: sector = "policymaking"
 on-arrival: wum_money = "National budget and treasury funds"
-go-to: 12_statement_of_purpose
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: National budget and treasury funds.
 
 @wumm_pol_city
 title: Municipal budget and local taxes
 view-if: sector = "policymaking"
 on-arrival: wum_money = "Municipal budget and local taxes"
-go-to: 12_statement_of_purpose
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Municipal budget and local taxes.
 
 @wumm_pol_intl
 title: Foreign affairs budget and diplomatic funding
 view-if: sector = "policymaking"
 on-arrival: wum_money = "Foreign affairs budget and diplomatic funding"
-go-to: 12_statement_of_purpose
+go-to: wumm_answer
 tags: monetary_rcs
-
-Me: Foreign affairs budget and diplomatic funding.
 
 @wumm_org_custom
 title: Custom answer
@@ -366,10 +294,10 @@ Me: Custom answer
 
 {!<textarea class="textarea" data-quality="wum_money" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
 
-- @wumm_org_custom_answer
+- @wumm_answer: Save
 
-@wumm_org_custom_answer
-title: Save
-go-to: 12_statement_of_purpose
+@wumm_answer
+title: Answer
+go-to: 13_qol_intro if player != "org"; 12_statement_of_purpose if player = "org"
 
 Me: [+ wum_money +]

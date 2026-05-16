@@ -41,26 +41,20 @@ They pause briefly, watching the rain find its way into the harbor in a hundred 
 @frbe_detailed_scientific
 title: Resilient water and mineral cycles, strong community dynamics, steady energy flow and rich biodiversity
 on-arrival: frb_environment = "resilient water and mineral cycles, strong community dynamics, steady energy flow and rich biodiversity"
-go-to: 22_holtext
+go-to: frbe_answer
 tags: environment_aspects
-
-Me: Resilient water and mineral cycles, strong community dynamics, steady energy flow and rich biodiversity
 
 @frbe_descriptive_visionary
 title: Healthy, biologically rich land with covered soils, clean running water, active nutrient cycling and webs of life that keep energy moving
 on-arrival: frb_environment = "healthy, biologically rich land with covered soils, clean running water, active nutrient cycling and webs of life that keep energy moving"
-go-to: 22_holtext
+go-to: frbe_answer
 tags: environment_aspects
-
-Me: Healthy, biologically rich land with covered soils, clean running water, active nutrient cycling and webs of life that keep energy moving
 
 @frbe_simple_grounded
 title: Stable, productive surroundings with fertile covered soils, clean water, functioning water and mineral cycles, and biodiversity that strengthens community dynamics and energy flow
 on-arrival: frb_environment = "stable, productive surroundings with fertile covered soils, clean water, functioning water and mineral cycles, and biodiversity that strengthens community dynamics and energy flow"
-go-to: 22_holtext
+go-to: frbe_answer
 tags: environment_aspects
-
-Me: Stable, productive surroundings with fertile covered soils, clean water, functioning water and mineral cycles, and biodiversity that strengthens community dynamics and energy flow
 
 @frbe_custom
 title: Custom answer
@@ -71,10 +65,10 @@ Me: Custom answer
 
 {!<textarea class="textarea" data-quality="frb_environment" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
 
-- @frbe_custom_answer: Save
+- @frbe_answer: Save
 
-@frbe_custom_answer
-title: Save
+@frbe_answer
+title: Answer
 go-to: 22_holtext
 
 Me: [+ frb_environment +]

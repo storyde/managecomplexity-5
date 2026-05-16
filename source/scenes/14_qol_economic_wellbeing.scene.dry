@@ -13,26 +13,20 @@ Facilyn: Which aspects matter most to you?
 @qolew_basic_needs_fulfilled
 title: Nourishing food, clean water, safe shelter, warm clothing, dependable care and a deep sense of safety
 on-arrival: qol_economic = "nourishing food, clean water, safe shelter, warm clothing, dependable care and a deep sense of safety"
-go-to: qolewb_balance
+go-to: qolew_answer
 tags: economic_aspects
-
-Me: Nourishing food, clean water, safe shelter, warm clothing, dependable care and a deep sense of safety
 
 @qolew_comfortable_surroundings
 title: A comfortable home, dependable health care and enough money for daily needs without constant strain
 on-arrival: qol_economic = "a comfortable home, dependable health care and enough money for daily needs without constant strain"
-go-to: qolewb_balance
+go-to: qolew_answer
 tags: economic_aspects
-
-Me: A comfortable home, dependable health care and enough money for daily needs without constant strain
 
 @qolew_health_and_vitality
 title: Robust health, personal safety and the means to meet essential needs without scraping by
 on-arrival: qol_economic = "robust health, personal safety and the means to meet essential needs without scraping by"
-go-to: qolewb_balance
+go-to: qolew_answer
 tags: economic_aspects
-
-Me: Robust health, personal safety and the means to meet essential needs without scraping by
 
 @qolew_custom
 title: Custom answer
@@ -43,10 +37,10 @@ Me: Custom answer
 
 {!<textarea class="textarea" data-quality="qol_economic" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
 
-- @qolew_custom_answer: Save
+- @qolew_answer: Save
 
-@qolew_custom_answer
-title: Save
+@qolew_answer
+title: Answer
 go-to: qolewb_balance
 
 Me: [+ qol_economic +]
@@ -83,45 +77,35 @@ Facilyn: Name what money makes possible. Freedom? Time? The ability to help some
 @qolewb_education_community
 title: Time for family, friends and community, with learning woven into everyday life
 on-arrival: qol_balance = "time for family, friends and community, with learning woven into everyday life"
-go-to: 15_qol_relationships
+go-to: qolewb_answer
 tags: balance_aspects
-
-Me: Time for family, friends and community, with learning woven into everyday life
 
 @qolewb_balance_leisure
 title: Room for rest, leisure and time with family and friends
 on-arrival: qol_balance = "room for rest, leisure and time with family and friends"
-go-to: 15_qol_relationships
+go-to: qolewb_answer
 tags: balance_aspects
-
-Me: Room for rest, leisure and time with family and friends
 
 # Balance - Individual
 
 @qolewb_family_friends
 title: Time with family and friends, chances to keep learning and space for culture and play
 on-arrival: qol_balance = "time with family and friends, chances to keep learning and space for culture and play"
-go-to: 15_qol_relationships
+go-to: qolewb_answer
 tags: balance_aspects
-
-Me: Time with family and friends, chances to keep learning and space for culture and play
 
 @qolew_travel_and_experience
 title: The means for travel and discovery, with food, shelter, health and security well covered
 view-if: player = "one"
-on-arrival: qol_economic = "the means for travel and discovery, with food, shelter, health and security well covered"
-go-to: 15_qol_relationships
+on-arrival: qol_balance = "the means for travel and discovery, with food, shelter, health and security well covered"
+go-to: qolewb_answer
 tags: balance_aspects
-
-Me: The means for travel and discovery, with food, shelter, health and security well covered
 
 @qolewb_cultural_pursuits
 title: Room for art, culture and creative life, held up by learning and time with loved ones
 on-arrival: qol_balance = "room for art, culture and creative life, held up by learning and time with loved ones"
-go-to: 15_qol_relationships
+go-to: qolewb_answer
 tags: balance_aspects
-
-Me: Room for art, culture and creative life, held up by learning and time with loved ones
 
 # Balance - Group
 
@@ -129,10 +113,8 @@ Me: Room for art, culture and creative life, held up by learning and time with l
 title: Community wellbeing, with time to show up for one another and room for culture
 view-if: player = "group"
 on-arrival: qol_balance = "community wellbeing, with time to show up for one another and room for culture"
-go-to: 15_qol_relationships
+go-to: qolewb_answer
 tags: balance_aspects
-
-Me: Community wellbeing, with time to show up for one another and room for culture
 
 # Balance - Organisation
 
@@ -140,10 +122,8 @@ Me: Community wellbeing, with time to show up for one another and room for cultu
 title: Member wellbeing, with time to learn, contribute, connect and have a life beyond work
 view-if: player = "org"
 on-arrival: qol_balance = "member wellbeing, with time to learn, contribute, connect and have a life beyond work"
-go-to: 15_qol_relationships
+go-to: qolewb_answer
 tags: balance_aspects
-
-Me: Member wellbeing, with time to learn, contribute, connect and have a life beyond work
 
 @qolewb_custom
 title: Custom answer
@@ -154,10 +134,10 @@ Me: Custom answer
 
 {!<textarea class="textarea" data-quality="qol_balance" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
 
-- @qolewb_custom_answer: Save
+- @qolewb_answer: Save
 
-@qolewb_custom_answer
-title: Save
+@qolewb_answer
+title: Answer
 go-to: 15_qol_relationships
 
 Me: [+ qol_balance +]

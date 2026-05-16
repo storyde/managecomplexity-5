@@ -1,4 +1,4 @@
-const MODEL = "@cf/zai-org/glm-4.7-flash";
+const MODEL = "@cf/mistralai/mistral-small-3.1-24b-instruct";
 
 function json(data, init) {
   return Response.json(data, init);

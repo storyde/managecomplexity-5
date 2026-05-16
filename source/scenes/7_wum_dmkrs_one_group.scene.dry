@@ -43,7 +43,8 @@ Facilyn: Exclude a real stakeholder, and you end up negotiating with a fire hydr
 - #decision_makers
 
 @dmkrs_me
-title: Just me
+title: Just me.
+subtitle: I am making the decisions in my life.
 view-if: player = "one"
 on-arrival: decision_makers = "Me"
 go-to: 9_wum_physical_res
@@ -54,13 +55,14 @@ Me: Just me. I am making the decisions in my life.
 Facilyn: Perfect. Then we treat you as the only decision-maker.
 
 @dmkrs_include_more
-title: Include more people
+title: Let's include the people
+subtitle: that I live or decide with.
 view-if: player = "one"
 on-arrival: decision_makers = "Me and people I live or decide with"; player = "group"
 go-to: 9_wum_physical_res
 tags: decision_makers
 
-Me: Let's include the people I live or decide with.
+Me: Let's include the people that I live or decide with.
 
 Facilyn: Great. We’ll treat all of you together as the decision-makers in your whole under management.
 
